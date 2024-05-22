@@ -1,7 +1,13 @@
+import { Header } from '@/components/Header/Header';
+import cls from './page.module.scss';
 
 export default function Home() {
   return (
-    <h1>Главная</h1>
-  )
+    <>
+      <Header />
+      <main className={cls.main}>
+        <section className="container">HELLO</section>
+      </main>
+    </>
+  );
 }
- 
