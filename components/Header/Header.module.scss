@@ -1,5 +1,10 @@
-.nav {
+.navList {
   display: flex;
+  gap: 60px;
+}
+
+.nav {
+  margin-right: auto;
 }
 
 .headerNavWrapper {
@@ -10,4 +15,18 @@
 .header {
   background-image: url('../../public/sea.png');
   min-height: 950px;
+}
+
+.headerWrapper {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0.5662640056022409) 80%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.logo {
+  margin-right: 145px;
 }
