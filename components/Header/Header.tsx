@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Logo from '@/public/logo.png';
 import { classNames } from '@/utils/classNames/classNames';
 import { IHeaderProps } from './types';
+import Link from 'next/link';
 
 export const Header = ({ view }: IHeaderProps) => {
   return (
@@ -12,13 +13,41 @@ export const Header = ({ view }: IHeaderProps) => {
           <Image src={Logo} alt="Mirai Line Logo" className={cls.logo} />
           <nav className={cls.nav}>
             <ul className={cls.navList}>
-              <li>Главная</li>
-              <li>О компании</li>
-              <li>Услуги</li>
-              <li>Расписание</li>
-              <li>Цены</li>
-              <li>Отслеживание</li>
-              <li>Контакты</li>
+              <li>
+                <Link className={cls.navLink} href="/">
+                  Главная
+                </Link>
+              </li>
+              <li>
+                <Link className={cls.navLink} href="/about">
+                  О компании
+                </Link>
+              </li>
+              <li>
+                <Link className={cls.navLink} href="/services">
+                  Услуги
+                </Link>
+              </li>
+              <li>
+                <Link className={cls.navLink} href="/schedule">
+                  Расписание
+                </Link>
+              </li>
+              <li>
+                <Link className={cls.navLink} href="/prices">
+                  Цены
+                </Link>
+              </li>
+              <li>
+                <Link className={cls.navLink} href="/tracking">
+                  Отслеживание
+                </Link>
+              </li>
+              <li>
+                <Link className={cls.navLink} href="/contacts">
+                  Контакты
+                </Link>
+              </li>
             </ul>
           </nav>
           <select className={cls.langSwitcher} name="lang" id="lang">
