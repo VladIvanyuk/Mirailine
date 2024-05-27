@@ -13,7 +13,12 @@ export const Header = ({ view }: IHeaderProps) => {
     <header className={classNames(cls.header, {}, [cls[view]])}>
       <section className={cls.headerWrapper}>
         <div className={classNames(cls.headerNavWrapper, {}, ['container'])}>
-          <Image src={Logo} alt="Mirai Line Logo" className={cls.logo} />
+          <Image
+            src={Logo}
+            priority={true}
+            alt="Mirai Line Logo"
+            className={cls.logo}
+          />
           <nav className={cls.nav}>
             <ul className={cls.navList}>
               <li>

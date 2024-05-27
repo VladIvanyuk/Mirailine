@@ -1,8 +1,24 @@
-.main {
+.promo {
   background-image: url('../../public/sea.png');
   min-height: 950px;
 }
 
 .home {
   position: absolute;
+}
+
+.promoSection {
+  padding-top: 500px;
+}
+
+.promoHeading {
+  max-width: 580px;
+  margin: 0 auto;
+  font-family: var(--orchidea);
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 130%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--white);
 }
