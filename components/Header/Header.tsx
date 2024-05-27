@@ -4,8 +4,11 @@ import Logo from '@/public/logo.png';
 import { classNames } from '@/utils/classNames/classNames';
 import { IHeaderProps } from './types';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
+import { LocaleSwitcher } from '../LocaleSwitcher/LocaleSwitcher';
 
 export const Header = ({ view }: IHeaderProps) => {
+  const t = useTranslations('Header');
   return (
     <header className={classNames(cls.header, {}, [cls[view]])}>
       <section className={cls.headerWrapper}>
@@ -15,45 +18,42 @@ export const Header = ({ view }: IHeaderProps) => {
             <ul className={cls.navList}>
               <li>
                 <Link className={cls.navLink} href="/">
-                  Главная
+                  {t('Home')}
                 </Link>
               </li>
               <li>
                 <Link className={cls.navLink} href="/about">
-                  О компании
+                  {t('About')}
                 </Link>
               </li>
               <li>
                 <Link className={cls.navLink} href="/services">
-                  Услуги
+                  {t('Services')}
                 </Link>
               </li>
               <li>
                 <Link className={cls.navLink} href="/schedule">
-                  Расписание
+                  {t('Schedule')}
                 </Link>
               </li>
               <li>
                 <Link className={cls.navLink} href="/prices">
-                  Цены
+                  {t('Prices')}
                 </Link>
               </li>
               <li>
                 <Link className={cls.navLink} href="/tracking">
-                  Отслеживание
+                  {t('Tracking')}
                 </Link>
               </li>
               <li>
                 <Link className={cls.navLink} href="/contacts">
-                  Контакты
+                  {t('Contacts')}
                 </Link>
               </li>
             </ul>
           </nav>
-          <select className={cls.langSwitcher} name="lang" id="lang">
-            <option value="ru">РУС</option>
-            <option value="en">ENG</option>
-          </select>
+          <LocaleSwitcher />
         </div>
       </section>
     </header>
