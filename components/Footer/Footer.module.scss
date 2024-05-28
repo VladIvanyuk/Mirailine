@@ -1,0 +1,20 @@
+.footer {
+  background-color: var(--main-blue);
+}
+
+.footerWrapper {
+  padding: 60px 0;
+  display: flex;
+}
+
+.navLink {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 20px;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.navList li:not(:last-child) {
+  margin-bottom: 24px;
+}

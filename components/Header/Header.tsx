@@ -6,14 +6,15 @@ import { IHeaderProps } from './types';
 import Link from 'next/link';
 import { useLocale, useTranslations } from 'next-intl';
 import { LocaleSwitcher } from '../LocaleSwitcher/LocaleSwitcher';
+import { SectionLayout } from '../SectionLayout/SectionLayout';
 
 export const Header = ({ view }: IHeaderProps) => {
-  const t = useTranslations('Header');
+  const t = useTranslations('Navigations');
   const activeLocale = useLocale();
   return (
     <header className={classNames(cls.header, {}, [cls[view]])}>
-      <section className={cls.headerWrapper}>
-        <div className={classNames(cls.headerNavWrapper, {}, ['container'])}>
+      <div className={cls.headerWrapper}>
+        <SectionLayout classes={cls.headerNavWrapper}>
           <Image
             src={Logo}
             priority={true}
@@ -72,8 +73,8 @@ export const Header = ({ view }: IHeaderProps) => {
             </ul>
           </nav>
           <LocaleSwitcher />
-        </div>
-      </section>
+        </SectionLayout>
+      </div>
     </header>
   );
 };

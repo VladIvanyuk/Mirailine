@@ -1,0 +1,15 @@
+.contact {
+  display: flex;
+  align-items: center;
+  font-family: var(--font-two);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 120%;
+  color: var(--white);
+}
+
+.contactWrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
