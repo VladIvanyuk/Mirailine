@@ -13,6 +13,7 @@ export default function Home() {
         <div className={cls.promo}>
           <section className={classNames('container', {}, [cls.promoSection])}>
             <p className={cls.promoHeading}>{t('Promo')}</p>
+            <p className={cls.hierography}>未来ライン。</p>
           </section>
         </div>
       </main>

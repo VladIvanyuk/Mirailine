@@ -1,6 +1,7 @@
 .promo {
   background-image: url('../../public/sea.png');
   min-height: 950px;
+  overflow: hidden;
 }
 
 .home {
@@ -14,11 +15,23 @@
 .promoHeading {
   max-width: 580px;
   margin: 0 auto;
-  font-family: var(--orchidea);
+  font-family: var(--font-three);
   font-weight: 700;
   font-size: 48px;
   line-height: 130%;
   letter-spacing: 0.02em;
   text-transform: uppercase;
   color: var(--white);
+}
+
+.hierography {
+  position: relative;
+  top: 145px;
+  font-family: var(--font-five);
+  font-weight: 400;
+  font-size: 200px;
+  line-height: 130%;
+  letter-spacing: -0.2em;
+  text-transform: uppercase;
+  color: var(--lightest-blue);
 }
