@@ -15,6 +15,39 @@
   text-decoration: none;
 }
 
+.navList {
+  padding-top: 5px;
+}
+
 .navList li:not(:last-child) {
   margin-bottom: 24px;
+}
+
+.contactWrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.workTime {
+  color: var(--white);
+  font-family: var(--font-two);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 120%;
+}
+
+.workTime li {
+  margin-bottom: 3px;
+}
+
+.contactsList {
+  display: flex;
+  gap: 160px;
+}
+
+.footerListsWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }

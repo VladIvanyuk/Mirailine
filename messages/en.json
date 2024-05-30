@@ -10,5 +10,12 @@
   },
   "Home": {
     "Promo": "Transportation of all types of cargo"
+  },
+  "Footer": {
+    "Days": "Mon - Fri",
+    "Text": "Local time",
+    "Japan": "Japan",
+    "Russia": "Russia",
+    "ContactsIn": "contacts in"
   }
 }

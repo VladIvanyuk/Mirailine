@@ -3,3 +3,31 @@
   flex-direction: column;
   gap: 38px;
 }
+
+.contactsTextCountry {
+  font-family: var(--font-three);
+  font-weight: 400;
+  line-height: 110%;
+  color: var(--white);
+}
+
+.contactsTextBottom {
+  font-size: 24px;
+  text-transform: uppercase;
+}
+.contactsText {
+  font-size: 24px;
+  color: var(--white);
+  font-family: var(--font-three);
+}
+
+.contactsTextTop {
+  font-size: 20px;
+}
+
+.contactsContent {
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 47px;
+}

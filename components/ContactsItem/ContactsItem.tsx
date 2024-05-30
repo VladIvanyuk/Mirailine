@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import cls from './ContactsItem.module.scss';
-import Phone from '@/public/vectors/phone.png';
-import WA from '@/public/vectors/wa.png';
-import Email from '@/public/vectors/email.png';
+import Phone from '@/public/images/vectors/phone.png';
+import WA from '@/public/images/vectors/wa.png';
+import Email from '@/public/images/vectors/email.png';
 
 interface IContactsItemProps {
   type: ContactTypes;
