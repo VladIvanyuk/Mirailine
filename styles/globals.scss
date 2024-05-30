@@ -2,12 +2,17 @@
 @import './variables.scss';
 @import './fonts.scss';
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   max-width: 1920px;
   width: 100%;
   margin: 0 auto;
   color: var(--main-blue);
   font-family: var(--font-one);
+  background-color: var(--lightest-blue);
 }
 
 .container {

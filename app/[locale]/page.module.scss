@@ -36,3 +36,18 @@
   text-transform: uppercase;
   color: var(--lightest-blue);
 }
+
+.servicesDescrWrapper {
+  max-width: 356px;
+}
+
+.servicesCards {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 30px;
+}
+
+.servicesContent {
+  display: flex;
+}
