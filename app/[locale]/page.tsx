@@ -14,13 +14,13 @@ export default function Home() {
   return (
     <>
       <main className={cls.main}>
-        <div className={cls.promo}>
+        <div className={classNames(cls.promo, {}, [cls.wrapper])}>
           <SectionLayout classes={cls.promoSection}>
             <h1 className={cls.promoHeading}>{t('Promo')}</h1>
             <p className={cls.hierography}>未来ライン。</p>
           </SectionLayout>
         </div>
-        <SectionLayout>
+        <SectionLayout classes={cls.wrapper}>
           <Title lineVariant={LineVariants.VARIANT_ONE} text={t('Services')} />
           <div className={cls.servicesContent}>
             <div className={cls.servicesDescrWrapper}>

@@ -1,4 +1,5 @@
 .card {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -7,6 +8,33 @@
   max-width: 338px;
   padding: 30px;
   background-color: var(--white);
+  overflow: hidden;
+}
+
+.card:hover::before {
+  width: 500px;
+  height: 500px;
+  right: -295px;
+  bottom: -270px;
+}
+
+.card::before {
+  content: '';
+  right: -20px;
+  bottom: -20px;
+  width: 146px;
+  height: 139px;
+  position: absolute;
+  background-color: var(--light-blue-sec);
+  opacity: 0.16;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+}
+
+.card::after {
+  position: absolute;
+  right: 25px;
+  bottom: 15px;
 }
 
 .cardTitle {
@@ -18,9 +46,36 @@
 }
 
 .cardsLink {
+  display: flex;
+  align-items: center;
   font-family: var(--font-two);
   font-weight: 400;
   font-size: 16px;
   line-height: 120%;
   color: var(--light-blue-sec);
+  transition: all 0.3s ease-in-out;
+}
+
+.cardsLink:hover,
+.cardsLink:hover::after {
+  color: var(--main-blue);
+}
+
+.cardsLink::after {
+  content: '>';
+  padding-left: 5px;
+  font-size: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.planet::after {
+  content: url('../../public/images/icons/planet.png');
+}
+
+.ship::after {
+  content: url('../../public/images/icons/ship.png');
+}
+
+.stock::after {
+  content: url('../../public/images/icons/stock.png');
 }
