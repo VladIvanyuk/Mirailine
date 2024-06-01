@@ -104,7 +104,7 @@ export const Footer = () => {
         </div>
       </SectionLayout>
       <div className={cls.footerBottom}>
-        <SectionLayout>
+        <SectionLayout classes={cls.footerBottomWrapper}>
           <p className={cls.footerBottomText}>{t1('Copyright')}</p>
         </SectionLayout>
       </div>

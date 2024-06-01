@@ -6,9 +6,14 @@
   background-position: bottom right, top left;
 }
 
-.footerWrapper {
+.footer .footerWrapper {
   padding: 60px 0;
   display: flex;
+  margin-bottom: 0;
+}
+
+.footer .footerBottomWrapper {
+  margin-bottom: 0;
 }
 
 .navLink {

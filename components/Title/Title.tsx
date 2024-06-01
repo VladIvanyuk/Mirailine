@@ -1,9 +1,11 @@
+import Image, { StaticImageData } from 'next/image';
 import cls from './Title.module.scss';
 import { classNames } from '@/utils/classNames/classNames';
 
 interface ITitleProps {
   text: string;
   lineVariant: string;
+  decorText?: StaticImageData;
 }
 
 export enum LineVariants {
@@ -16,8 +18,11 @@ export enum LineVariants {
   VARIANT_SEVEN = 'variantSeven',
 }
 
-export const Title = ({ text, lineVariant }: ITitleProps) => {
+export const Title = ({ text, lineVariant, decorText }: ITitleProps) => {
   return (
-    <h2 className={classNames(cls.title, {}, [cls[lineVariant]])}>{text}</h2>
+    <h2 className={classNames(cls.title, {}, [cls[lineVariant]])}>
+      <span>{text}</span>
+      {decorText && <Image src={decorText} alt="Иероглифы" />}
+    </h2>
   );
 };

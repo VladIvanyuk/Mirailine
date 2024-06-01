@@ -1,0 +1,39 @@
+.aboutWrapper {
+  display: flex;
+  gap: 30px;
+}
+
+.aboutText {
+  flex-basis: 50%;
+  font-family: var(--font-one);
+}
+
+.aboutImg {
+  flex-basis: 50%;
+  background-image: url('../../../public/images/container.png');
+  background-position: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.aboutBoldText {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 140%;
+  color: var(--main-blue);
+  margin-bottom: 30px;
+}
+
+.aboutThinText {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+  color: var(--main-blue);
+  margin-bottom: 30px;
+}
+
+.aboutThinTextWithIcons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}

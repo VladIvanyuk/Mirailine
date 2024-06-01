@@ -1,4 +1,6 @@
 .title {
+  display: flex;
+  justify-content: space-between;
   padding-left: 505px;
   margin-bottom: 70px;
   font-family: var(--font-three);
@@ -14,25 +16,39 @@
 }
 
 .variantOne {
-  padding-top: 10px;
   background-image: url('../../public/images/lines/variant-one.png');
   background-repeat: no-repeat;
   background-position-x: 240px;
-  background-position-y: 15px;
+  background-position-y: 10px;
 }
 
 .variantTwo {
-  padding-top: 15px;
   background-image: url('../../public/images/lines/variant-two.png');
   background-repeat: no-repeat;
   background-position-x: 730px;
-  background-position-y: 15px;
+  background-position-y: 10px;
 }
 
 .variantThree {
-  padding-top: 10px;
   background-image: url('../../public/images/lines/variant-three.png');
   background-repeat: no-repeat;
   background-position-x: 240px;
-  background-position-y: 15px;
+  background-position-y: 10px;
+}
+
+.variantFour {
+  background-image: url('../../public/images/lines/variant-four.png');
+  background-repeat: no-repeat;
+  background-position-x: 240px;
+  background-position-y: 10px;
+}
+
+.decor {
+  font-family: var(--font-five);
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 120%;
+  text-transform: uppercase;
+  text-align: right;
+  color: var(--light-blue);
 }
