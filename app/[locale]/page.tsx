@@ -5,6 +5,7 @@ import { SectionLayout } from '@/components/SectionLayout/SectionLayout';
 import { LineVariants, Title } from '@/components/Title/Title';
 import { Description } from '@/components/Description/Description';
 import { AboutBGPic, AboutCard } from '@/components/AboutCard/AboutCard';
+import { ServicesList } from '@/components/ServicesList/ServicesList';
 
 export default function Home() {
   const t = useTranslations('Home');
@@ -45,14 +46,12 @@ export default function Home() {
             </ul>
           </div>
         </SectionLayout>
-        <SectionLayout>
+        <SectionLayout classes={cls.wrapper}>
           <Title lineVariant={LineVariants.VARIANT_TWO} text={t('Services')} />
-          <div className={cls.servicesContentWrapper}>
-            <Description>чем мы можем помочь</Description>
-            <div className={cls.servicesContent}>
-              <div className={cls.servicesImg}></div>
-              <ul className={cls.servicesList}></ul>
-            </div>
+          <Description>чем мы можем помочь</Description>
+          <div className={cls.servicesContent}>
+            <div className={cls.servicesImg}></div>
+            <ServicesList className={cls.servicesList}></ServicesList>
           </div>
         </SectionLayout>
       </main>

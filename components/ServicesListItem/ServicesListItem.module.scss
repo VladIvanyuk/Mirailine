@@ -1,0 +1,23 @@
+.servicesListItem {
+  display: flex;
+  align-items: center;
+  padding: 10px 30px;
+  border-top: 1px solid #cfcfcf;
+}
+
+.servicesListItem:last-child {
+  border-bottom: 1px solid #cfcfcf;
+}
+
+.itemNumber {
+  margin-right: 126px;
+  font-family: var(--font-three);
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 80%;
+  color: var(--grey);
+}
+
+.itemImage {
+  margin-right: 30px;
+}

@@ -6,9 +6,8 @@ interface I[FTName]Props {
    className?: string;
 }
 
-export const [FTName] = (props: I[FTName]Props) => {
-   const { className } = props;
-   const t = useTranslations()
+export const [FTName] = ({className}: I[FTName]Props) => {
+   const t = useTranslations();
 
    return (
       <div className={classNames(cls.[FTName | camelcase], {}, [className])}>
