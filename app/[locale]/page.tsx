@@ -1,3 +1,5 @@
+'use-client';
+
 import cls from './page.module.scss';
 import { useTranslations } from 'next-intl';
 import { classNames } from '@/utils/classNames/classNames';
@@ -6,8 +8,9 @@ import { LineVariants, Title } from '@/components/Title/Title';
 import { Description } from '@/components/Description/Description';
 import { AboutBGPic, AboutCard } from '@/components/AboutCard/AboutCard';
 import { ServicesList } from '@/components/ServicesList/ServicesList';
+import Slider from '@/components/Slider/Slider';
 
-export default function Home() {
+const Home = () => {
   const t = useTranslations('Home');
   return (
     <>
@@ -54,13 +57,16 @@ export default function Home() {
             <ServicesList className={cls.servicesList}></ServicesList>
           </div>
         </SectionLayout>
-        <SectionLayout>
+        <SectionLayout classes={cls.wrapper}>
           <Title
             lineVariant={LineVariants.VARIANT_THREE}
             text={t('Partners')}
           />
+          <Slider />
         </SectionLayout>
       </main>
     </>
   );
-}
+};
+
+export default Home;
