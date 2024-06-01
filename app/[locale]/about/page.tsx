@@ -4,11 +4,13 @@ import cls from './page.module.scss';
 import { SectionLayout } from '@/components/SectionLayout/SectionLayout';
 import { LineVariants, Title } from '@/components/Title/Title';
 import TitleAboutDecor from '@/public/images/text/about.png';
+import TitleStocksDecor from '@/public/images/text/stocks.png';
 import { classNames } from '@/utils/classNames/classNames';
 import Image from 'next/image';
 import RussiaIcon from '@/public/images/countries/russia-wide.png';
 import JapanIcon from '@/public/images/countries/japan.png';
 import CanadaIcon from '@/public/images/countries/canada.png';
+import { Description } from '@/components/Description/Description';
 
 export default function About() {
   return (
@@ -67,6 +69,17 @@ export default function About() {
             </div>
             <div className={cls.aboutImg}></div>
           </div>
+        </SectionLayout>
+        <SectionLayout>
+          <Title
+            lineVariant={LineVariants.VARIANT_FIVE}
+            text="Stocks"
+            decorText={TitleStocksDecor}
+          />
+          <Description className={cls.stocksDescr}>
+            В распоряжении компании есть склады, которые могут быть использованы
+            для хранения грузов перед отправкой
+          </Description>
         </SectionLayout>
       </main>
     </>
