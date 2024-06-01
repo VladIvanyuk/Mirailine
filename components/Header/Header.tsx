@@ -1,6 +1,6 @@
 import cls from './Header.module.scss';
 import Image from 'next/image';
-import Logo from '@/public/logo.png';
+import Logo from '@/public/images/logo.png';
 import { classNames } from '@/utils/classNames/classNames';
 import { IHeaderProps } from './types';
 import Link from 'next/link';

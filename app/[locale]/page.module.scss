@@ -1,5 +1,5 @@
 .promo {
-  background-image: url('../../public/sea.png');
+  background-image: url('../../public/images/sea.png');
   min-height: 950px;
   overflow: hidden;
 }
@@ -40,17 +40,35 @@
   color: var(--lightest-blue);
 }
 
-.servicesDescrWrapper {
+.aboutDescrWrapper {
   max-width: 356px;
+  display: flex;
+  align-items: flex-end;
 }
 
-.servicesCards {
+.aboutCards {
   width: 100%;
   display: flex;
   justify-content: flex-end;
   gap: 30px;
 }
 
-.servicesContent {
+.aboutContent {
   display: flex;
+}
+
+.servicesContent {
+  min-height: 468px;
+  display: flex;
+  gap: 30px;
+}
+
+.servicesImg,
+.servicesList {
+  flex-basis: 50%;
+}
+
+.servicesImg {
+  background-image: url('../../public/images/employee.png');
+  background-position: right;
 }

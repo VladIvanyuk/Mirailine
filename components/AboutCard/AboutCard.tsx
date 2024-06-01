@@ -1,20 +1,20 @@
 import { classNames } from '@/utils/classNames/classNames';
-import cls from './ServicesCard.module.scss';
+import cls from './AboutCard.module.scss';
 import Link from 'next/link';
 
-export enum ServicesBGPic {
+export enum AboutBGPic {
   PLANET = 'planet',
   SHIP = 'ship',
   STOCK = 'stock',
 }
 
-interface IServicesCardProps {
-  img: ServicesBGPic;
+interface IAboutCardProps {
+  img: AboutBGPic;
   title: string;
   page: string;
 }
 
-export const ServicesCard = ({ img, title, page }: IServicesCardProps) => {
+export const AboutCard = ({ img, title, page }: IAboutCardProps) => {
   return (
     <li className={classNames(cls.card, {}, [cls[img]])}>
       <h3 className={cls.cardTitle}>{title}</h3>
