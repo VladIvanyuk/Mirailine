@@ -3,10 +3,41 @@ import Image from 'next/image';
 import Logo from '@/public/images/logo.png';
 import { classNames } from '@/utils/classNames/classNames';
 import { IHeaderProps } from './types';
-import Link from 'next/link';
 import { useLocale, useTranslations } from 'next-intl';
 import { LocaleSwitcher } from '../LocaleSwitcher/LocaleSwitcher';
 import { SectionLayout } from '../SectionLayout/SectionLayout';
+import { NavLink } from '../NavLink/NavLink';
+
+const Routes = [
+  {
+    name: 'Home',
+    route: '/',
+  },
+  {
+    name: 'About',
+    route: '/about',
+  },
+  {
+    name: 'Services',
+    route: '/services',
+  },
+  {
+    name: 'Schedule',
+    route: '/schedule',
+  },
+  {
+    name: 'Prices',
+    route: '/prices',
+  },
+  {
+    name: 'Tracking',
+    route: '/tracking',
+  },
+  {
+    name: 'Contacts',
+    route: '/contacts',
+  },
+];
 
 export const Header = ({ view }: IHeaderProps) => {
   const t = useTranslations('Navigations');
@@ -23,53 +54,16 @@ export const Header = ({ view }: IHeaderProps) => {
           />
           <nav className={cls.nav}>
             <ul className={cls.navList}>
-              <li>
-                <Link className={cls.navLink} href={`/${activeLocale}`}>
-                  {t('Home')}
-                </Link>
-              </li>
-              <li>
-                <Link className={cls.navLink} href={`/${activeLocale}/about`}>
-                  {t('About')}
-                </Link>
-              </li>
-              <li>
-                <Link
+              {Routes.map((route) => (
+                <NavLink
                   className={cls.navLink}
-                  href={`/${activeLocale}/services`}
+                  locale={activeLocale}
+                  route={route.route}
+                  key={route.name}
                 >
-                  {t('Services')}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className={cls.navLink}
-                  href={`/${activeLocale}/schedule`}
-                >
-                  {t('Schedule')}
-                </Link>
-              </li>
-              <li>
-                <Link className={cls.navLink} href={`/${activeLocale}/prices`}>
-                  {t('Prices')}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className={cls.navLink}
-                  href={`/${activeLocale}/tracking`}
-                >
-                  {t('Tracking')}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className={cls.navLink}
-                  href={`/${activeLocale}/contacts`}
-                >
-                  {t('Contacts')}
-                </Link>
-              </li>
+                  {t(route.name)}
+                </NavLink>
+              ))}
             </ul>
           </nav>
           <LocaleSwitcher />
