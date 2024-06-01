@@ -54,6 +54,12 @@ export default function Home() {
             <ServicesList className={cls.servicesList}></ServicesList>
           </div>
         </SectionLayout>
+        <SectionLayout>
+          <Title
+            lineVariant={LineVariants.VARIANT_THREE}
+            text={t('Partners')}
+          />
+        </SectionLayout>
       </main>
     </>
   );

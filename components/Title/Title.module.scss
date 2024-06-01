@@ -14,13 +14,25 @@
 }
 
 .variantOne {
+  padding-top: 10px;
   background-image: url('../../public/images/lines/variant-one.png');
   background-repeat: no-repeat;
   background-position-x: 240px;
+  background-position-y: 15px;
 }
 
 .variantTwo {
+  padding-top: 15px;
   background-image: url('../../public/images/lines/variant-two.png');
   background-repeat: no-repeat;
   background-position-x: 730px;
+  background-position-y: 15px;
+}
+
+.variantThree {
+  padding-top: 10px;
+  background-image: url('../../public/images/lines/variant-three.png');
+  background-repeat: no-repeat;
+  background-position-x: 240px;
+  background-position-y: 15px;
 }
