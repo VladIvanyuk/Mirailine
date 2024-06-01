@@ -21,10 +21,9 @@ export const NavLink = ({
 }: INavLinkProps) => {
   const pathname = usePathname();
   const isCurrentRoute = pathname === `/${locale}${route}`;
-  console.log(pathname, `/${locale}${route}`);
   const mods = {
     [cls.active]: isCurrentRoute,
-    [cls.isHome]: pathname === '/ru' && route === '/',
+    [cls.isHome]: (pathname === '/ru' || pathname === '/en') && route === '/',
   };
   return (
     <li className={classNames(cls.navLink, mods, [className])}>
