@@ -16,39 +16,39 @@ interface IServicesListProps {
 const services = [
   {
     pic: Storage,
-    text: 'Хранение груза на наших складах',
+    text: 'Storage',
   },
   {
     pic: Transshipment,
-    text: 'Перевалка груза в порту Тояма',
+    text: 'Transshipment',
   },
   {
     pic: Organizations,
-    text: 'Организация морской перевозки',
+    text: 'Organizations',
   },
   {
     pic: Customs,
-    text: 'Таможенное оформление и сопровождение',
+    text: 'Customs',
   },
   {
     pic: Photo,
-    text: 'Фотоопись автомобиля',
+    text: 'Photo',
   },
   {
     pic: Tracking,
-    text: 'Отслеживание движение груза',
+    text: 'Tracking',
   },
 ];
 
 export const ServicesList = ({ className }: IServicesListProps) => {
-  const t = useTranslations();
+  const t = useTranslations('Home');
 
   return (
     <div className={classNames(cls.servicesList, {}, [className])}>
       {services.map(({ pic, text }, index) => (
         <ServicesListItem
           pic={pic}
-          text={text}
+          text={t(text)}
           number={index + 1}
           key={index}
         />

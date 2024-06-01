@@ -3,6 +3,7 @@ import { ContactTypes, ContactsItem } from '../ContactsItem/ContactsItem';
 import cls from './ContactsList.module.scss';
 import { classNames } from '@/utils/classNames/classNames';
 import Image, { StaticImageData } from 'next/image';
+import { useTranslations } from 'next-intl';
 
 interface IContactsListProps {
   phone: string;
@@ -23,16 +24,13 @@ export const ContactsList = ({
   countrySubtext = '',
   countryImg,
 }: IContactsListProps) => {
+  const t = useTranslations('Footer');
   return (
-    <div className={cls.contactsTextWrapper}>
+    <>
       {country ? (
         <div className={cls.contactsContent}>
           <Image src={countryImg as StaticImport} alt={country} />
-          <div
-            className={classNames(cls.contactsTextBlock, {}, [
-              cls.contactsTextCountryBlock,
-            ])}
-          >
+          <div>
             <p
               className={classNames(cls.contactsTextTop, {}, [
                 cls.contactsTextCountry,
@@ -53,22 +51,9 @@ export const ContactsList = ({
         </div>
       ) : (
         <div className={cls.contactsContent}>
-          <div className={cls.contactsTextBlock}>
-            <p
-              className={classNames(cls.contactsTextSecondary, {}, [
-                cls.contactsText,
-              ])}
-            >
-              отдел
-            </p>
-            <p
-              className={classNames(cls.contactsTextSecondary, {}, [
-                cls.contactsText,
-              ])}
-            >
-              претензий
-            </p>
-          </div>
+          <p className={classNames(cls.contactsText, {}, [cls.claims])}>
+            {t('Claims')}
+          </p>
         </div>
       )}
       <ul className={cls.contactsList}>
@@ -77,6 +62,6 @@ export const ContactsList = ({
         <ContactsItem type={ContactTypes.EMAIL} text={email} />
         {children}
       </ul>
-    </div>
+    </>
   );
 };

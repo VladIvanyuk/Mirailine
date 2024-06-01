@@ -9,12 +9,24 @@
     "Services": "Services"
   },
   "Home": {
-    "Promo": "Transportation of all types of cargo",
+    "Promo": "Transportation of all types of cargo",
     "Services": "Services",
     "About": "About us",
-    "Partners": "Our partners"
+    "Partners": "Our partners",
+    "AboutDescr": "we provide comprehensive assistance in the delivery and warehousing of goods",
+    "Logistic": "Professional logistics services",
+    "Stocks": "Our own warehouses",
+    "Ships": "Regular voyages to Vladivostok",
+    "HelpDescr": "HOW CAN WE HELP",
+    "Storage": "Cargo storage in our warehouses",
+    "Transshipment": "Transloading in the port of Toyama",
+    "Organizations": "Organizing shipments by sea",
+    "Customs": "Customs clearance",
+    "Photo": "Photo inventory of cars before loading",
+    "Tracking": "Ability to track your cargo"
   },
   "Footer": {
+    "Claims": "claims department",
     "Days": "Mon - Fri",
     "Text": "Local time",
     "Japan": "Japan",

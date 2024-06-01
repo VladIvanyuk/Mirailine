@@ -25,24 +25,21 @@ const Home = () => {
           <Title lineVariant={LineVariants.VARIANT_ONE} text={t('About')} />
           <div className={cls.aboutContent}>
             <div className={cls.aboutDescrWrapper}>
-              <Description>
-                мы оказываем всестороннюю помощь в&nbsp;доставке
-                и&nbsp;складировании грузов
-              </Description>
+              <Description>{t('AboutDescr')}</Description>
             </div>
             <ul className={cls.aboutCards}>
               <AboutCard
-                title={'Профессиональные логистические услуги'}
+                title={t('Logistic')}
                 img={AboutBGPic.PLANET}
                 page="services"
               />
               <AboutCard
-                title={'Cобственные склады'}
+                title={t('Stocks')}
                 img={AboutBGPic.STOCK}
                 page="about"
               />
               <AboutCard
-                title={'Регулярные рейсы во\u00A0Владивосток'}
+                title={t('Ships')}
                 img={AboutBGPic.SHIP}
                 page="schedule"
               />
@@ -51,10 +48,10 @@ const Home = () => {
         </SectionLayout>
         <SectionLayout classes={cls.wrapper}>
           <Title lineVariant={LineVariants.VARIANT_TWO} text={t('Services')} />
-          <Description>чем мы можем помочь</Description>
+          <Description>{t('HelpDescr')}</Description>
           <div className={cls.servicesContent}>
             <div className={cls.servicesImg}></div>
-            <ServicesList className={cls.servicesList}></ServicesList>
+            <ServicesList className={cls.servicesList} />
           </div>
         </SectionLayout>
         <SectionLayout classes={cls.wrapper}>
