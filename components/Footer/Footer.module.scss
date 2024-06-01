@@ -1,5 +1,9 @@
 .footer {
-  background-color: var(--main-blue);
+  background: var(--main-blue);
+  background-image: url('../../public/images/lines/footer-one.png'),
+    url('../../public/images/lines/footer-two.png');
+  background-repeat: no-repeat, no-repeat;
+  background-position: bottom right, top left;
 }
 
 .footerWrapper {
@@ -50,4 +54,16 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
+}
+
+.footerBottom {
+  padding: 50px 0px;
+  border-top: 1px solid #1853b2;
+  font-size: 0;
+}
+
+.footerBottomText {
+  font-weight: 400;
+  font-size: 15px;
+  color: var(--white);
 }

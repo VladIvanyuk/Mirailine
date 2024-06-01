@@ -11,7 +11,6 @@ import PartnerFive from '../../public/images/partners/partner-five.png';
 import PartnerSix from '../../public/images/partners/partner-six.png';
 import PartnerSeven from '../../public/images/partners/partner-seven.png';
 import Image from 'next/image';
-import cls from './Slider.module.scss';
 
 const Slider = () => {
   return (

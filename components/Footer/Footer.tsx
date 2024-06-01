@@ -103,6 +103,11 @@ export const Footer = () => {
           </ul>
         </div>
       </SectionLayout>
+      <div className={cls.footerBottom}>
+        <SectionLayout>
+          <p className={cls.footerBottomText}>{t1('Copyright')}</p>
+        </SectionLayout>
+      </div>
     </footer>
   );
 };
