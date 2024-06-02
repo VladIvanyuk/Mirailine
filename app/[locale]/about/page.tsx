@@ -11,6 +11,7 @@ import RussiaIcon from '@/public/images/countries/russia-wide.png';
 import JapanIcon from '@/public/images/countries/japan.png';
 import CanadaIcon from '@/public/images/countries/canada.png';
 import { Description } from '@/components/Description/Description';
+import { AdressItem } from '@/components/AdressItem/AdressItem';
 
 export default function About() {
   return (
@@ -80,6 +81,67 @@ export default function About() {
             В распоряжении компании есть склады, которые могут быть использованы
             для хранения грузов перед отправкой
           </Description>
+          <div className={cls.stockContent}>
+            <ul className={cls.addressList}>
+              <li>
+                <AdressItem title="Порт Фусики">
+                  <p>高岡市伏木万葉ふ頭</p>
+                  <p>Fushikimanyofuto, Takaoka-shi, Toyama-ken</p>
+                </AdressItem>
+              </li>
+              <li>
+                <AdressItem title="Порт Тоямашинко">
+                  <p>Kitafuto, Toyamashinko, Imizu-shi, Toyama-ken</p>
+                </AdressItem>
+              </li>
+              <li>
+                <AdressItem title="Склад Т1">
+                  <p>富山県射水市新堀5</p>
+                  <p>Toyama-ken, Imizu-shi, Shinbori 5</p>
+                </AdressItem>
+              </li>
+              <li>
+                <AdressItem title="Склад Т2">
+                  <p>富山県高岡市堀岡又新2-2</p>
+                  <p>Toyama-ken, Takaoka-shi, Horiokamatashin 2 – 2</p>
+                </AdressItem>
+              </li>
+            </ul>
+            <div className={cls.map}></div>
+          </div>
+          <div className={cls.stockContent}>
+            <div className={cls.addressList}>
+              <div>
+                <AdressItem title="Порт Осаки">
+                  <p>HS-3 大阪港ターミナル</p>
+                  <p>〒554-0041 大阪府大阪港此花区北港白津1-9-25</p>
+                  <p>HS-3 terminal of Osaka Port</p>
+                  <p>
+                    〒554-0041 Osaka-fu, Osaka-shi, Konohana Ward,
+                    Hokkoshiratsu, 1-chōme-9-25
+                  </p>
+                </AdressItem>
+              </div>
+            </div>
+            <div className={cls.map}></div>
+          </div>
+          <div className={cls.stockContent}>
+            <div className={cls.addressList}>
+              <div>
+                <AdressItem title="Порт Иокогама">
+                  <p>
+                    京浜港大黒埠頭地区指定保税地域大黒埠頭 K号荷捌地〒230-0054
+                    神奈川県横浜市鶴見区大黒ふ頭20
+                  </p>
+                  <p>Cargo handling area K</p>
+                  <p>
+                    20 Daikokufuto, Tsurumi Ward, Yokohama, Kanagawa 230-0054
+                  </p>
+                </AdressItem>
+              </div>
+            </div>
+            <div className={cls.map}></div>
+          </div>
         </SectionLayout>
       </main>
     </>
