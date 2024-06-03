@@ -11,18 +11,23 @@ import RussiaIcon from '@/public/images/countries/russia-wide.png';
 import JapanIcon from '@/public/images/countries/japan.png';
 import CanadaIcon from '@/public/images/countries/canada.png';
 import { Description } from '@/components/Description/Description';
-import { AdressItem } from '@/components/AdressItem/AdressItem';
+import { AdressItemWithChange } from '@/components/AdressItemWithChange/AdressItemWithChange';
 import { StockMap } from '@/components/StockMap/StockMap';
+import { AdressItem } from '@/components/AdressItem/AdressItem';
+import { Map, Maps } from '@/components/Map/Map';
+import { mapLinks } from '@/components/Map/MapLinks';
 
 export default function About() {
+  console.log(mapLinks);
+
   return (
     <>
       <Header view={HeaderView.About} />
       <main>
-        <SectionLayout className='container'>
+        <SectionLayout className="container">
           <Title
             lineVariant={LineVariants.VARIANT_FOUR}
-            text='About'
+            text="About"
             decorText={TitleAboutDecor}
           />
           <div className={cls.aboutWrapper}>
@@ -48,7 +53,7 @@ export default function About() {
                     cls.aboutThinTextWithIcons,
                   ])}
                 >
-                  <Image src={RussiaIcon} alt='Флаг России' />
+                  <Image src={RussiaIcon} alt="Флаг России" />
                   <span>Владивосток, Россия</span>
                 </li>
                 <li
@@ -56,7 +61,7 @@ export default function About() {
                     cls.aboutThinTextWithIcons,
                   ])}
                 >
-                  <Image src={JapanIcon} alt='Флаг США' />
+                  <Image src={JapanIcon} alt="Флаг США" />
                   <span>Лос-Анджелес, США</span>
                 </li>
                 <li
@@ -64,7 +69,7 @@ export default function About() {
                     cls.aboutThinTextWithIcons,
                   ])}
                 >
-                  <Image src={CanadaIcon} alt='Флаг Канады' />
+                  <Image src={CanadaIcon} alt="Флаг Канады" />
                   <span>Ванкувер, Канада</span>
                 </li>
               </ul>
@@ -75,7 +80,7 @@ export default function About() {
         <SectionLayout>
           <Title
             lineVariant={LineVariants.VARIANT_FIVE}
-            text='Stocks'
+            text="Stocks"
             decorText={TitleStocksDecor}
           />
           <Description className={cls.stocksDescr}>
@@ -86,7 +91,7 @@ export default function About() {
           <div className={cls.stockContent}>
             <div className={cls.addressList}>
               <div>
-                <AdressItem title='Порт Осаки'>
+                <AdressItem title="Порт Осаки">
                   <p>HS-3 大阪港ターミナル</p>
                   <p>〒554-0041 大阪府大阪港此花区北港白津1-9-25</p>
                   <p>HS-3 terminal of Osaka Port</p>
@@ -97,12 +102,14 @@ export default function About() {
                 </AdressItem>
               </div>
             </div>
-            <div className={cls.map}></div>
+            <div className={cls.map}>
+              <Map src={mapLinks[Maps.OSAKA]} />
+            </div>
           </div>
           <div className={cls.stockContent}>
             <div className={cls.addressList}>
               <div>
-                <AdressItem title='Порт Иокогама'>
+                <AdressItem title="Порт Иокогама">
                   <p>
                     京浜港大黒埠頭地区指定保税地域大黒埠頭 K号荷捌地〒230-0054
                     神奈川県横浜市鶴見区大黒ふ頭20
@@ -114,7 +121,9 @@ export default function About() {
                 </AdressItem>
               </div>
             </div>
-            <div className={cls.map}></div>
+            <div className={cls.map}>
+              <Map src={mapLinks[Maps.YOKOHAMA]} />
+            </div>
           </div>
         </SectionLayout>
       </main>

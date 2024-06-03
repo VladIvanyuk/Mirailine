@@ -1,4 +1,4 @@
-import { Maps } from './StockMap';
+import { Maps } from './Map';
 
 export const mapLinks: Record<Maps, string> = {
   fushiki:
@@ -7,4 +7,8 @@ export const mapLinks: Record<Maps, string> = {
     'https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3195.8409738883347!2d137.1003160764038!3d36.77438226915355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzbCsDQ2JzI3LjgiTiAxMzfCsDA2JzEwLjQiRQ!5e0!3m2!1sru!2sru!4v1717404169311!5m2!1sru!2sru',
   t1: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3196.548351425569!2d137.1229587063595!3d36.757410676255354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5ff79db783ea1fe7%3A0x6ebf515871851c8e!2sMIRAI%20LINE%20T1!5e0!3m2!1sru!2sru!4v1717403937708!5m2!1sru!2sru',
   t2: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3195.9281766682825!2d137.09693481067023!3d36.77229044003758!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5ff79dcb9cd60b67%3A0x472e634812d583a5!2sMIRAI%20LINE%20T2!5e0!3m2!1sru!2sru!4v1717403849627!5m2!1sru!2sru',
+  osaka:
+    'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1363.1413635234771!2d135.40797958963742!3d34.66113191146993!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e9ccdb9a53e9%3A0x61d35fea0037221f!2z5aSn6Ziq5riv5Z-g6aCt44K_44O844Of44OK44Or5qCq5byP5Lya56S-IEhTLTPoiJ7mtLLjg6Tjg7zjg4k!5e1!3m2!1sru!2sru!4v1717412609972!5m2!1sru!2sru',
+  yokohama:
+    'https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1624.9944235362025!2d139.69819962771376!3d35.455070541504575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzXCsDI3JzE4LjMiTiAxMznCsDQxJzU2LjgiRQ!5e0!3m2!1sru!2sru!4v1717411355411!5m2!1sru!2sru',
 };

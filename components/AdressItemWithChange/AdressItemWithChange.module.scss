@@ -10,7 +10,8 @@
   font-size: 22px;
   line-height: 140%;
   color: var(--main-blue);
-  border-bottom: 2px solid var(--main-blue);
+  cursor: pointer;
+  border-bottom: 2px solid var(--lightest-blue);
   transition: all 0.3s ease-in-out;
 }
 
@@ -27,4 +28,5 @@
 }
 
 .active {
+  border-bottom: 2px solid var(--main-blue);
 }
