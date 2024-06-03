@@ -93,7 +93,9 @@ export default function About() {
               <div>
                 <AdressItem title="Порт Осаки">
                   <p>HS-3 大阪港ターミナル</p>
-                  <p>〒554-0041 大阪府大阪港此花区北港白津1-9-25</p>
+                  <p className={cls.addressItemTop}>
+                    〒554-0041 大阪府大阪港此花区北港白津1-9-25
+                  </p>
                   <p>HS-3 terminal of Osaka Port</p>
                   <p>
                     〒554-0041 Osaka-fu, Osaka-shi, Konohana Ward,
@@ -110,7 +112,7 @@ export default function About() {
             <div className={cls.addressList}>
               <div>
                 <AdressItem title="Порт Иокогама">
-                  <p>
+                  <p className={cls.addressItemTop}>
                     京浜港大黒埠頭地区指定保税地域大黒埠頭 K号荷捌地〒230-0054
                     神奈川県横浜市鶴見区大黒ふ頭20
                   </p>
