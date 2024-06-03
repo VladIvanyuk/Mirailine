@@ -11,8 +11,7 @@ import RussiaIcon from '@/public/images/countries/russia-wide.png';
 import JapanIcon from '@/public/images/countries/japan.png';
 import CanadaIcon from '@/public/images/countries/canada.png';
 import { Description } from '@/components/Description/Description';
-import { AdressItemWithChange } from '@/components/AdressItemWithChange/AdressItemWithChange';
-import { StockMap } from '@/components/StockMap/StockMap';
+import { StockMaps } from '@/components/StockMaps/StockMaps';
 import { AdressItem } from '@/components/AdressItem/AdressItem';
 import { Map, Maps } from '@/components/Map/Map';
 import { mapLinks } from '@/components/Map/MapLinks';
@@ -87,7 +86,7 @@ export default function About() {
             В распоряжении компании есть склады, которые могут быть использованы
             для хранения грузов перед отправкой
           </Description>
-          <StockMap />
+          <StockMaps />
           <div className={cls.stockContent}>
             <div className={cls.addressList}>
               <div>

@@ -1,6 +1,5 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
 import { classNames } from '@/utils/classNames/classNames';
 import cls from './AdressItem.module.scss';
 import { ReactNode } from 'react';

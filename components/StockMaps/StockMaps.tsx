@@ -1,16 +1,16 @@
 'use client';
 
-import cls from './StockMap.module.scss';
+import cls from './StockMaps.module.scss';
 import { AdressItemWithChange } from '../AdressItemWithChange/AdressItemWithChange';
 import { Map, Maps } from '../Map/Map';
 import { useState } from 'react';
 import { mapLinks } from '../Map/MapLinks';
 
-interface IStockMapProps {
+interface IStockMapsProps {
   className?: string;
 }
 
-export const StockMap = ({ className }: IStockMapProps) => {
+export const StockMaps = ({ className }: IStockMapsProps) => {
   const [map, setMap] = useState(Maps.T1);
 
   const findCurrentMap = (map: Maps) => {
