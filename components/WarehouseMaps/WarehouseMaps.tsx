@@ -1,16 +1,17 @@
 'use client';
 
-import cls from './StockMaps.module.scss';
+import cls from './WarehouseMaps.module.scss';
 import { AdressItemWithChange } from '../AdressItemWithChange/AdressItemWithChange';
 import { Map, Maps } from '../Map/Map';
 import { useState } from 'react';
 import { mapLinks } from '../Map/MapLinks';
 
-interface IStockMapsProps {
+interface IWarehouseMapsProps {
   className?: string;
+  titles: Record<string, string>;
 }
 
-export const StockMaps = ({ className }: IStockMapsProps) => {
+export const WarehouseMaps = ({ className, titles }: IWarehouseMapsProps) => {
   const [map, setMap] = useState(Maps.FUSHIKI);
 
   const findCurrentMap = (map: Maps) => {
@@ -31,15 +32,17 @@ export const StockMaps = ({ className }: IStockMapsProps) => {
   };
 
   const currentMap = findCurrentMap(map);
+
+  console.log(titles);
   return (
-    <div className={cls.stockContent}>
+    <div className={cls.warehouseContent}>
       <ul className={cls.addressList}>
         <li>
           <AdressItemWithChange
             onClick={onClickHandler}
             map={map}
             name='fushiki'
-            title='Порт Фусики'
+            title={titles['Fushiki']}
           >
             <p>高岡市伏木万葉ふ頭</p>
             <p>Fushikimanyofuto, Takaoka-shi, Toyama-ken</p>
@@ -50,7 +53,7 @@ export const StockMaps = ({ className }: IStockMapsProps) => {
             onClick={onClickHandler}
             map={map}
             name='toyama'
-            title='Порт Тоямашинко'
+            title={titles['Toyamashinko']}
           >
             <p>Kitafuto, Toyamashinko, Imizu-shi, Toyama-ken</p>
           </AdressItemWithChange>
@@ -60,7 +63,7 @@ export const StockMaps = ({ className }: IStockMapsProps) => {
             onClick={onClickHandler}
             map={map}
             name='t1'
-            title='Склад Т1'
+            title={titles['T1']}
           >
             <p>富山県射水市新堀5</p>
             <p>Toyama-ken, Imizu-shi, Shinbori 5</p>
@@ -71,7 +74,7 @@ export const StockMaps = ({ className }: IStockMapsProps) => {
             onClick={onClickHandler}
             map={map}
             name='t2'
-            title='Склад Т2'
+            title={titles['T2']}
           >
             <p>富山県高岡市堀岡又新2-2</p>
             <p>Toyama-ken, Takaoka-shi, Horiokamatashin 2 – 2</p>

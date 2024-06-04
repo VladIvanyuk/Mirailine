@@ -15,7 +15,7 @@
     "Partners": "Our partners",
     "AboutDescr": "we provide comprehensive assistance in the delivery and warehousing of goods",
     "Logistic": "Professional logistics services",
-    "Stocks": "Our own warehouses",
+    "Warehouse": "Our own warehouses",
     "Ships": "Regular voyages to Vladivostok",
     "HelpDescr": "HOW CAN WE HELP",
     "Storage": "Cargo storage in our warehouses",
@@ -33,5 +33,22 @@
     "Russia": "Russia",
     "ContactsIn": "contacts in",
     "Copyright": "Mirai Line © 2024 All Rights Reserved"
+  },
+  "About": {
+    "AboutCompanyInfoFirstParagraph": "Mirai Line Co., Ltd is an affiliated company created with a goal of organizing freight shippings by sea and provide freight forwarding services with help of the largest carriers in Japan.",
+    "AboutCompanyInfoSecondParagraph": "Our company organizes regular shipping by sea of equipment, vehicles, general cargo and more.",
+    "AboutCompanyInfoThirdParagraph": "We provide a full spectrum of services related to shipping cargo from Fushiki, Toyamashinko, Osaka, and Yokohama ports in Japan to the following destinations:",
+    "Russia": "Vladivostok, Russia",
+    "USA": "Los Angeles, USA",
+    "Canada": "Vancouver, Canada",
+    "WarehouseDescr": "Our company has yards available for cargo storage while it's awaiting to be shipped.",
+    "Fushiki": "Fushiki Port",
+    "Toyamashinko": "Toyamashinko Port",
+    "T1": "T1 Warehouse",
+    "T2": "T2 Warehouse",
+    "Osaka": "Osaka Port",
+    "Yokohama": "Yokohama Port",
+    "About": "About us",
+    "Warehouses": "Warehouses"
   }
 }

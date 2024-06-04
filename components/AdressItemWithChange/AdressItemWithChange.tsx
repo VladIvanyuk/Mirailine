@@ -1,6 +1,3 @@
-'use client';
-
-import { useTranslations } from 'next-intl';
 import { classNames } from '@/utils/classNames/classNames';
 import cls from './AdressItemWithChange.module.scss';
 import { ReactNode } from 'react';

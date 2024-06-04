@@ -31,17 +31,17 @@ const Home = () => {
               <AboutCard
                 title={t('Logistic')}
                 img={AboutBGPic.PLANET}
-                page="services"
+                page='services'
               />
               <AboutCard
-                title={t('Stocks')}
-                img={AboutBGPic.STOCK}
-                page="about"
+                title={t('Warehouses')}
+                img={AboutBGPic.WAREHOUSE}
+                page='about'
               />
               <AboutCard
                 title={t('Ships')}
                 img={AboutBGPic.SHIP}
-                page="schedule"
+                page='schedule'
               />
             </ul>
           </div>

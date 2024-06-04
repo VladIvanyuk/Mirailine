@@ -5,7 +5,7 @@ import Link from 'next/link';
 export enum AboutBGPic {
   PLANET = 'planet',
   SHIP = 'ship',
-  STOCK = 'stock',
+  WAREHOUSE = 'warehouse',
 }
 
 interface IAboutCardProps {

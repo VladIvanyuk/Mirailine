@@ -4,47 +4,48 @@ import cls from './page.module.scss';
 import { SectionLayout } from '@/components/SectionLayout/SectionLayout';
 import { LineVariants, Title } from '@/components/Title/Title';
 import TitleAboutDecor from '@/public/images/text/about.png';
-import TitleStocksDecor from '@/public/images/text/stocks.png';
+import TitleWarehouseDecor from '@/public/images/text/warehouse.png';
 import { classNames } from '@/utils/classNames/classNames';
 import Image from 'next/image';
 import RussiaIcon from '@/public/images/countries/russia-wide.png';
 import JapanIcon from '@/public/images/countries/japan.png';
 import CanadaIcon from '@/public/images/countries/canada.png';
 import { Description } from '@/components/Description/Description';
-import { StockMaps } from '@/components/StockMaps/StockMaps';
+import { WarehouseMaps } from '@/components/WarehouseMaps/WarehouseMaps';
 import { AdressItem } from '@/components/AdressItem/AdressItem';
 import { Map, Maps } from '@/components/Map/Map';
 import { mapLinks } from '@/components/Map/MapLinks';
+import { useTranslations } from 'next-intl';
 
 export default function About() {
-  console.log(mapLinks);
+  const t = useTranslations('About');
 
+  const AdressTitles: Record<string, string> = {
+    Fushiki: t('Fushiki'),
+    Toyamashinko: t('Toyamashinko'),
+    T1: t('T1'),
+    T2: t('T2'),
+  };
   return (
     <>
       <Header view={HeaderView.About} />
       <main>
-        <SectionLayout className="container">
+        <SectionLayout className='container'>
           <Title
             lineVariant={LineVariants.VARIANT_FOUR}
-            text="About"
+            text={t('About')}
             decorText={TitleAboutDecor}
           />
           <div className={cls.aboutWrapper}>
             <div className={cls.aboutText}>
               <p className={cls.aboutBoldText}>
-                Mirai Line Co., LTD является аффилированной компанией, созданной
-                с целью организации морских перевозок и оказания
-                форвардингово-логистических услуг при поддержке крупнейших
-                грузоперевозчиков Японии.
+                {t('AboutCompanyInfoFirstParagraph')}
               </p>
               <p className={classNames(cls.aboutThinText, {}, [])}>
-                Компания организует регулярные морские перевозки техники,
-                автомобилей, генерального груза и пр.
+                {t('AboutCompanyInfoSecondParagraph')}
               </p>
               <p className={classNames(cls.aboutThinText, {}, [])}>
-                Мы осуществляем полный спектр услуг по транспортировке грузов из
-                портов Фусики, Тояма Шинко, Осака и Йокогамы в Японии по
-                следующим направлениям:
+                {t('AboutCompanyInfoThirdParagraph')}
               </p>
               <ul>
                 <li
@@ -52,24 +53,24 @@ export default function About() {
                     cls.aboutThinTextWithIcons,
                   ])}
                 >
-                  <Image src={RussiaIcon} alt="Флаг России" />
-                  <span>Владивосток, Россия</span>
+                  <Image src={RussiaIcon} alt='Флаг России' />
+                  <span>{t('Russia')}</span>
                 </li>
                 <li
                   className={classNames(cls.aboutThinText, {}, [
                     cls.aboutThinTextWithIcons,
                   ])}
                 >
-                  <Image src={JapanIcon} alt="Флаг США" />
-                  <span>Лос-Анджелес, США</span>
+                  <Image src={JapanIcon} alt='Флаг США' />
+                  <span>{t('USA')}</span>
                 </li>
                 <li
                   className={classNames(cls.aboutThinText, {}, [
                     cls.aboutThinTextWithIcons,
                   ])}
                 >
-                  <Image src={CanadaIcon} alt="Флаг Канады" />
-                  <span>Ванкувер, Канада</span>
+                  <Image src={CanadaIcon} alt='Флаг Канады' />
+                  <span>{t('Canada')}</span>
                 </li>
               </ul>
             </div>
@@ -79,18 +80,17 @@ export default function About() {
         <SectionLayout>
           <Title
             lineVariant={LineVariants.VARIANT_FIVE}
-            text="Stocks"
-            decorText={TitleStocksDecor}
+            text={t('Warehouses')}
+            decorText={TitleWarehouseDecor}
           />
-          <Description className={cls.stocksDescr}>
-            В распоряжении компании есть склады, которые могут быть использованы
-            для хранения грузов перед отправкой
+          <Description className={cls.warehouseDescr}>
+            {t('WarehouseDescr')}
           </Description>
-          <StockMaps />
-          <div className={cls.stockContent}>
+          <WarehouseMaps titles={AdressTitles} />
+          <div className={cls.warehouseContent}>
             <div className={cls.addressList}>
               <div>
-                <AdressItem title="Порт Осаки">
+                <AdressItem title='Osaka'>
                   <p>HS-3 大阪港ターミナル</p>
                   <p className={cls.addressItemTop}>
                     〒554-0041 大阪府大阪港此花区北港白津1-9-25
@@ -107,10 +107,10 @@ export default function About() {
               <Map src={mapLinks[Maps.OSAKA]} />
             </div>
           </div>
-          <div className={cls.stockContent}>
+          <div className={cls.warehouseContent}>
             <div className={cls.addressList}>
               <div>
-                <AdressItem title="Порт Иокогама">
+                <AdressItem title='Yokohama'>
                   <p className={cls.addressItemTop}>
                     京浜港大黒埠頭地区指定保税地域大黒埠頭 K号荷捌地〒230-0054
                     神奈川県横浜市鶴見区大黒ふ頭20
