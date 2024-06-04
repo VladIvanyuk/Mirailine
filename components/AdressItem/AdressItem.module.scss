@@ -9,13 +9,9 @@
   font-weight: 600;
   font-size: 22px;
   line-height: 140%;
-  color: var(--main-blue);
-  border-bottom: 2px solid var(--main-blue);
+  color: var(--light-blue-sec);
+  border-bottom: 2px solid var(--light-blue-sec);
   transition: all 0.3s ease-in-out;
-}
-
-.adressItemTitle:hover {
-  border-bottom: 2px solid var(--main-blue);
 }
 
 .adressItemText {
@@ -24,7 +20,4 @@
   font-size: 18px;
   line-height: 140%;
   color: var(--grey);
-}
-
-.active {
 }

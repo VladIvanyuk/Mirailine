@@ -16,7 +16,8 @@
 }
 
 .adressItemTitle:hover {
-  border-bottom: 2px solid var(--main-blue);
+  color: var(--light-blue-sec);
+  border-bottom: 2px solid var(--light-blue-sec);
 }
 
 .adressItemText {
@@ -28,5 +29,6 @@
 }
 
 .active {
-  border-bottom: 2px solid var(--main-blue);
+  border-bottom: 2px solid var(--light-blue-sec);
+  color: var(--light-blue-sec);
 }

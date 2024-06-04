@@ -11,7 +11,7 @@ interface IStockMapsProps {
 }
 
 export const StockMaps = ({ className }: IStockMapsProps) => {
-  const [map, setMap] = useState(Maps.T1);
+  const [map, setMap] = useState(Maps.FUSHIKI);
 
   const findCurrentMap = (map: Maps) => {
     switch (map) {
@@ -38,8 +38,8 @@ export const StockMaps = ({ className }: IStockMapsProps) => {
           <AdressItemWithChange
             onClick={onClickHandler}
             map={map}
-            name="fushiki"
-            title="Порт Фусики"
+            name='fushiki'
+            title='Порт Фусики'
           >
             <p>高岡市伏木万葉ふ頭</p>
             <p>Fushikimanyofuto, Takaoka-shi, Toyama-ken</p>
@@ -49,8 +49,8 @@ export const StockMaps = ({ className }: IStockMapsProps) => {
           <AdressItemWithChange
             onClick={onClickHandler}
             map={map}
-            name="toyama"
-            title="Порт Тоямашинко"
+            name='toyama'
+            title='Порт Тоямашинко'
           >
             <p>Kitafuto, Toyamashinko, Imizu-shi, Toyama-ken</p>
           </AdressItemWithChange>
@@ -59,8 +59,8 @@ export const StockMaps = ({ className }: IStockMapsProps) => {
           <AdressItemWithChange
             onClick={onClickHandler}
             map={map}
-            name="t1"
-            title="Склад Т1"
+            name='t1'
+            title='Склад Т1'
           >
             <p>富山県射水市新堀5</p>
             <p>Toyama-ken, Imizu-shi, Shinbori 5</p>
@@ -70,8 +70,8 @@ export const StockMaps = ({ className }: IStockMapsProps) => {
           <AdressItemWithChange
             onClick={onClickHandler}
             map={map}
-            name="t2"
-            title="Склад Т2"
+            name='t2'
+            title='Склад Т2'
           >
             <p>富山県高岡市堀岡又新2-2</p>
             <p>Toyama-ken, Takaoka-shi, Horiokamatashin 2 – 2</p>
