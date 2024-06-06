@@ -11,11 +11,11 @@ import RussiaIcon from '@/public/images/countries/russia-wide.png';
 import JapanIcon from '@/public/images/countries/japan.png';
 import CanadaIcon from '@/public/images/countries/canada.png';
 import { Description } from '@/components/Description/Description';
-import { WarehouseMaps } from '@/components/WarehouseMaps/WarehouseMaps';
 import { AdressItem } from '@/components/AdressItem/AdressItem';
 import { Map, Maps } from '@/components/Map/Map';
 import { mapLinks } from '@/components/Map/MapLinks';
 import { useTranslations } from 'next-intl';
+import { WarehouseMaps } from '@/components/WarehouseMaps/WarehouseMaps';
 
 export default function About() {
   const t = useTranslations('About');

@@ -15,46 +15,56 @@
   padding-left: 200px;
 }
 
-.variantOne {
-  background-image: url('../../public/images/lines/variant-one.png');
-  background-repeat: no-repeat;
-  background-position-x: 240px;
-  background-position-y: 10px;
+.titleText {
+  position: relative;
 }
 
-.variantTwo {
-  background-image: url('../../public/images/lines/variant-two.png');
+.variantOne::before {
+  content: url('../../public/images/lines/variant-one.png');
+  display: block;
+  position: absolute;
+  right: 110%;
   background-repeat: no-repeat;
-  background-position-x: 730px;
-  background-position-y: 10px;
 }
 
-.variantThree {
-  background-image: url('../../public/images/lines/variant-three.png');
+.variantTwo::before {
+  content: url('../../public/images/lines/variant-two.png');
+  display: block;
+  position: absolute;
+  left: 110%;
   background-repeat: no-repeat;
-  background-position-x: 240px;
-  background-position-y: 10px;
 }
 
-.variantFour {
-  background-image: url('../../public/images/lines/variant-four.png');
+.variantThree::before {
+  content: url('../../public/images/lines/variant-three.png');
+  display: block;
+  position: absolute;
+  right: 110%;
   background-repeat: no-repeat;
-  background-position-x: 240px;
-  background-position-y: 10px;
 }
 
-.variantFive {
-  background-image: url('../../public/images/lines/variant-five.png');
+.variantFour::before {
+  content: url('../../public/images/lines/variant-four.png');
+  display: block;
+  position: absolute;
+  right: 110%;
   background-repeat: no-repeat;
-  background-position-x: 700px;
-  background-position-y: 10px;
 }
 
-.variantSix {
-  background-image: url('../../public/images/lines/variant-six.png');
+.variantFive::before {
+  content: url('../../public/images/lines/variant-four.png');
+  display: block;
+  position: absolute;
+  left: 110%;
   background-repeat: no-repeat;
-  background-position-x: 240px;
-  background-position-y: 10px;
+}
+
+.variantSix::before {
+  content: url('../../public/images/lines/variant-five.png');
+  display: block;
+  position: absolute;
+  right: 110%;
+  background-repeat: no-repeat;
 }
 
 .decor {
