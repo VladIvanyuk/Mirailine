@@ -11,10 +11,10 @@ export default function Services() {
     <>
       <Header view={HeaderView.Services} />
       <main>
-        <SectionLayout className="container">
+        <SectionLayout className='container'>
           <Title
             decorText={TitleServicesDecor}
-            text="Services"
+            text='Services'
             lineVariant={LineVariants.VARIANT_SIX}
           />
           <div className={cls.servicesContent}>
@@ -49,6 +49,12 @@ export default function Services() {
             </div>
             <div className={cls.servicesImage}></div>
           </div>
+        </SectionLayout>
+        <SectionLayout>
+          <Title
+            text='Мы предоставляем'
+            lineVariant={LineVariants.VARIANT_FIVE}
+          />
         </SectionLayout>
       </main>
     </>
