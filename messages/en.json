@@ -65,5 +65,12 @@
     "Employees": "qualified employees providing transportation",
     "Warehouses": "sq. meters of warehouses in Japan",
     "WeCan": "we provide"
+  },
+  "Schedule": {
+    "Schedule": "Schedule",
+    "Vessel": "Vessel",
+    "Voyage": "Voyage number",
+    "Date": "Date of shipment",
+    "Port": "Port of shipment"
   }
 }

@@ -1,0 +1,41 @@
+.scheduleList {
+  background-color: var(--white);
+  padding: 50px 250px 20px 250px;
+}
+
+.tableHeadingTitle {
+  max-width: 250px;
+  width: 100%;
+  padding-left: 30px;
+  font-family: var(--font-one);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 140%;
+  color: #3792ff;
+}
+
+.tableHead {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.tableTextRow {
+  display: flex;
+  justify-content: center;
+}
+
+.tableTextRow:not(:last-child) {
+  border-bottom: 1px solid #cfcfcf;
+}
+
+.text {
+  max-width: 250px;
+  width: 100%;
+  padding: 30px;
+  font-family: var(--font-two);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+  color: var(--main-blue);
+}
