@@ -1,3 +1,29 @@
 .servicesCard {
-	
+  position: relative;
+  display: flex;
+  flex-basis: 32%;
+  padding: 40px;
+  background-color: var(--white);
+  gap: 40px;
+}
+
+.servicesCardText {
+  padding: 5px 30px;
+  border-left: 1px solid #000;
+  font-family: var(--font-one);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+  color: var(--main-blue);
+}
+
+.cardNumber {
+  position: absolute;
+  right: 40px;
+  bottom: 10px;
+  font-family: var(--font-three);
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 120%;
+  color: var(--grey);
 }

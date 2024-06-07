@@ -5,16 +5,18 @@ import { SectionLayout } from '@/components/SectionLayout/SectionLayout';
 import { LineVariants, Title } from '@/components/Title/Title';
 import TitleServicesDecor from '@/public/images/text/services.png';
 import { Description, FontSizes } from '@/components/Description/Description';
+import { cards } from '@/components/ServicesCard/cardsData';
+import { ServicesCard } from '@/components/ServicesCard/ServicesCard';
 
 export default function Services() {
   return (
     <>
       <Header view={HeaderView.Services} />
       <main>
-        <SectionLayout className='container'>
+        <SectionLayout className="container">
           <Title
             decorText={TitleServicesDecor}
-            text='Services'
+            text="Services"
             lineVariant={LineVariants.VARIANT_SIX}
           />
           <div className={cls.servicesContent}>
@@ -52,9 +54,19 @@ export default function Services() {
         </SectionLayout>
         <SectionLayout>
           <Title
-            text='Мы предоставляем'
+            text="Мы предоставляем"
             lineVariant={LineVariants.VARIANT_FIVE}
           />
+          <ul className={cls.servicesCardsList}>
+            {cards.map((card) => (
+              <ServicesCard
+                key={card.id}
+                number={card.id}
+                textKey={card.textKey}
+                src={card.src}
+              />
+            ))}
+          </ul>
         </SectionLayout>
       </main>
     </>
