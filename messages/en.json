@@ -57,6 +57,13 @@
     "Organizations": "Organizing shipments by sea",
     "Customs": "Customs clearance",
     "Photo": "Photo inventory of cars before loading",
-    "Tracking": "Ability to track your cargo"
+    "Tracking": "Ability to track your cargo",
+    "Description": "We provide a full spectrum of services to ship your cargo to the port of destination. Trust our team of professionals and track your cargo in real time.",
+    "Services": "Services",
+    "HappyClients": "happy clients",
+    "TransportedCargo": "transported cargo",
+    "Employees": "qualified employees providing transportation",
+    "Warehouses": "sq. meters of warehouses in Japan",
+    "WeCan": "we provide"
   }
 }

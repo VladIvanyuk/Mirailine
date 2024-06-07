@@ -7,8 +7,10 @@ import TitleServicesDecor from '@/public/images/text/services.png';
 import { Description, FontSizes } from '@/components/Description/Description';
 import { cards } from '@/components/ServicesCard/cardsData';
 import { ServicesCard } from '@/components/ServicesCard/ServicesCard';
+import { useTranslations } from 'next-intl';
 
 export default function Services() {
+  const t = useTranslations('Services');
   return (
     <>
       <Header view={HeaderView.Services} />
@@ -16,36 +18,30 @@ export default function Services() {
         <SectionLayout className="container">
           <Title
             decorText={TitleServicesDecor}
-            text="Services"
+            text={t('Services')}
             lineVariant={LineVariants.VARIANT_SIX}
           />
           <div className={cls.servicesContent}>
             <div className={cls.servicesTextContent}>
               <Description fontSize={FontSizes.M} className={cls.servicesDescr}>
-                Осуществляем полный спектр услуг по доставке Вашего груза из
-                порта в порт. доверьтесь нашей команде профессионалов и
-                отслеживайте груз в реальном времени
+                {t('Description')}
               </Description>
               <ul className={cls.numbersList}>
                 <li className={cls.numbersListItem}>
                   <p className={cls.numbersListNum}>100+</p>
-                  <p className={cls.numbersListText}>счастливых клиентов</p>
+                  <p className={cls.numbersListText}>{t('HappyClients')}</p>
                 </li>
                 <li className={cls.numbersListItem}>
                   <p className={cls.numbersListNum}>143+</p>
-                  <p className={cls.numbersListText}>перевезенных груза</p>
+                  <p className={cls.numbersListText}>{t('TransportedCargo')}</p>
                 </li>
                 <li className={cls.numbersListItem}>
                   <p className={cls.numbersListNum}>450+</p>
-                  <p className={cls.numbersListText}>
-                    квалифицированных сотрудников, обеспечивающих перевозку
-                  </p>
+                  <p className={cls.numbersListText}>{t('Employees')}</p>
                 </li>
                 <li className={cls.numbersListItem}>
                   <p className={cls.numbersListNum}>15000+</p>
-                  <p className={cls.numbersListText}>
-                    кв. метров cкладов в Японии
-                  </p>
+                  <p className={cls.numbersListText}>{t('Warehouses')}</p>
                 </li>
               </ul>
             </div>
@@ -53,10 +49,7 @@ export default function Services() {
           </div>
         </SectionLayout>
         <SectionLayout>
-          <Title
-            text="Мы предоставляем"
-            lineVariant={LineVariants.VARIANT_FIVE}
-          />
+          <Title text={t('WeCan')} lineVariant={LineVariants.VARIANT_FIVE} />
           <ul className={cls.servicesCardsList}>
             {cards.map((card) => (
               <ServicesCard
