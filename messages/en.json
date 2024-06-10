@@ -72,5 +72,9 @@
     "Voyage": "Voyage number",
     "Date": "Date of shipment",
     "Port": "Port of shipment"
+  },
+  "Prices": {
+    "Title": "Prices",
+    "Note": "The prices indicated on this page are valid for all shipments made from April 17th. 2023"
   }
 }

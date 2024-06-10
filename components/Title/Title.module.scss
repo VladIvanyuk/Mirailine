@@ -67,6 +67,14 @@
   background-repeat: no-repeat;
 }
 
+.variantEight::before {
+  content: url('../../public/images/lines/variant-one.png');
+  display: block;
+  position: absolute;
+  left: 110%;
+  background-repeat: no-repeat;
+}
+
 .decor {
   font-family: var(--font-five);
   font-weight: 400;

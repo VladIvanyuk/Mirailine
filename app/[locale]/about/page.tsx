@@ -30,7 +30,7 @@ export default function About() {
     <>
       <Header view={HeaderView.About} />
       <main>
-        <SectionLayout className='container'>
+        <SectionLayout>
           <Title
             lineVariant={LineVariants.VARIANT_FOUR}
             text={t('About')}

@@ -16,6 +16,7 @@ export enum LineVariants {
   VARIANT_FIVE = 'variantFive',
   VARIANT_SIX = 'variantSix',
   VARIANT_SEVEN = 'variantSeven',
+  VARIANT_EIGHT = 'variantEight',
 }
 
 export const Title = ({ text, lineVariant, decorText }: ITitleProps) => {
