@@ -75,6 +75,9 @@
   },
   "Prices": {
     "Title": "Prices",
-    "Note": "The prices indicated on this page are valid for all shipments made from April 17th. 2023"
+    "Note": "The prices indicated on this page are valid for all shipments made from April 17th. 2023",
+    "OskVdk": "OSAKA-VLADIVOSTOK",
+    "YokVdk": "YOKOHAMA-VLADIVOSTOK",
+    "ToyaVdk": "TOYAMA-VLADIVOSTOK"
   }
 }
