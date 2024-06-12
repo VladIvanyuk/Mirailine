@@ -105,5 +105,8 @@
     "Tractor": "Tractor under 3 m / 999 kg",
     "Pallet": "Pallet 1.5 x 1.5 m",
     "Details": "* - confirm the details with your sender"
+  },
+  "Tracking": {
+    "Tracking": "Tracking"
   }
 }
