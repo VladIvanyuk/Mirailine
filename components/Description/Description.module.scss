@@ -1,10 +1,9 @@
 .description {
-  font-family: var(--font-two);
+  font-family: var(--font-one);
   font-weight: 400;
   font-size: 25px;
   line-height: 140%;
   text-transform: uppercase;
-  color: var(--main-blue);
 }
 
 .large {
@@ -13,4 +12,8 @@
 
 .medium {
   font-size: 20;
+}
+
+.small {
+  font-size: 18;
 }

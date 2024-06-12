@@ -107,6 +107,9 @@
     "Details": "* - confirm the details with your sender"
   },
   "Tracking": {
-    "Tracking": "Tracking"
+    "Tracking": "Tracking",
+    "TrackingSearch": "You can track your cargo online",
+    "TrackingSearchPlaceholder": "Enter frame number",
+    "TrackingSearchButton": "Search"
   }
 }

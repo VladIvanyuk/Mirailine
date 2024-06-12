@@ -107,6 +107,9 @@
     "Pallet": "Паллет 1,5 x 1,5 м"
   },
   "Tracking": {
-    "Tracking": "Отслеживание"
+    "Tracking": "Отслеживание",
+    "TrackingSearch": "Вы можете отследить ваш груз в режиме онлайн",
+    "TrackingSearchPlaceholder": "Ведите номер кузова",
+    "TrackingSearchButton": "Найти"
   }
 }

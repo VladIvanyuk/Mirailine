@@ -11,6 +11,7 @@ interface IDescription {
 export enum FontSizes {
   L = 'large',
   M = 'medium',
+  S = 'small',
 }
 
 export const Description = ({
