@@ -44,7 +44,7 @@ export const ScheduleList = async ({ className }: IScheduleListProps) => {
         <li className={cls.tableHeadingTitle}>{t('Port')}</li>
         <li className={cls.tableHeadingTitle}>{t('Date')}</li>
       </ul>
-      <div className={cls.tableBody}>
+      <div>
         {data.map((el, index) => {
           const date =
             el['SAILINGONORABOUT'] && el['SAILINGONORABOUT'].substring(0, 10);

@@ -6,6 +6,7 @@ import { LineVariants, Title } from '@/components/Title/Title';
 import TitlePricesDecor from '@/public/images/text/prices.png';
 import { useTranslations } from 'next-intl';
 import { PricesList } from '@/components/PricesList/PricesList';
+import { pricesData } from '@/components/PricesList/pricesData';
 
 export default function Prices() {
   const t = useTranslations('Prices');
@@ -20,7 +21,9 @@ export default function Prices() {
             lineVariant={LineVariants.VARIANT_EIGHT}
           />
           <p className={cls.note}>{t('Note')}</p>
-          <PricesList title={t('OskVdk')} />
+          <PricesList title={t('OskVdk')} list={pricesData.Osaka} />
+          <PricesList title={t('YokVdk')} list={pricesData.Yokohama} />
+          <PricesList title={t('ToyaVdk')} list={pricesData.Toyama} />
         </SectionLayout>
       </main>
     </>
