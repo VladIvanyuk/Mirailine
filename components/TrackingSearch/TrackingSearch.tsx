@@ -2,7 +2,7 @@
 
 import { classNames } from '@/utils/classNames/classNames';
 import { Description, FontSizes } from '../Description/Description';
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import './Swiper.scss';
@@ -43,6 +43,7 @@ export const TrackingSearch = ({
   const [isError, setIsError] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [swiper, setSwiper] = useState<any>();
+  const [slideToShow, setSlideToShow] = useState(0);
   const searchFrame = async () => {
     setIsLoading(true);
     try {
@@ -56,6 +57,7 @@ export const TrackingSearch = ({
       setIsError(false);
     }
   };
+
   console.log(swiper);
   return (
     <div className={classNames(cls.trackingSearch, {}, [className])}>
@@ -66,7 +68,10 @@ export const TrackingSearch = ({
             onClick={() => setIsShowCarousel(false)}
           ></div>
           <Swiper
-            onSwiper={(swiper) => setSwiper(swiper)}
+            onSwiper={(swiper) => {
+              setSwiper(swiper);
+              swiper.slideTo(slideToShow, 0);
+            }}
             modules={[Navigation, Pagination]}
             loopAddBlankSlides={true}
             loop={true}
@@ -77,8 +82,7 @@ export const TrackingSearch = ({
           >
             {frameData &&
               frameData.images.map((el, index) => (
-                <SwiperSlide key={index}>
-                  <p>X</p>
+                <SwiperSlide className={cls.swiperSlide} key={index}>
                   <Image
                     src={el.image}
                     width={1000}
@@ -106,7 +110,7 @@ export const TrackingSearch = ({
               <li
                 onClick={() => {
                   setIsShowCarousel(true);
-                  swiper.slideTo(index);
+                  setSlideToShow(index);
                 }}
                 className={cls.imgsListItem}
                 key={index}

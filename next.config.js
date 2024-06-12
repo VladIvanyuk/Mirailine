@@ -6,6 +6,7 @@ const withNextIntl = createNextIntlPlugin();
 const nextConfig = {
   //   output: 'export',
   //   images: { unoptimized: true },
+  reactStrictMode: false,
 };
 
 module.exports = withNextIntl(nextConfig);
