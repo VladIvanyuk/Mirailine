@@ -1,13 +1,16 @@
 'use client';
 
 import { classNames } from '@/utils/classNames/classNames';
-import cls from './TrackingSearch.module.scss';
 import { Description, FontSizes } from '../Description/Description';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import './Swiper.scss';
 import 'swiper/css';
-import { Navigation, Pagination, Scrollbar } from 'swiper/modules';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import { Navigation, Pagination } from 'swiper/modules';
+import cls from './TrackingSearch.module.scss';
 
 interface ITrackingSearchProps {
   className?: string;
@@ -39,6 +42,7 @@ export const TrackingSearch = ({
   const [isShowCarousel, setIsShowCarousel] = useState(false);
   const [isError, setIsError] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [swiper, setSwiper] = useState<any>();
   const searchFrame = async () => {
     setIsLoading(true);
     try {
@@ -52,24 +56,29 @@ export const TrackingSearch = ({
       setIsError(false);
     }
   };
-
+  console.log(swiper);
   return (
     <div className={classNames(cls.trackingSearch, {}, [className])}>
       {isShowCarousel && (
         <div className={cls.swiperWrapper}>
+          <div
+            className={cls.swiperLayout}
+            onClick={() => setIsShowCarousel(false)}
+          ></div>
           <Swiper
-            modules={[Navigation, Pagination, Scrollbar]}
+            onSwiper={(swiper) => setSwiper(swiper)}
+            modules={[Navigation, Pagination]}
             loopAddBlankSlides={true}
             loop={true}
             slidesPerView={1}
             className={cls.swiper}
             navigation
             pagination={{ clickable: true }}
-            scrollbar={{ draggable: true }}
           >
             {frameData &&
               frameData.images.map((el, index) => (
                 <SwiperSlide key={index}>
+                  <p>X</p>
                   <Image
                     src={el.image}
                     width={1000}
@@ -91,19 +100,21 @@ export const TrackingSearch = ({
         </button>
       </div>
       <div>
-        <p>VM4-082144</p>
         {frameData && (
           <ul className={cls.imgsList}>
             {frameData.images.map((el, index) => (
               <li
-                onClick={() => setIsShowCarousel(true)}
+                onClick={() => {
+                  setIsShowCarousel(true);
+                  swiper.slideTo(index);
+                }}
                 className={cls.imgsListItem}
                 key={index}
               >
                 <Image
                   src={el.image}
-                  width={100}
-                  height={100}
+                  width={200}
+                  height={130}
                   alt="Картинка кузова"
                 />
               </li>

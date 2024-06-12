@@ -1,0 +1,13 @@
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  transition: all 0.3s ease-in-out;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  color: white;
+}
+.swiper-button-next:hover::after,
+.swiper-button-prev:hover::after {
+  color: var(--middle-blue);
+}
