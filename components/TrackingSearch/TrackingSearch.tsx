@@ -11,7 +11,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Navigation, Pagination } from 'swiper/modules';
 import cls from './TrackingSearch.module.scss';
-import { useDownload } from './useDownload';
+import { handleZip } from '@/utils/imgDownloader/imgDownloader';
 
 interface ITrackingSearchProps {
   className?: string;
@@ -45,7 +45,6 @@ export const TrackingSearch = ({
   const [isLoading, setIsLoading] = useState(false);
   const [swiper, setSwiper] = useState<any>();
   const [slideToShow, setSlideToShow] = useState(0);
-  const { handleZip } = useDownload();
 
   const searchFrame = async () => {
     setIsLoading(true);
@@ -89,7 +88,7 @@ export const TrackingSearch = ({
                     src={el.image}
                     width={1000}
                     height={650}
-                    alt='Картинка кузова'
+                    alt="Картинка кузова"
                   />
                 </SwiperSlide>
               ))}
@@ -100,7 +99,7 @@ export const TrackingSearch = ({
         {title}
       </Description>
       <div>
-        <input type='text' className={cls.input} placeholder={placeholder} />
+        <input type="text" className={cls.input} placeholder={placeholder} />
         <button onClick={searchFrame} className={cls.button}>
           {button}
         </button>
@@ -122,7 +121,7 @@ export const TrackingSearch = ({
                     src={el.image}
                     width={200}
                     height={130}
-                    alt='Картинка кузова'
+                    alt="Картинка кузова"
                   />
                 </li>
               ))}
