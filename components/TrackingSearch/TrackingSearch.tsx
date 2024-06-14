@@ -11,6 +11,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Navigation, Pagination } from 'swiper/modules';
 import cls from './TrackingSearch.module.scss';
+import { handleZip } from '@/utils/imgDownloader/imgDownloader';
 
 interface ITrackingSearchProps {
   className?: string;
@@ -44,6 +45,7 @@ export const TrackingSearch = ({
   const [isLoading, setIsLoading] = useState(false);
   const [swiper, setSwiper] = useState<any>();
   const [slideToShow, setSlideToShow] = useState(0);
+
   const searchFrame = async () => {
     setIsLoading(true);
     try {
@@ -58,7 +60,6 @@ export const TrackingSearch = ({
     }
   };
 
-  console.log(swiper);
   return (
     <div className={classNames(cls.trackingSearch, {}, [className])}>
       {isShowCarousel && (
@@ -105,25 +106,30 @@ export const TrackingSearch = ({
       </div>
       <div>
         {frameData && (
-          <ul className={cls.imgsList}>
-            {frameData.images.map((el, index) => (
-              <li
-                onClick={() => {
-                  setIsShowCarousel(true);
-                  setSlideToShow(index);
-                }}
-                className={cls.imgsListItem}
-                key={index}
-              >
-                <Image
-                  src={el.image}
-                  width={200}
-                  height={130}
-                  alt="Картинка кузова"
-                />
-              </li>
-            ))}
-          </ul>
+          <>
+            <ul className={cls.imgsList}>
+              {frameData.images.map((el, index) => (
+                <li
+                  onClick={() => {
+                    setIsShowCarousel(true);
+                    setSlideToShow(index);
+                  }}
+                  className={cls.imgsListItem}
+                  key={index}
+                >
+                  <Image
+                    src={el.image}
+                    width={200}
+                    height={130}
+                    alt="Картинка кузова"
+                  />
+                </li>
+              ))}
+            </ul>
+            <button onClick={() => handleZip(frameData.images)}>
+              DOWNLOAD
+            </button>
+          </>
         )}
       </div>
     </div>
