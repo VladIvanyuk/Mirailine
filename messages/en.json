@@ -110,6 +110,13 @@
     "Tracking": "Tracking",
     "TrackingSearch": "You can track your cargo online",
     "TrackingSearchPlaceholder": "Enter frame number",
-    "TrackingSearchButton": "Search"
+    "TrackingSearchButton": "Search",
+    "FrameNumber": "Voyage number",
+    "FrameName": "Vessel name",
+    "SailingDate": "Departure date",
+    "Status": "Status",
+    "Waiting": "Waiting for loading",
+    "OnTheWay": "On the way",
+    "Download": "Download"
   }
 }

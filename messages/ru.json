@@ -110,6 +110,13 @@
     "Tracking": "Отслеживание",
     "TrackingSearch": "Вы можете отследить ваш груз в режиме онлайн",
     "TrackingSearchPlaceholder": "Ведите номер кузова",
-    "TrackingSearchButton": "Найти"
+    "TrackingSearchButton": "Найти",
+    "FrameNumber": "Номер рейса",
+    "FrameName": "Название судна",
+    "SailingDate": "Дата отправления",
+    "Status": "Статус",
+    "Waiting": "Ожидает погрузки",
+    "OnTheWay": "В пути",
+    "Download": "Скачать"
   }
 }
