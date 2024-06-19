@@ -8,7 +8,7 @@ import Date from '@/public/images/vectors/date.png';
 import JapanImg from '@/public/images/countries/japan.png';
 import RussiaImg from '@/public/images/countries/russia.png';
 
-enum ContactNumbers {
+export enum ContactNumbers {
   PRETENSION_CONTACT = '+7-994-109-5764',
   PRETENSION_EMAIL = 'claim@mirailine.com',
   JAPAN_TEL_CONTACT = '+81-766-86-0772',

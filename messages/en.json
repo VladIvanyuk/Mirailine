@@ -118,5 +118,9 @@
     "Waiting": "Waiting for loading",
     "OnTheWay": "On the way",
     "Download": "Download"
+  },
+  "Contacts": {
+    "Contacts": "Contacts",
+    "Description": "Contact us in any convenient way"
   }
 }
