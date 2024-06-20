@@ -9,6 +9,10 @@ import { Description } from '@/components/Description/Description';
 import Image from 'next/image';
 import Clock from '@/public/images/vectors/clock.png';
 import { ListHeading } from '@/components/ListHeading/ListHeading';
+import {
+  ContactTypes,
+  ContactsItem,
+} from '@/components/ContactsItem/ContactsItem';
 
 export default function Contacts() {
   const t = useTranslations('Contacts');
@@ -40,6 +44,12 @@ export default function Contacts() {
                 <ListHeading className={cls.contactsHeading}>
                   {t('ContactsRussia')}
                 </ListHeading>
+                <ul>
+                  <ContactsItem
+                    type={ContactTypes.PHONE}
+                    text={'+7-994-109-2002'}
+                  />
+                </ul>
               </div>
             </div>
           </div>
