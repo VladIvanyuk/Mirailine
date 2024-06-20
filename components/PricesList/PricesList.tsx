@@ -2,6 +2,7 @@ import { useTranslations } from 'next-intl';
 import { classNames } from '@/utils/classNames/classNames';
 import cls from './PricesList.module.scss';
 import { IPricesItem } from './pricesData';
+import { ListHeading } from '../ListHeading/ListHeading';
 
 interface IPricesListProps {
   className?: string;
@@ -15,7 +16,7 @@ export const PricesList = ({ className, title, list }: IPricesListProps) => {
   return (
     <div className={classNames(cls.pricesListWrapper, {}, [className])}>
       <div className={cls.pricesList}>
-        <h5 className={cls.listTitle}>{title}</h5>
+        <ListHeading className={cls.listHeading}>{title}</ListHeading>
         <div className={cls.textRow}>
           <p className={classNames(cls.textPart, {}, [cls.textPartHeading])}>
             Категория груза

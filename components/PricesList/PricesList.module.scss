@@ -11,17 +11,6 @@
   margin: 0 auto;
 }
 
-.listTitle {
-  margin-bottom: 50px;
-  padding-left: 30px;
-  font-family: var(--font-three);
-  font-weight: 600;
-  font-size: 22px;
-  line-height: 140%;
-  text-transform: uppercase;
-  color: var(--main-blue);
-}
-
 .textRow {
   display: flex;
 }
@@ -57,4 +46,9 @@
   font-size: 16px;
   line-height: 120%;
   color: var(--grey);
+}
+
+.listHeading {
+  margin-bottom: 50px;
+  padding-left: 30px;
 }

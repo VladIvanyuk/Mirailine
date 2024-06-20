@@ -6,10 +6,9 @@ import { LineVariants, Title } from '@/components/Title/Title';
 import { useTranslations } from 'next-intl';
 import TitleContactsDecor from '@/public/images/text/contacts.png';
 import { Description } from '@/components/Description/Description';
-import {
-  ContactTypes,
-  ContactsItem,
-} from '@/components/ContactsItem/ContactsItem';
+import Image from 'next/image';
+import Clock from '@/public/images/vectors/clock.png';
+import { ListHeading } from '@/components/ListHeading/ListHeading';
 
 export default function Contacts() {
   const t = useTranslations('Contacts');
@@ -26,10 +25,24 @@ export default function Contacts() {
           <Description className={cls.servicesDescr}>
             {t('Description')}
           </Description>
-          <ContactsItem
-            type={ContactTypes.PHONE}
-            text='ПН - ПТ 9:00 - 18:00 время местное)'
-          />
+          <div className={cls.contactMapWrapper}>
+            <div className={cls.contactsItem}>
+              <div className={cls.contactMapItem}>
+                <div className={cls.time}>
+                  <Image src={Clock} alt={'Иконка календаря'} />
+                  <div className={cls.workTime}>
+                    <p>{t('Hours')}</p>
+                    <p>{`(${t('Time')})`}</p>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <ListHeading className={cls.contactsHeading}>
+                  {t('ContactsRussia')}
+                </ListHeading>
+              </div>
+            </div>
+          </div>
         </SectionLayout>
       </main>
     </>

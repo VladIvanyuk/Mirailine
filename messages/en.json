@@ -121,6 +121,11 @@
   },
   "Contacts": {
     "Contacts": "Contacts",
-    "Description": "Contact us in any convenient way"
+    "Description": "Contact us in any convenient way",
+    "Hours": "MON - FRI 9:00 - 18:00",
+    "Time": "local time",
+    "ContactsRussia": "Contacts in Russia",
+    "ContactsJapan": "Contacts in Japan",
+    "Claims": "Claims department"
   }
 }

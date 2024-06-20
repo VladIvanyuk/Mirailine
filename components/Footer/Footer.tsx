@@ -72,11 +72,11 @@ export const Footer = () => {
               >
                 <li className={cls.contactWrapper}>
                   <Image src={Date} alt={'Иконка календаря'} />
-                  <ul className={cls.workTime}>
-                    <li>{`(${t1('Days')})`}</li>
-                    <li>9:00 - 18:00</li>
-                    <li>{`(${t1('Text')})`}</li>
-                  </ul>
+                  <div className={cls.workTime}>
+                    <p>{`(${t1('Days')})`}</p>
+                    <p>9:00 - 18:00</p>
+                    <p>{`(${t1('Text')})`}</p>
+                  </div>
                 </li>
               </ContactsList>
             </li>
