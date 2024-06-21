@@ -12,10 +12,55 @@
   margin-bottom: 60px;
 }
 
-.contactMapItem {
+.contactMapItemWrapper {
   margin-bottom: 70px;
 }
 
 .contactsHeading {
+  position: relative;
   margin-bottom: 30px;
+}
+
+.contactsItem {
+  color: var(--main-blue);
+}
+
+.mapItemList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contactMapItem:not(:last-child) {
+  margin-bottom: 50px;
+}
+
+.section {
+  padding-left: 13%;
+}
+
+.contactsAddressItem {
+  max-width: 200px;
+}
+
+.contactsJapanAddressItem {
+  max-width: 320px;
+}
+
+.russiaHeadingPic::before,
+.japanHeadingPic::before {
+  content: '';
+  left: -70px;
+  display: block;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+}
+
+.russiaHeadingPic::before {
+  background-image: url('../../../public/images/countries/russia.png');
+}
+
+.japanHeadingPic::before {
+  background-image: url('../../../public/images/countries/japan.png');
 }
