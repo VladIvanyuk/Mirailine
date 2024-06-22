@@ -9,11 +9,15 @@ import { Description } from '@/components/Description/Description';
 import { AboutBGPic, AboutCard } from '@/components/AboutCard/AboutCard';
 import { ServicesList } from '@/components/ServicesList/ServicesList';
 import Slider from '@/components/Slider/Slider';
+import { Header } from '@/components/Header/Header';
+import { HeaderView } from '@/components/Header/types';
 
 const Home = () => {
   const t = useTranslations('Home');
   return (
     <>
+      <Header view={HeaderView.Home} />
+
       <main>
         <div className={classNames(cls.promo, {}, [cls.wrapper])}>
           <SectionLayout classes={cls.promoSection}>
