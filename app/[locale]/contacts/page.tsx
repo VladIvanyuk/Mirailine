@@ -37,7 +37,7 @@ export default function Contacts() {
               <div className={cls.contactMapItemWrapper}>
                 <div className={cls.time}>
                   <Image src={Clock} alt={'Иконка календаря'} />
-                  <div className={cls.workTime}>
+                  <div>
                     <p>{t('Hours')}</p>
                     <p>{`(${t('Time')})`}</p>
                   </div>
@@ -102,14 +102,14 @@ export default function Contacts() {
                       </ul>
                     </div>
                   </div>
-                  <div>
-                    <Map src={mapLinks[Maps.MIRAIONE]} />
+                  <div className={cls.miraiJPMap}>
+                    <Map src={mapLinks[Maps.T1]} />
                   </div>
                 </div>
               </div>
               <div className={cls.contactMapItemWrapper}>
                 <div className={cls.contactsMapItemBlock}>
-                  <div className=''>
+                  <div className="">
                     <div className={cls.contactMapItem}>
                       <ListHeading
                         className={classNames(cls.contactsHeading, {}, [
@@ -149,7 +149,9 @@ export default function Contacts() {
                       </ul>
                     </div>
                   </div>
-                  <div>MAP</div>
+                  <div className={cls.miraiRUMap}>
+                    <Map src={mapLinks[Maps.MIRAIVDK]} />
+                  </div>
                 </div>
               </div>
             </div>

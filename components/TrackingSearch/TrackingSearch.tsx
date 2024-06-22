@@ -85,7 +85,7 @@ export const TrackingSearch = ({
   return (
     <div className={classNames(cls.trackingSearch, {}, [className])}>
       {isShowCarousel && (
-        <div className={cls.swiperWrapper}>
+        <div>
           <div
             className={cls.swiperLayout}
             onClick={() => setIsShowCarousel(false)}
@@ -110,7 +110,7 @@ export const TrackingSearch = ({
                     src={el.image}
                     width={1000}
                     height={650}
-                    alt='Картинка кузова'
+                    alt="Картинка кузова"
                   />
                 </SwiperSlide>
               ))}
@@ -121,7 +121,7 @@ export const TrackingSearch = ({
         {title}
       </Description>
       <div>
-        <input type='text' className={cls.input} placeholder={placeholder} />
+        <input type="text" className={cls.input} placeholder={placeholder} />
         <button onClick={searchFrame} className={cls.button}>
           {button}
         </button>
@@ -167,7 +167,7 @@ export const TrackingSearch = ({
                     src={el.image}
                     width={200}
                     height={130}
-                    alt='Картинка кузова'
+                    alt="Картинка кузова"
                   />
                 </li>
               ))}

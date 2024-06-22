@@ -10,9 +10,9 @@ export enum Maps {
   T2 = 't2',
   OSAKA = 'osaka',
   YOKOHAMA = 'yokohama',
-  MIRAIONE = 'MIRAIONE',
+  MIRAIVDK = 'miraivdk',
 }
 
 export const Map = ({ className, src }: IMapProps) => {
-  return <iframe src={src} height='100%' width='100%' loading='lazy'></iframe>;
+  return <iframe src={src} height="100%" width="100%" loading="lazy"></iframe>;
 };
