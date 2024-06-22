@@ -14,6 +14,8 @@ import {
   ContactsItem,
 } from '@/components/ContactsItem/ContactsItem';
 import { classNames } from '@/utils/classNames/classNames';
+import { Map, Maps } from '@/components/Map/Map';
+import { mapLinks } from '@/components/Map/MapLinks';
 
 export default function Contacts() {
   const t = useTranslations('Contacts');
@@ -42,100 +44,112 @@ export default function Contacts() {
                 </div>
               </div>
               <div className={cls.contactMapItemWrapper}>
-                <div className={cls.contactMapItem}>
-                  <ListHeading
-                    className={classNames(cls.contactsHeading, {}, [
-                      cls.russiaHeadingPic,
-                    ])}
-                  >
-                    {t('ContactsRussia')}
-                  </ListHeading>
-                  <ul className={cls.mapItemList}>
-                    <ContactsItem
-                      className={cls.contactsItem}
-                      type={ContactTypes.PHONE}
-                      text={'+7-994-109-2002'}
-                    />
-                    <ContactsItem
-                      className={cls.contactsItem}
-                      type={ContactTypes.WA}
-                      text={'+7-994-109-2002'}
-                    />
-                    <ContactsItem
-                      className={cls.contactsItem}
-                      type={ContactTypes.EMAIL}
-                      text={'vladivostok@mirailine.com'}
-                    />
-                  </ul>
-                </div>
-                <div className={cls.contactMapItem}>
-                  <ListHeading className={cls.contactsHeading}>
-                    {t('Claims')}
-                  </ListHeading>
-                  <ul className={cls.mapItemList}>
-                    <ContactsItem
-                      className={cls.contactsItem}
-                      type={ContactTypes.PHONE}
-                      text={'+7-994-109-5764'}
-                    />
-                    <ContactsItem
-                      className={cls.contactsItem}
-                      type={ContactTypes.WA}
-                      text={'+7-994-109-5764'}
-                    />
-                    <ContactsItem
-                      className={cls.contactsItem}
-                      type={ContactTypes.EMAIL}
-                      text={'claim@mirailine.com'}
-                    />
-                    <ContactsItem
-                      className={classNames(cls.contactsItem, {}, [
-                        cls.contactsAddressItem,
-                      ])}
-                      type={ContactTypes.ADDRESS}
-                      text={`г. Владивосток ул.${'\u00A0'}Некрасовская${'\u00A0'}36Б офис 302`}
-                    />
-                  </ul>
+                <div className={cls.contactsMapItemBlock}>
+                  <div>
+                    <div className={cls.contactMapItem}>
+                      <ListHeading
+                        className={classNames(cls.contactsHeading, {}, [
+                          cls.russiaHeadingPic,
+                        ])}
+                      >
+                        {t('ContactsRussia')}
+                      </ListHeading>
+                      <ul className={cls.mapItemList}>
+                        <ContactsItem
+                          className={cls.contactsItem}
+                          type={ContactTypes.PHONE}
+                          text={'+7-994-109-2002'}
+                        />
+                        <ContactsItem
+                          className={cls.contactsItem}
+                          type={ContactTypes.WA}
+                          text={'+7-994-109-2002'}
+                        />
+                        <ContactsItem
+                          className={cls.contactsItem}
+                          type={ContactTypes.EMAIL}
+                          text={'vladivostok@mirailine.com'}
+                        />
+                      </ul>
+                    </div>
+                    <div className={cls.contactMapItem}>
+                      <ListHeading className={cls.contactsHeading}>
+                        {t('Claims')}
+                      </ListHeading>
+                      <ul className={cls.mapItemList}>
+                        <ContactsItem
+                          className={cls.contactsItem}
+                          type={ContactTypes.PHONE}
+                          text={'+7-994-109-5764'}
+                        />
+                        <ContactsItem
+                          className={cls.contactsItem}
+                          type={ContactTypes.WA}
+                          text={'+7-994-109-5764'}
+                        />
+                        <ContactsItem
+                          className={cls.contactsItem}
+                          type={ContactTypes.EMAIL}
+                          text={'claim@mirailine.com'}
+                        />
+                        <ContactsItem
+                          className={classNames(cls.contactsItem, {}, [
+                            cls.contactsAddressItem,
+                          ])}
+                          type={ContactTypes.ADDRESS}
+                          text={`г. Владивосток ул.${'\u00A0'}Некрасовская${'\u00A0'}36Б офис 302`}
+                        />
+                      </ul>
+                    </div>
+                  </div>
+                  <div>
+                    <Map src={mapLinks[Maps.MIRAIONE]} />
+                  </div>
                 </div>
               </div>
               <div className={cls.contactMapItemWrapper}>
-                <div className={cls.contactMapItem}>
-                  <ListHeading
-                    className={classNames(cls.contactsHeading, {}, [
-                      cls.japanHeadingPic,
-                    ])}
-                  >
-                    {t('ContactsJapan')}
-                  </ListHeading>
-                  <ul className={cls.mapItemList}>
-                    <ContactsItem
-                      className={cls.contactsItem}
-                      type={ContactTypes.PHONE}
-                      text={'+81-766-86-0772'}
-                    />
-                    <ContactsItem
-                      className={cls.contactsItem}
-                      type={ContactTypes.WA}
-                      text={'+81-90-7357-8470'}
-                    />
-                    <ContactsItem
-                      className={cls.contactsItem}
-                      type={ContactTypes.FAX}
-                      text={'+81-766-86-1114'}
-                    />
-                    <ContactsItem
-                      className={cls.contactsItem}
-                      type={ContactTypes.EMAIL}
-                      text={'claim@mirailine.com'}
-                    />
-                    <ContactsItem
-                      className={classNames(cls.contactsItem, {}, [
-                        cls.contactsJapanAddressItem,
-                      ])}
-                      type={ContactTypes.ADDRESS}
-                      text={`〒934-0035 富山県射水市新堀５番地5, Shinbori, Imizu city, Toyama${'\u00A0'}prefecture 934-0035, Japan`}
-                    />
-                  </ul>
+                <div className={cls.contactsMapItemBlock}>
+                  <div className=''>
+                    <div className={cls.contactMapItem}>
+                      <ListHeading
+                        className={classNames(cls.contactsHeading, {}, [
+                          cls.japanHeadingPic,
+                        ])}
+                      >
+                        {t('ContactsJapan')}
+                      </ListHeading>
+                      <ul className={cls.mapItemList}>
+                        <ContactsItem
+                          className={cls.contactsItem}
+                          type={ContactTypes.PHONE}
+                          text={'+81-766-86-0772'}
+                        />
+                        <ContactsItem
+                          className={cls.contactsItem}
+                          type={ContactTypes.WA}
+                          text={'+81-90-7357-8470'}
+                        />
+                        <ContactsItem
+                          className={cls.contactsItem}
+                          type={ContactTypes.FAX}
+                          text={'+81-766-86-1114'}
+                        />
+                        <ContactsItem
+                          className={cls.contactsItem}
+                          type={ContactTypes.EMAIL}
+                          text={'claim@mirailine.com'}
+                        />
+                        <ContactsItem
+                          className={classNames(cls.contactsItem, {}, [
+                            cls.contactsJapanAddressItem,
+                          ])}
+                          type={ContactTypes.ADDRESS}
+                          text={`〒934-0035 富山県射水市新堀５番地5, Shinbori, Imizu city, Toyama${'\u00A0'}prefecture 934-0035, Japan`}
+                        />
+                      </ul>
+                    </div>
+                  </div>
+                  <div>MAP</div>
                 </div>
               </div>
             </div>

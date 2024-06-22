@@ -11,4 +11,5 @@ export const mapLinks: Record<Maps, string> = {
     'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9282.21297287697!2d135.4040282705914!3d34.66081738330631!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e9ccdb9a53e9%3A0x61d35fea0037221f!2z5aSn6Ziq5riv5Z-g6aCt44K_44O844Of44OK44Or5qCq5byP5Lya56S-IEhTLTPoiJ7mtLLjg6Tjg7zjg4k!5e0!3m2!1sru!2sru!4v1718170265628!5m2!1sru!2sru',
   yokohama:
     'https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1624.9944235362025!2d139.69819962771376!3d35.455070541504575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzXCsDI3JzE4LjMiTiAxMznCsDQxJzU2LjgiRQ!5e0!3m2!1sru!2sru!4v1717411355411!5m2!1sru!2sru',
+  MIRAIONE: '21',
 };

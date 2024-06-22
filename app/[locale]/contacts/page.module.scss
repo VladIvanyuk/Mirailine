@@ -4,7 +4,6 @@
 }
 
 .contactMapWrapper {
-  display: flex;
   padding-left: 70px;
 }
 
@@ -14,6 +13,11 @@
 
 .contactMapItemWrapper {
   margin-bottom: 70px;
+}
+
+.contactMapItem {
+  max-width: 364px;
+  width: 100%;
 }
 
 .contactsHeading {
@@ -63,4 +67,9 @@
 
 .japanHeadingPic::before {
   background-image: url('../../../public/images/countries/japan.png');
+}
+
+.contactsMapItemBlock {
+  display: flex;
+  justify-content: space-between;
 }
