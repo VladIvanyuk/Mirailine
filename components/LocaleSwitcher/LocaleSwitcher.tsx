@@ -5,8 +5,9 @@ import cls from './LocaleSwitcher.module.scss';
 import { useRouter } from 'next/navigation';
 import { useLocale } from 'next-intl';
 import { usePathname } from '@/navigations';
+import { classNames } from '@/utils/classNames/classNames';
 
-export const LocaleSwitcher = () => {
+export const LocaleSwitcher = ({ className }: { className?: string }) => {
   const [isPending, startTransition] = useTransition();
   const pathname = usePathname();
   const router = useRouter();
@@ -19,7 +20,7 @@ export const LocaleSwitcher = () => {
   };
   return (
     <select
-      className={cls.localeSwitcher}
+      className={classNames(cls.localeSwitcher, {}, [className])}
       onChange={onChangeSelect}
       name="lang"
       id="lang"

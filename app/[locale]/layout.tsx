@@ -25,7 +25,7 @@ export default function RootLayout({ children, params: { locale } }: TProps) {
       <body>
         <Header view={HeaderView.Home} />
         {children}
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   );

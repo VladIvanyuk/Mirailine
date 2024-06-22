@@ -21,7 +21,7 @@ const Home = () => {
             <p className={cls.hierography}>未来ライン。</p>
           </SectionLayout>
         </div>
-        <SectionLayout classes={cls.wrapper}>
+        {/* <SectionLayout classes={cls.wrapper}>
           <Title lineVariant={LineVariants.VARIANT_ONE} text={t('About')} />
           <div className={cls.aboutContent}>
             <div className={cls.aboutDescrWrapper}>
@@ -31,22 +31,22 @@ const Home = () => {
               <AboutCard
                 title={t('Logistic')}
                 img={AboutBGPic.PLANET}
-                page='services'
+                page="services"
               />
               <AboutCard
                 title={t('Warehouses')}
                 img={AboutBGPic.WAREHOUSE}
-                page='about'
+                page="about"
               />
               <AboutCard
                 title={t('Ships')}
                 img={AboutBGPic.SHIP}
-                page='schedule'
+                page="schedule"
               />
             </ul>
           </div>
-        </SectionLayout>
-        <SectionLayout classes={cls.wrapper}>
+        </SectionLayout> */}
+        {/* <SectionLayout classes={cls.wrapper}>
           <Title lineVariant={LineVariants.VARIANT_TWO} text={t('Services')} />
           <Description>{t('HelpDescr')}</Description>
           <div className={cls.servicesContent}>
@@ -60,7 +60,7 @@ const Home = () => {
             text={t('Partners')}
           />
           <Slider />
-        </SectionLayout>
+        </SectionLayout> */}
       </main>
     </>
   );

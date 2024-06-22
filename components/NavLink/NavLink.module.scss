@@ -10,3 +10,15 @@
 .isHome {
   font-weight: 600;
 }
+
+@media (max-width: 1040px) {
+  .navLink {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 800px) {
+  .navLink {
+    font-size: 12px;
+  }
+}

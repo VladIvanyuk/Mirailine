@@ -4,3 +4,9 @@
   outline: none;
   cursor: pointer;
 }
+
+@media (max-width: 1040px) {
+  .localeSwitcher {
+    font-size: 12px;
+  }
+}

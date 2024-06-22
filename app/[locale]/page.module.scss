@@ -74,3 +74,49 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+@media (max-width: 1680px) {
+  .promo {
+    background-position-y: -50px;
+    min-height: 900px;
+  }
+
+  .hierography {
+    top: 190px;
+    line-height: 106%;
+  }
+}
+
+@media (max-width: 1100px) {
+  .promoSection {
+    padding-top: 405px;
+  }
+
+  .hierography {
+    top: 150px;
+    line-height: 100%;
+    font-size: 160px;
+  }
+
+  .promo {
+    min-height: 820px;
+    background-position-y: -90px;
+  }
+}
+
+@media (max-width: 800px) {
+  .promoSection {
+    padding-top: 380px;
+  }
+
+  .hierography {
+    top: 150px;
+    line-height: 100%;
+    font-size: 140px;
+  }
+
+  .promo {
+    min-height: 775px;
+    background-position-y: -140px;
+  }
+}
