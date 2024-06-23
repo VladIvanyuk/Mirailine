@@ -22,7 +22,13 @@ export const Header = ({ view }: IHeaderProps) => {
   };
 
   return (
-    <header className={classNames(cls.header, {}, [cls[view]])}>
+    <header
+      className={classNames(
+        cls.header,
+        { [cls['activeSideBar']]: isShowSidebar },
+        [cls[view]]
+      )}
+    >
       <div className={cls.headerWrapper}>
         <SectionLayout classes={cls.headerNavWrapper}>
           <Image

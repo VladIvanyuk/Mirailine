@@ -21,7 +21,7 @@ const Home = () => {
         <div className={classNames(cls.promo, {}, [cls.wrapper])}>
           <SectionLayout classes={cls.promoSection}>
             <h1 className={cls.promoHeading}>{t('Promo')}</h1>
-            <p className={cls.hierography}>未来ライン。</p>
+            <p className={cls.hierography}>未来ライン</p>
           </SectionLayout>
         </div>
         {/* <SectionLayout classes={cls.wrapper}>
