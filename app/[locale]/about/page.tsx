@@ -29,7 +29,7 @@ export default function About() {
   return (
     <>
       <Header view={HeaderView.About} />
-      <main>
+      <main className="main">
         <SectionLayout>
           <Title
             lineVariant={LineVariants.VARIANT_FOUR}

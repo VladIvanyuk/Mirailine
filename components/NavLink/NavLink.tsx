@@ -26,8 +26,11 @@ export const NavLink = ({
     [cls.isHome]: (pathname === '/ru' || pathname === '/en') && route === '/',
   };
   return (
-    <li className={classNames(cls.navLink, mods, [className])}>
-      <Link className={cls.navLink} href={`/${locale}${route}`}>
+    <li>
+      <Link
+        className={classNames(cls.navLink, mods, [className])}
+        href={`/${locale}${route}`}
+      >
         {children}
       </Link>
     </li>

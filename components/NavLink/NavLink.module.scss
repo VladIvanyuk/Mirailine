@@ -22,3 +22,11 @@
     font-size: 12px;
   }
 }
+
+@media (max-width: 680px) {
+  .navLink {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 32px;
+  }
+}

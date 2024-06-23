@@ -22,7 +22,7 @@ export default function Contacts() {
   return (
     <>
       <Header view={HeaderView.Contacts} />
-      <main>
+      <main className="main">
         <SectionLayout classes={cls.section}>
           <Title
             lineVariant={LineVariants.VARIANT_EIGHT}

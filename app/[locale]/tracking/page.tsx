@@ -39,7 +39,7 @@ export default function Tracking() {
   return (
     <>
       <Header view={HeaderView.Tracking} />
-      <main>
+      <main className="main">
         <SectionLayout>
           <Title
             text={t('Tracking')}

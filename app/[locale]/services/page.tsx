@@ -14,7 +14,7 @@ export default function Services() {
   return (
     <>
       <Header view={HeaderView.Services} />
-      <main>
+      <main className="main">
         <SectionLayout className="container">
           <Title
             decorText={TitleServicesDecor}

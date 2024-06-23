@@ -12,7 +12,7 @@ export default function Schedule() {
   return (
     <>
       <Header view={HeaderView.Schedule} />
-      <main>
+      <main className="main">
         <SectionLayout>
           <Title
             lineVariant={LineVariants.VARIANT_THREE}

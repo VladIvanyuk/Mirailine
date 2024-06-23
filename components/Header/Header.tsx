@@ -11,6 +11,7 @@ import { SectionLayout } from '../SectionLayout/SectionLayout';
 import { NavLink } from '../NavLink/NavLink';
 import { Routes } from './Routes';
 import { useState } from 'react';
+import { translations } from './Translations';
 
 export const Header = ({ view }: IHeaderProps) => {
   const activeLocale = useLocale();
@@ -45,7 +46,7 @@ export const Header = ({ view }: IHeaderProps) => {
                 ))}
               </ul>
             </nav>
-            <LocaleSwitcher className={cls.localeSwitcher} />
+            <LocaleSwitcher />
           </div>
           <div
             className={classNames(
@@ -56,10 +57,18 @@ export const Header = ({ view }: IHeaderProps) => {
           >
             <nav className={cls.navMob}>
               <LocaleSwitcher className={cls.localeSwitcher} />
+              <div className={cls.workSchedule}>
+                <p className={cls.workScheduleText}>
+                  {translations.work[activeLocale]['title']}
+                </p>
+                <p className={cls.workScheduleText}>
+                  {translations.work[activeLocale]['time']}
+                </p>
+              </div>
               <ul className={cls.navListMob}>
                 {Routes.map((route) => (
                   <NavLink
-                    className={cls.navLinkMob}
+                    className={cls.navLink}
                     locale={activeLocale}
                     route={route.route}
                     key={route.name}

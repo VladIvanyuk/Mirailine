@@ -3,10 +3,17 @@
   border: none;
   outline: none;
   cursor: pointer;
+  color: var(--main-blue);
+}
+
+.localeSwitcherWrapper {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 @media (max-width: 1040px) {
   .localeSwitcher {
-    font-size: 12px;
+    font-size: 14px;
   }
 }

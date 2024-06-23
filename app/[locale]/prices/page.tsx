@@ -13,7 +13,7 @@ export default function Prices() {
   return (
     <>
       <Header view={HeaderView.Prices} />
-      <main>
+      <main className="main">
         <SectionLayout>
           <Title
             text={t('Title')}

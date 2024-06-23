@@ -17,7 +17,6 @@ const Home = () => {
   return (
     <>
       <Header view={HeaderView.Home} />
-
       <main>
         <div className={classNames(cls.promo, {}, [cls.wrapper])}>
           <SectionLayout classes={cls.promoSection}>
