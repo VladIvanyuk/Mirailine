@@ -24,11 +24,13 @@ const Home = () => {
             <p className={cls.hierography}>未来ライン</p>
           </SectionLayout>
         </div>
-        {/* <SectionLayout classes={cls.wrapper}>
+        <SectionLayout classes={cls.wrapper}>
           <Title lineVariant={LineVariants.VARIANT_ONE} text={t('About')} />
           <div className={cls.aboutContent}>
             <div className={cls.aboutDescrWrapper}>
-              <Description>{t('AboutDescr')}</Description>
+              <Description className={cls.mainDescr}>
+                {t('AboutDescr')}
+              </Description>
             </div>
             <ul className={cls.aboutCards}>
               <AboutCard
@@ -48,10 +50,12 @@ const Home = () => {
               />
             </ul>
           </div>
-        </SectionLayout> */}
-        {/* <SectionLayout classes={cls.wrapper}>
+        </SectionLayout>
+        <SectionLayout classes={cls.wrapper}>
           <Title lineVariant={LineVariants.VARIANT_TWO} text={t('Services')} />
-          <Description>{t('HelpDescr')}</Description>
+          <Description className={cls.servicesDescr}>
+            {t('HelpDescr')}
+          </Description>
           <div className={cls.servicesContent}>
             <div className={cls.servicesImg}></div>
             <ServicesList className={cls.servicesList} />
@@ -63,7 +67,7 @@ const Home = () => {
             text={t('Partners')}
           />
           <Slider />
-        </SectionLayout> */}
+        </SectionLayout>
       </main>
     </>
   );

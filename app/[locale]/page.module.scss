@@ -87,6 +87,21 @@
   }
 }
 
+@media (max-width: 1300px) {
+  .aboutContent {
+    flex-direction: column;
+  }
+
+  .aboutDescrWrapper {
+    max-width: 570px;
+    margin-bottom: 24px;
+  }
+
+  .aboutCards {
+    justify-content: space-between;
+  }
+}
+
 @media (max-width: 1100px) {
   .promoSection {
     padding-top: 405px;
@@ -101,6 +116,14 @@
   .promo {
     min-height: 820px;
     background-position-y: -90px;
+  }
+
+  .servicesList {
+    flex-basis: 40%;
+  }
+
+  .servicesImg {
+    flex-basis: 60%;
   }
 }
 
@@ -122,6 +145,9 @@
 }
 
 @media (max-width: 680px) {
+  .servicesDescr {
+    margin-bottom: 24px;
+  }
   .promoSection {
     height: 500px;
     display: flex;
@@ -134,15 +160,16 @@
     font-size: 30px;
     line-height: 130%;
     letter-spacing: 0.02em;
-    padding: 0 20px;
     margin-bottom: auto;
   }
 
   .hierography {
-    top: 0;
+    top: 10px;
     bottom: 0;
     line-height: 100%;
     font-size: 80px;
+    margin-left: -20px;
+    margin-right: -20px;
   }
 
   .promo {
@@ -151,5 +178,28 @@
     background-size: cover;
     background-position: bottom 0 left 0;
     background-repeat: no-repeat;
+  }
+
+  .wrapper {
+    margin-bottom: 80px;
+  }
+
+  .aboutCards {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .aboutDescrWrapper {
+    margin-bottom: 38px;
+  }
+
+  .servicesContent {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .servicesImg {
+    height: 200px;
+    flex-basis: auto;
   }
 }

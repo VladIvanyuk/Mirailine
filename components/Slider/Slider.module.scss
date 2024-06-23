@@ -1,0 +1,14 @@
+.swiperSlide {
+  width: 200px;
+  text-align: center;
+}
+
+.swiper div {
+  align-items: center;
+}
+
+@media (max-width: 680px) {
+  .swiper {
+    padding-top: 8px !important;
+  }
+}
