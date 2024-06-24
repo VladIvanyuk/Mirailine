@@ -88,7 +88,7 @@ export const Footer = () => {
                 </li>
               </ContactsList>
             </li>
-            <li>
+            <li className={cls.jpnContact}>
               <ContactsList
                 phone={ContactNumbers.JAPAN_TEL_CONTACT}
                 wa={ContactNumbers.JAPAN_WA_CONTACT}
