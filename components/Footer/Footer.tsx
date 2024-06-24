@@ -7,6 +7,7 @@ import Image from 'next/image';
 import Date from '@/public/images/vectors/date.png';
 import JapanImg from '@/public/images/countries/japan.png';
 import RussiaImg from '@/public/images/countries/russia.png';
+import LogoFooter from '@/public/images/logo-footer.png';
 
 export enum ContactNumbers {
   PRETENSION_CONTACT = '+7-994-109-5764',
@@ -25,6 +26,7 @@ export const Footer = () => {
   return (
     <footer className={cls.footer}>
       <SectionLayout classes={cls.footerWrapper}>
+        <Image className={cls.footerLogo} src={LogoFooter} alt="Логотип" />
         <div className={cls.footerListsWrapper}>
           <ul className={cls.navList}>
             <li>
@@ -71,11 +73,17 @@ export const Footer = () => {
                 email={ContactNumbers.PRETENSION_EMAIL}
               >
                 <li className={cls.contactWrapper}>
-                  <Image src={Date} alt={'Иконка календаря'} />
+                  <Image
+                    className={cls.workTimeIng}
+                    src={Date}
+                    alt={'Иконка календаря'}
+                  />
                   <div className={cls.workTime}>
-                    <p>{`(${t1('Days')})`}</p>
-                    <p>9:00 - 18:00</p>
-                    <p>{`(${t1('Text')})`}</p>
+                    <div className={cls.workTimeMain}>
+                      <p className={cls.worktimeText}>{`(${t1('Days')})`}</p>
+                      <p className={cls.worktimeText}>9:00 - 18:00</p>
+                    </div>
+                    <p className={cls.worktimeText}>{`(${t1('Text')})`}</p>
                   </div>
                 </li>
               </ContactsList>

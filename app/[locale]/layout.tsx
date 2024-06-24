@@ -24,7 +24,7 @@ export default function RootLayout({ children, params: { locale } }: TProps) {
     <html lang={locale}>
       <body>
         {children}
-        {/* <Footer /> */}
+        <Footer />
       </body>
     </html>
   );

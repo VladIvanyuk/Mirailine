@@ -29,7 +29,11 @@ export const ContactsList = ({
     <>
       {country ? (
         <div className={cls.contactsContent}>
-          <Image src={countryImg as StaticImport} alt={country} />
+          <Image
+            className={cls.countryImg}
+            src={countryImg as StaticImport}
+            alt={country}
+          />
           <div>
             <p
               className={classNames(cls.contactsTextTop, {}, [

@@ -7,8 +7,7 @@
 }
 
 .footer .footerWrapper {
-  padding: 60px 0;
-  display: flex;
+  padding: 60px 20px;
   margin-bottom: 0;
 }
 
@@ -36,6 +35,10 @@
   display: flex;
   align-items: flex-start;
   gap: 20px;
+}
+
+.footerLogo {
+  display: none;
 }
 
 .workTime {
@@ -71,4 +74,76 @@
   font-weight: 400;
   font-size: 15px;
   color: var(--white);
+}
+
+@media (max-width: 1230px) {
+  .contactsList {
+    gap: 10px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+
+  .footerLogo {
+    display: block;
+    margin: 0 auto 40px;
+  }
+
+  .footerListsWrapper {
+    flex-direction: column;
+  }
+
+  .navList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 52px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 880px) {
+  .navList li:not(:last-child) {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 680px) {
+  .footer .footerWrapper {
+    padding: 32px 20px;
+  }
+
+  .contactsList {
+    gap: 52px;
+    justify-content: flex-start;
+  }
+
+  .footer {
+    background-image: none;
+  }
+
+  .navLink {
+    font-size: 16px;
+  }
+
+  .navList li:not(:last-child) {
+    margin-bottom: 0;
+  }
+
+  .workTimeMain {
+    display: flex;
+    gap: 8px;
+  }
+
+  .worktimeText {
+    font-size: 14px;
+  }
+
+  .workTimeIng {
+    width: 16px;
+    height: 16px;
+  }
+
+  .footerBottom {
+    padding: 24px 0;
+  }
 }

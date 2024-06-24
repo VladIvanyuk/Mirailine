@@ -13,3 +13,20 @@
   align-items: start;
   gap: 20px;
 }
+
+@media (max-width: 850px) {
+  .contact {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 680px) {
+  .contact {
+    font-size: 14px;
+  }
+
+  .img {
+    width: 16px;
+    height: 16px;
+  }
+}

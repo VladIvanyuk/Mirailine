@@ -35,3 +35,32 @@
 .claims {
   max-width: 150px;
 }
+
+@media (max-width: 850px) {
+  .contactsList {
+    gap: 16px;
+  }
+
+  .contactsContent {
+    margin-bottom: 35px;
+  }
+}
+
+@media (max-width: 680px) {
+  .contactsText {
+    font-size: 16px;
+  }
+
+  .contactsContent {
+    margin-bottom: 24px;
+  }
+
+  .contactsList {
+    gap: 16px;
+  }
+
+  .countryImg {
+    width: 32px;
+    height: 32px;
+  }
+}
