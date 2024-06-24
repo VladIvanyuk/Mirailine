@@ -33,7 +33,6 @@ export const WarehouseMaps = ({ className, titles }: IWarehouseMapsProps) => {
 
   const currentMap = findCurrentMap(map);
 
-  console.log(titles);
   return (
     <div className={cls.warehouseContent}>
       <ul className={cls.addressList}>
@@ -41,7 +40,7 @@ export const WarehouseMaps = ({ className, titles }: IWarehouseMapsProps) => {
           <AdressItemWithChange
             onClick={onClickHandler}
             map={map}
-            name='fushiki'
+            name="fushiki"
             title={titles['Fushiki']}
           >
             <p>高岡市伏木万葉ふ頭</p>
@@ -52,7 +51,7 @@ export const WarehouseMaps = ({ className, titles }: IWarehouseMapsProps) => {
           <AdressItemWithChange
             onClick={onClickHandler}
             map={map}
-            name='toyama'
+            name="toyama"
             title={titles['Toyamashinko']}
           >
             <p>Kitafuto, Toyamashinko, Imizu-shi, Toyama-ken</p>
@@ -62,7 +61,7 @@ export const WarehouseMaps = ({ className, titles }: IWarehouseMapsProps) => {
           <AdressItemWithChange
             onClick={onClickHandler}
             map={map}
-            name='t1'
+            name="t1"
             title={titles['T1']}
           >
             <p>富山県射水市新堀5</p>
@@ -73,7 +72,7 @@ export const WarehouseMaps = ({ className, titles }: IWarehouseMapsProps) => {
           <AdressItemWithChange
             onClick={onClickHandler}
             map={map}
-            name='t2'
+            name="t2"
             title={titles['T2']}
           >
             <p>富山県高岡市堀岡又新2-2</p>

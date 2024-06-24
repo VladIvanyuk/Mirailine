@@ -22,10 +22,10 @@ export enum LineVariants {
 export const Title = ({ text, lineVariant, decorText }: ITitleProps) => {
   return (
     <h2 className={classNames(cls.title, {}, [])}>
-      <span className={classNames(cls.titleText, {}, [cls[lineVariant]])}>
+      <p className={classNames(cls.titleText, {}, [cls[lineVariant]])}>
         {text}
-      </span>
-      {decorText && <Image src={decorText} alt='Иероглифы' />}
+      </p>
+      {decorText && <Image src={decorText} alt="Иероглифы" />}
     </h2>
   );
 };

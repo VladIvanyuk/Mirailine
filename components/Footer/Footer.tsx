@@ -66,7 +66,7 @@ export const Footer = () => {
             </li>
           </ul>
           <ul className={cls.contactsList}>
-            <li>
+            <li className={cls.claims}>
               <ContactsList
                 phone={ContactNumbers.PRETENSION_CONTACT}
                 wa={ContactNumbers.PRETENSION_CONTACT}

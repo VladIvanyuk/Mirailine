@@ -102,4 +102,16 @@
   .titleText::after {
     content: '';
   }
+
+  .titleText {
+    font-size: 24px;
+    width: 100%;
+  }
+
+  .variantTwo {
+    background-image: url('../../public/images/text/services.png');
+    background-size: 90px 20px;
+    background-repeat: no-repeat;
+    background-position: right 0 center;
+  }
 }
