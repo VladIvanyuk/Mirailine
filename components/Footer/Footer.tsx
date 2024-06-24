@@ -8,6 +8,7 @@ import Date from '@/public/images/vectors/date.png';
 import JapanImg from '@/public/images/countries/japan.png';
 import RussiaImg from '@/public/images/countries/russia.png';
 import LogoFooter from '@/public/images/logo-footer.png';
+import { ScrollTopButton } from '../ScrollTopButton/ScrollTopButton';
 
 export enum ContactNumbers {
   PRETENSION_CONTACT = '+7-994-109-5764',
@@ -26,6 +27,7 @@ export const Footer = () => {
   return (
     <footer className={cls.footer}>
       <SectionLayout classes={cls.footerWrapper}>
+        <ScrollTopButton />
         <Image className={cls.footerLogo} src={LogoFooter} alt="Логотип" />
         <div className={cls.footerListsWrapper}>
           <ul className={cls.navList}>
