@@ -25,8 +25,10 @@ const Slider = () => {
         return 4;
       } else if (screenWidth > 600 && screenWidth < 800) {
         return 3;
-      } else if (screenWidth < 600) {
+      } else if (screenWidth > 400 && screenWidth < 600) {
         return 2;
+      } else {
+        return 1;
       }
     }
   };

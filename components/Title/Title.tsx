@@ -25,7 +25,9 @@ export const Title = ({ text, lineVariant, decorText }: ITitleProps) => {
       <p className={classNames(cls.titleText, {}, [cls[lineVariant]])}>
         {text}
       </p>
-      {decorText && <Image src={decorText} alt="Иероглифы" />}
+      {decorText && (
+        <Image className={cls.decorText} src={decorText} alt="Иероглифы" />
+      )}
     </h2>
   );
 };

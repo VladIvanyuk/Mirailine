@@ -1,5 +1,6 @@
 .adressItem {
   margin-bottom: 30px;
+  position: relative;
 }
 
 .adressItemTitle {
@@ -20,4 +21,27 @@
   font-size: 18px;
   line-height: 140%;
   color: var(--grey);
+}
+
+@media (max-width: 680px) {
+  .adressItemTitle {
+    font-size: 14px;
+    line-height: 140%;
+    margin-bottom: 5px;
+  }
+
+  .adressItemText {
+    font-size: 14px;
+    line-height: 120%;
+  }
+
+  .adressItem {
+    padding-left: 50px;
+  }
+
+  .adressItem::before {
+    content: url('../../public/images/icons/map-mark.png');
+    position: absolute;
+    left: 0;
+  }
 }

@@ -51,7 +51,7 @@ const Home = () => {
             </ul>
           </div>
         </SectionLayout>
-        <SectionLayout classes={cls.wrapper}>
+        <SectionLayout>
           <Title lineVariant={LineVariants.VARIANT_TWO} text={t('Services')} />
           <Description className={cls.servicesDescr}>
             {t('HelpDescr')}
@@ -61,7 +61,7 @@ const Home = () => {
             <ServicesList className={cls.servicesList} />
           </div>
         </SectionLayout>
-        <SectionLayout classes={cls.wrapper}>
+        <SectionLayout>
           <Title
             lineVariant={LineVariants.VARIANT_THREE}
             text={t('Partners')}

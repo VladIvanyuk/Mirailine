@@ -17,3 +17,19 @@
   flex-basis: 50%;
   box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.3);
 }
+
+@media (max-width: 680px) {
+  .warehouseContent {
+    flex-direction: column;
+    margin-bottom: 60px;
+  }
+
+  .addressList {
+    margin-bottom: 12px;
+  }
+
+  .map {
+    flex-basis: auto;
+    height: 200px;
+  }
+}

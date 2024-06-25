@@ -11,9 +11,8 @@
 .aboutImg {
   flex-basis: 50%;
   background-image: url('../../../public/images/container.png');
-  background-position: 100%;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
 }
 
 .aboutBoldText {
@@ -29,6 +28,9 @@
   font-size: 18px;
   line-height: 140%;
   color: var(--main-blue);
+}
+
+.aboutThinText:not(:last-child) {
   margin-bottom: 30px;
 }
 
@@ -61,4 +63,93 @@
 
 .addressItemTop {
   margin-bottom: 20px;
+}
+
+.decorImg {
+  display: none;
+}
+
+@media (max-width: 1100px) {
+  .aboutImg {
+    display: none;
+  }
+
+  .aboutText {
+    flex-basis: 100%;
+  }
+}
+
+@media (max-width: 800px) {
+  .aboutImg {
+    display: block;
+    height: 300px;
+    flex-basis: auto;
+    background-size: 100%;
+    background-position: center;
+  }
+
+  .aboutWrapper {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .decorImg {
+    margin-left: auto;
+    display: block;
+    height: 26px;
+    width: 120px;
+    align-items: flex-end;
+    margin-bottom: 5px;
+  }
+
+  .aboutText {
+    margin-bottom: 32px;
+  }
+}
+
+@media (max-width: 680px) {
+  .aboutBoldText {
+    font-size: 16px;
+    line-height: 140%;
+    margin-bottom: 20px;
+  }
+
+  .aboutThinText {
+    font-size: 14px;
+    line-height: 140%;
+  }
+
+  .warehouseDescr {
+    margin-bottom: 32px;
+  }
+
+  .warehouseContent {
+    flex-direction: column;
+    margin-bottom: 60px;
+  }
+
+  .addressItemTop {
+    margin-bottom: 8px;
+  }
+
+  .map {
+    flex-basis: auto;
+    height: 200px;
+  }
+}
+
+@media (max-width: 500px) {
+  .aboutImg {
+    height: 214px;
+    background-size: 100%;
+    background-position: center;
+    margin: 0 -20px;
+  }
+}
+
+@media (max-width: 400px) {
+  .decorImg {
+    height: 19px;
+    width: 100px;
+  }
 }

@@ -74,6 +74,11 @@ export default function About() {
                 </li>
               </ul>
             </div>
+            <Image
+              className={cls.decorImg}
+              src={TitleAboutDecor}
+              alt="Иероглифы"
+            />
             <div className={cls.aboutImg}></div>
           </div>
         </SectionLayout>
