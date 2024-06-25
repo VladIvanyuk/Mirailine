@@ -28,6 +28,18 @@
   color: var(--grey);
 }
 
+@media (max-width: 1400px) {
+  .servicesCard {
+    flex-basis: 45%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .servicesCard {
+    flex-basis: 100%;
+  }
+}
+
 @media (max-width: 680) {
   .image {
     width: 62px;
