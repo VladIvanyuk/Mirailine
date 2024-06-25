@@ -77,6 +77,10 @@
   .aboutText {
     flex-basis: 100%;
   }
+
+  .map {
+    flex-basis: 60%;
+  }
 }
 
 @media (max-width: 800px) {

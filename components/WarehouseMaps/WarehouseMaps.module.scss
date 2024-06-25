@@ -18,6 +18,18 @@
   box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.3);
 }
 
+@media (max-width: 1100px) {
+  .map {
+    flex-basis: 60%;
+  }
+}
+
+@media (max-width: 950px) {
+  .addressList {
+    flex-basis: 35%;
+  }
+}
+
 @media (max-width: 680px) {
   .warehouseContent {
     flex-direction: column;
