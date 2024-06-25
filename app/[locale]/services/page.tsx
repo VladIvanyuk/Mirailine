@@ -8,6 +8,7 @@ import { Description, FontSizes } from '@/components/Description/Description';
 import { cards } from '@/components/ServicesCard/cardsData';
 import { ServicesCard } from '@/components/ServicesCard/ServicesCard';
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 
 export default function Services() {
   const t = useTranslations('Services');
@@ -45,6 +46,11 @@ export default function Services() {
                 </li>
               </ul>
             </div>
+            <Image
+              className={cls.servicesImgDecor}
+              src={TitleServicesDecor}
+              alt="Иероглифы"
+            />
             <div className={cls.servicesImage}></div>
           </div>
         </SectionLayout>

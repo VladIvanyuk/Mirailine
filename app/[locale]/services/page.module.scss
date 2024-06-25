@@ -22,11 +22,16 @@
 
 .servicesImage {
   background-image: url('../../../public/images/serviceEmpl.png');
+  background-repeat: no-repeat;
 }
 
 .numbersList {
   flex-wrap: wrap;
   display: flex;
+}
+
+.servicesImgDecor {
+  display: none;
 }
 
 .numbersListItem {
@@ -62,4 +67,84 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: 30px;
+}
+
+@media (max-width: 1200px) {
+  .servicesContent {
+    flex-direction: column;
+  }
+
+  .numbersListItem:nth-child(2n) {
+    padding-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .servicesTextContent {
+    gap: 30px;
+  }
+
+  .numbersList {
+    gap: 32px;
+  }
+
+  .numbersListItem {
+    flex-basis: 40%;
+  }
+}
+
+@media (max-width: 680px) {
+  .numbersListNum {
+    font-size: 50px;
+    line-height: 100%;
+  }
+
+  .numbersListText {
+    max-width: 100%;
+    font-size: 14px;
+    line-height: 140%;
+  }
+
+  .numbersListItem {
+    flex-basis: 100%;
+  }
+
+  .servicesImage {
+    flex-basis: auto;
+    height: 350px;
+    background-size: cover;
+  }
+
+  .servicesImgDecor {
+    height: 22px;
+    width: 110px;
+    display: block;
+    margin-left: auto;
+    margin-bottom: 5px;
+  }
+
+  .servicesContent {
+    gap: 0;
+  }
+
+  .servicesTextContent {
+    margin-bottom: 32px;
+  }
+
+  .servicesCardsList {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 450px) {
+  .servicesImage {
+    height: 214px;
+  }
+
+  .servicesImgDecor {
+    height: 18px;
+    width: 80px;
+    display: block;
+    margin-left: auto;
+    margin-bottom: 5px;
+  }
 }

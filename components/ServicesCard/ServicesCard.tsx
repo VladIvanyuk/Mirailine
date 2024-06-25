@@ -20,7 +20,7 @@ export const ServicesCard = ({
 
   return (
     <li className={classNames(cls.servicesCard, {}, [className])}>
-      <Image src={src} alt={t(textKey)} />
+      <Image className={cls.image} src={src} alt={t(textKey)} />
       <p className={cls.servicesCardText}>{t(textKey)}</p>
       <span className={cls.cardNumber}>{number}</span>
     </li>
