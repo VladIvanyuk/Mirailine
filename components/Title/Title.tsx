@@ -6,6 +6,7 @@ interface ITitleProps {
   text: string;
   lineVariant: string;
   decorText?: StaticImageData;
+  className?: string;
 }
 
 export enum LineVariants {
@@ -19,10 +20,17 @@ export enum LineVariants {
   VARIANT_EIGHT = 'variantEight',
 }
 
-export const Title = ({ text, lineVariant, decorText }: ITitleProps) => {
+export const Title = ({
+  text,
+  lineVariant,
+  decorText,
+  className,
+}: ITitleProps) => {
   return (
     <h2 className={classNames(cls.title, {}, [])}>
-      <p className={classNames(cls.titleText, {}, [cls[lineVariant]])}>
+      <p
+        className={classNames(cls.titleText, {}, [cls[lineVariant], className])}
+      >
         {text}
       </p>
       {decorText && (

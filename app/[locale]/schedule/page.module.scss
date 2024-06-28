@@ -4,3 +4,31 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+.bottomDecor {
+  display: none;
+}
+
+@media (max-width: 680px) {
+  .bottomImg {
+    display: none;
+  }
+
+  .scheduleContainer {
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 500px) {
+  .scheduleTitle + img {
+    display: none;
+  }
+
+  .bottomDecor {
+    display: block;
+    width: 150px;
+    height: 19px;
+    margin-left: auto;
+    margin-right: 10px;
+  }
+}

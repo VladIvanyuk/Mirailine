@@ -41,8 +41,8 @@ export const ScheduleList = async ({ className }: IScheduleListProps) => {
       <ul className={cls.tableHead}>
         <li className={cls.tableHeadingTitle}>{t('Vessel')}</li>
         <li className={cls.tableHeadingTitle}>{t('Voyage')}</li>
-        <li className={cls.tableHeadingTitle}>{t('Port')}</li>
         <li className={cls.tableHeadingTitle}>{t('Date')}</li>
+        <li className={cls.tableHeadingTitle}>{t('Port')}</li>
       </ul>
       <div>
         {data.map((el, index) => {
