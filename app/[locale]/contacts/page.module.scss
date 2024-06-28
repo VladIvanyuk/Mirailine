@@ -25,7 +25,7 @@
   margin-bottom: 30px;
 }
 
-.contactsItem {
+.contactsItem a {
   color: var(--main-blue);
 }
 
@@ -47,11 +47,11 @@
   padding-left: 400px;
 }
 
-.contactsAddressItem {
+.contactsAddressItem a {
   max-width: 200px;
 }
 
-.contactsJapanAddressItem {
+.contactsJapanAddressItem a {
   max-width: 320px;
 }
 
@@ -155,5 +155,9 @@
     height: 200px;
     flex-basis: auto;
     margin-left: -44px;
+  }
+
+  .contactsJapanAddressItem img {
+    height: 28px;
   }
 }

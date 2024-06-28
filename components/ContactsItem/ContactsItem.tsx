@@ -60,10 +60,10 @@ export const ContactsItem = ({ type, text, className }: IContactsItemProps) => {
   const contactType = getContactType(type);
 
   return (
-    <li className={cls.contactWrapper}>
+    <li className={classNames(cls.contactWrapper, {}, [className])}>
       <Image className={cls.img} src={contactType.src} alt={contactType.alt} />
       <a
-        className={classNames(cls.contact, {}, [className])}
+        className={classNames(cls.contact, {}, [])}
         href={`${contactType.hrefType}${text}`}
       >
         {text}
