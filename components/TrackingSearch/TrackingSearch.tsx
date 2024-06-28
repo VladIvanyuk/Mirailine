@@ -108,6 +108,7 @@ export const TrackingSearch = ({
               frameData.images.map((el, index) => (
                 <SwiperSlide className={cls.swiperSlide} key={index}>
                   <Image
+                    className={cls.swiperImg}
                     src={el.image}
                     width={1000}
                     height={650}
