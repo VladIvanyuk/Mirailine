@@ -25,6 +25,7 @@ export default function Contacts() {
       <main className="main">
         <SectionLayout classes={cls.section}>
           <Title
+            className={cls.contactsTitle}
             lineVariant={LineVariants.VARIANT_EIGHT}
             decorText={TitleContactsDecor}
             text={t('Contacts')}
@@ -36,8 +37,12 @@ export default function Contacts() {
             <div className={cls.contactsItem}>
               <div className={cls.contactMapItemWrapper}>
                 <div className={cls.time}>
-                  <Image src={Clock} alt={'Иконка календаря'} />
-                  <div>
+                  <Image
+                    className={cls.clockPic}
+                    src={Clock}
+                    alt={'Иконка календаря'}
+                  />
+                  <div className={cls.timeBlock}>
                     <p>{t('Hours')}</p>
                     <p>{`(${t('Time')})`}</p>
                   </div>
@@ -103,7 +108,7 @@ export default function Contacts() {
                     </div>
                   </div>
                   <div className={cls.miraiJPMap}>
-                    <Map src={mapLinks[Maps.T1]} />
+                    <Map src={mapLinks[Maps.MIRAIVDK]} />
                   </div>
                 </div>
               </div>
@@ -150,7 +155,7 @@ export default function Contacts() {
                     </div>
                   </div>
                   <div className={cls.miraiRUMap}>
-                    <Map src={mapLinks[Maps.MIRAIVDK]} />
+                    <Map src={mapLinks[Maps.T1]} />
                   </div>
                 </div>
               </div>

@@ -89,6 +89,10 @@
   color: var(--light-blue);
 }
 
+.title:has(.variantEight) {
+  padding-left: 340px;
+}
+
 @media (max-width: 1300px) {
   .title:has(.variantFive) {
     padding-left: 250px;
@@ -114,6 +118,10 @@
   }
 
   .title:has(.variantSix) {
+    padding-left: 150px;
+  }
+
+  .title:has(.variantEight) {
     padding-left: 150px;
   }
 
@@ -145,6 +153,10 @@
     padding-left: 0;
   }
 
+  .title:has(.variantEight) {
+    padding-left: 0;
+  }
+
   .titleText {
     font-size: 24px;
     width: 100%;
@@ -165,6 +177,10 @@
 
   .variantSix + img {
     display: none;
+  }
+
+  .variantEight + img {
+    width: 90px;
   }
 }
 

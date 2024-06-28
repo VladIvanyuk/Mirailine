@@ -43,6 +43,10 @@
   padding-left: 13%;
 }
 
+.contactsTitle:has(.title) {
+  padding-left: 400px;
+}
+
 .contactsAddressItem {
   max-width: 200px;
 }
@@ -81,4 +85,75 @@
 
 .miraiRUMap {
   flex-basis: 62%;
+}
+
+@media (max-width: 1100px) {
+  .section {
+    padding-left: 20px;
+  }
+}
+
+@media (max-width: 680px) {
+  .section {
+    padding-left: 20px;
+  }
+
+  .servicesDescr {
+    margin-bottom: 40px;
+  }
+
+  .contactMapWrapper {
+    padding-left: 44px;
+  }
+
+  .contactMapItemWrapper {
+    margin-bottom: 44px;
+  }
+
+  .russiaHeadingPic::before,
+  .japanHeadingPic::before {
+    height: 20px;
+    width: 28px;
+    left: -40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .russiaHeadingPic::before {
+    background-image: url('../../../public/images/countries/contacts-russia.png');
+  }
+
+  .japanHeadingPic::before {
+    background-image: url('../../../public/images/countries/contacts-japan.png');
+  }
+
+  .timeBlock p {
+    font-size: 14px;
+    line-height: 140%;
+  }
+
+  .clockPic {
+    width: 20px;
+    height: 20px;
+  }
+
+  .time {
+    gap: 16px;
+  }
+
+  .contactMapItem .contactsHeading {
+    margin-bottom: 24px;
+  }
+
+  .contactsMapItemBlock {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .miraiJPMap,
+  .miraiRUMap {
+    height: 200px;
+    flex-basis: auto;
+    margin-left: -44px;
+  }
 }

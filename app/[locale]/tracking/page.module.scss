@@ -2,6 +2,9 @@
   display: none;
 }
 
+.titleWrapper {
+  margin-bottom: 0;
+}
 @media (max-width: 680px) {
   .mobDescr {
     display: block;
@@ -10,10 +13,6 @@
 
   .searchWrapper {
     padding: 0;
-  }
-
-  .titleWrapper {
-    margin-bottom: 0;
   }
 }
 
