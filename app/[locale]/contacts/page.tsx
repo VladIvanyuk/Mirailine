@@ -102,7 +102,7 @@ export default function Contacts() {
                             cls.contactsAddressItem,
                           ])}
                           type={ContactTypes.ADDRESS}
-                          text={`г. Владивосток ул.${'\u00A0'}Некрасовская${'\u00A0'}36Б офис 302`}
+                          text={t('Place')}
                         />
                       </ul>
                     </div>
