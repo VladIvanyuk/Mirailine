@@ -14,13 +14,16 @@ export default function Prices() {
     <>
       <Header view={HeaderView.Prices} />
       <main className="main">
-        <SectionLayout>
+        <SectionLayout classes={cls.titleWrapper}>
           <Title
+            className={cls.scheduleTitle}
             text={t('Title')}
             decorText={TitlePricesDecor}
             lineVariant={LineVariants.VARIANT_EIGHT}
           />
           <p className={cls.note}>{t('Note')}</p>
+        </SectionLayout>
+        <SectionLayout classes={cls.listWrapper}>
           <PricesList title={t('OskVdk')} list={pricesData.Osaka} />
           <PricesList title={t('YokVdk')} list={pricesData.Yokohama} />
           <PricesList title={t('ToyaVdk')} list={pricesData.Toyama} />

@@ -1,6 +1,6 @@
 .pricesListWrapper {
   width: 100%;
-  padding: 30px 30px 50px;
+  padding: 0px 30px 50px 30px;
   margin-bottom: 70px;
   background-color: var(--white);
 }
@@ -49,6 +49,44 @@
 }
 
 .listHeading {
+  max-width: 487px;
   margin-bottom: 50px;
-  padding-left: 30px;
+  margin-left: 30px;
+  padding-top: 40px;
+  border-top: 6px solid var(--light-blue-sec);
+}
+
+@media (max-width: 680px) {
+  .pricesListWrapper {
+    padding: 0px 20px 30px 20px;
+    margin-bottom: 40px;
+  }
+
+  .textPart {
+    padding: 16px 0px;
+    font-size: 12px;
+    line-height: 120%;
+  }
+
+  .textPartHeading {
+    font-size: 12px;
+    line-height: 140%;
+    padding: 0;
+  }
+
+  .listNote {
+    padding: 16px 0 0 0;
+    font-size: 12px;
+    line-height: 120%;
+  }
+
+  .textRowValues,
+  .textRow {
+    gap: 20px;
+  }
+
+  .listHeading {
+    margin-left: 0;
+    padding-top: 24px;
+  }
 }
