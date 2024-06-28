@@ -1,0 +1,24 @@
+.mobDescr {
+  display: none;
+}
+
+@media (max-width: 680px) {
+  .mobDescr {
+    display: block;
+    margin-bottom: 32px;
+  }
+
+  .searchWrapper {
+    padding: 0;
+  }
+
+  .titleWrapper {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .trackingTitle + img {
+    display: none;
+  }
+}

@@ -13,6 +13,7 @@ import { Navigation, Pagination } from 'swiper/modules';
 import cls from './TrackingSearch.module.scss';
 import { handleZip } from '@/utils/imgDownloader/imgDownloader';
 import { ITranslationsTypes } from '@/app/[locale]/tracking/page';
+import SearchVector from '@/public/images/vectors/search.png';
 
 interface ITrackingSearchProps {
   className?: string;
@@ -120,34 +121,49 @@ export const TrackingSearch = ({
       <Description fontSize={FontSizes.S} className={cls.trackingTitle}>
         {title}
       </Description>
-      <div>
+      <div className={cls.searchBlock}>
         <input type="text" className={cls.input} placeholder={placeholder} />
         <button onClick={searchFrame} className={cls.button}>
-          {button}
+          <p className={cls.btnText}>{button}</p>
+          <Image
+            className={cls.btnImage}
+            src={SearchVector}
+            alt="Картинка поиска"
+          />
         </button>
       </div>
       <div>
         {frameData && (
-          <>
+          <div className={cls.infoBlock}>
             <ul className={cls.frameInfo}>
               <li className={cls.frameInfoItem}>
                 <p className={cls.frameItemTitle}>{frameNumber}</p>
-                <p className={cls.frameItemValue}>{frameData.FlightNumber}</p>
               </li>
               <li className={cls.frameInfoItem}>
                 <p className={cls.frameItemTitle}>{frameName}</p>
+              </li>
+              <li className={cls.frameInfoItem}>
+                <p className={cls.frameItemTitle}>{sailingDate}</p>
+              </li>
+              <li className={cls.frameInfoItem}>
+                <p className={cls.frameItemTitle}>{status}</p>
+              </li>
+            </ul>
+            <ul className={cls.frameInfo}>
+              <li className={cls.frameInfoItem}>
+                <p className={cls.frameItemValue}>{frameData.FlightNumber}</p>
+              </li>
+              <li className={cls.frameInfoItem}>
                 <p className={cls.frameItemValue}>
                   {frameData.NameOfTheVessel}
                 </p>
               </li>
               <li className={cls.frameInfoItem}>
-                <p className={cls.frameItemTitle}>{sailingDate}</p>
                 <p className={cls.frameItemValue}>
                   {frameData.SailingOnOrAbout.substring(0, 10)}
                 </p>
               </li>
               <li className={cls.frameInfoItem}>
-                <p className={cls.frameItemTitle}>{status}</p>
                 <p className={cls.frameItemValue}>
                   {isFrameSailing ? waiting : onTheWay}
                 </p>
@@ -164,6 +180,7 @@ export const TrackingSearch = ({
                   key={index}
                 >
                   <Image
+                    className={cls.image}
                     src={el.image}
                     width={200}
                     height={130}
@@ -178,7 +195,7 @@ export const TrackingSearch = ({
             >
               {download}
             </button>
-          </>
+          </div>
         )}
       </div>
     </div>

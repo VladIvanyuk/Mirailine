@@ -6,6 +6,7 @@ import { LineVariants, Title } from '@/components/Title/Title';
 import { useTranslations } from 'next-intl';
 import TitleTrackingDecor from '@/public/images/text/tracking.png';
 import { TrackingSearch } from '@/components/TrackingSearch/TrackingSearch';
+import { Description } from '@/components/Description/Description';
 
 export interface ITranslationsTypes {
   placeholder: string;
@@ -40,12 +41,18 @@ export default function Tracking() {
     <>
       <Header view={HeaderView.Tracking} />
       <main className="main">
-        <SectionLayout>
+        <SectionLayout classes={cls.titleWrapper}>
           <Title
+            className={cls.trackingTitle}
             text={t('Tracking')}
             lineVariant={LineVariants.VARIANT_THREE}
             decorText={TitleTrackingDecor}
           />
+          <Description className={cls.mobDescr}>
+            {t('TrackingSearch')}
+          </Description>
+        </SectionLayout>
+        <SectionLayout classes={cls.searchWrapper}>
           <TrackingSearch translations={searchComponentTranslations} />
         </SectionLayout>
       </main>
