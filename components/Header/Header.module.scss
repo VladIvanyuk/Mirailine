@@ -3,8 +3,12 @@
   gap: 60px;
 }
 
+.navLink {
+  transition: all 0.3s ease-in-out;
+}
+
 .navLink:hover {
-  color: black;
+  color: var(--light-blue);
 }
 
 .header {
