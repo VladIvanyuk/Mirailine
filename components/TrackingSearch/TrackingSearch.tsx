@@ -14,6 +14,7 @@ import cls from './TrackingSearch.module.scss';
 import { handleZip } from '@/utils/imgDownloader/imgDownloader';
 import { ITranslationsTypes } from '@/app/[locale]/tracking/page';
 import SearchVector from '@/public/images/vectors/search.png';
+import Loader from '@/public/loader.gif';
 
 interface ITrackingSearchProps {
   className?: string;
@@ -31,8 +32,8 @@ export interface Image {
   image: string;
 }
 
-const URL = 'https://www.vl1c.ru/mirayunfhttp/hs/post/product_json/VM4-082144';
-
+const URL = 'https://www.vl1c.ru/mirayunfhttp/hs/post/product_json/';
+// VM4-082144
 export const TrackingSearch = ({
   className,
   translations: {
@@ -54,18 +55,26 @@ export const TrackingSearch = ({
   const [isLoading, setIsLoading] = useState(false);
   const [swiper, setSwiper] = useState<any>();
   const [slideToShow, setSlideToShow] = useState(0);
+  const [frameValue, setFrameValue] = useState('');
 
   const searchFrame = async () => {
+    setFrameData(null);
     setIsLoading(true);
     try {
-      const response = await fetch(URL);
+      const response = await fetch(`${URL}${frameValue}`);
+
+      if (!response.ok) {
+        throw new Error('Failed to fetch data');
+      }
+
       const data = await response.json();
       setFrameData(data);
       setIsLoading(false);
       setIsError(false);
     } catch (e) {
       setIsLoading(false);
-      setIsError(false);
+      setIsError(true);
+      setFrameData(null);
     }
   };
 
@@ -123,7 +132,12 @@ export const TrackingSearch = ({
         {title}
       </Description>
       <div className={cls.searchBlock}>
-        <input type="text" className={cls.input} placeholder={placeholder} />
+        <input
+          type="text"
+          className={cls.input}
+          onChange={(e) => setFrameValue(e.target.value)}
+          placeholder={placeholder}
+        />
         <button onClick={searchFrame} className={cls.button}>
           <p className={cls.btnText}>{button}</p>
           <Image
@@ -132,6 +146,12 @@ export const TrackingSearch = ({
             alt="Картинка поиска"
           />
         </button>
+      </div>
+      <div className={cls.loader}>
+        {isLoading && <Image src={Loader} alt="Загрузка" />}
+      </div>
+      <div className={cls.error}>
+        {isError && <p>Груз с таким номером не найден!</p>}
       </div>
       <div>
         {frameData && (

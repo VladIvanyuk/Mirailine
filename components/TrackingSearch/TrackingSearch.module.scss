@@ -24,6 +24,21 @@
   line-height: 120%;
 }
 
+.error p {
+  font-family: var(--font-one);
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 140%;
+  color: var(--middle-blue);
+  padding-top: 40px;
+}
+
+.loader img {
+  display: block;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
 .button {
   display: flex;
   justify-content: center;

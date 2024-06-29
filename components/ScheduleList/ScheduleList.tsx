@@ -2,11 +2,8 @@
 
 import { classNames } from '@/utils/classNames/classNames';
 import cls from './ScheduleList.module.scss';
-import { getTranslations } from 'next-intl/server';
 import { useEffect, useState } from 'react';
-import { useLocale } from 'next-intl';
-import LoaderRu from '@/public/loaders/loaderRu.gif';
-import LoaderEng from '@/public/loaders/loaderEng.gif';
+import Loader from '@/public/loader.gif';
 import Image from 'next/image';
 
 interface IScheduleListProps {
@@ -46,7 +43,6 @@ export const ScheduleList = ({
   const [scheduleData, setScheduleData] = useState<IScheduleItems[]>([]);
   const [isError, setIsError] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
-  const activeLocale = useLocale();
 
   useEffect(() => {
     getScheduleData()
@@ -73,11 +69,7 @@ export const ScheduleList = ({
 
   return isLoading ? (
     <div className={classNames(cls.scheduleList, {}, [cls.loader])}>
-      {activeLocale === 'ru' ? (
-        <Image src={LoaderRu} alt="Анимация загрузки" />
-      ) : (
-        <Image src={LoaderEng} alt="Анимация загрузки" />
-      )}
+      <Image src={Loader} alt="Анимация загрузки" />
     </div>
   ) : (
     <div className={classNames(cls.scheduleList, {}, [className])}>
