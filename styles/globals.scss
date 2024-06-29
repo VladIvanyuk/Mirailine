@@ -21,6 +21,7 @@ body {
 
 .main {
   padding-top: 220px;
+  animation: fadeInRightShorter 1s;
 }
 
 .container {
@@ -52,5 +53,16 @@ body {
 @media (max-width: 680px) {
   .container {
     margin-bottom: 80px;
+  }
+}
+
+@keyframes fadeInRightShorter {
+  0% {
+    opacity: 0;
+    transform: translate(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
   }
 }

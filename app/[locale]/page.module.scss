@@ -26,6 +26,7 @@
   letter-spacing: 0.02em;
   text-transform: uppercase;
   color: var(--white);
+  animation: fadeInRightShorter 1s;
 }
 
 .hierography {
@@ -38,6 +39,7 @@
   letter-spacing: -0.2em;
   text-transform: uppercase;
   color: var(--lightest-blue);
+  animation: fadeInTopShorter 1s;
 }
 
 .aboutDescrWrapper {
@@ -205,5 +207,27 @@
   .servicesImg {
     height: 200px;
     flex-basis: auto;
+  }
+}
+
+@keyframes fadeInRightShorter {
+  0% {
+    opacity: 0;
+    transform: translate(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fadeInTopShorter {
+  0% {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
   }
 }
