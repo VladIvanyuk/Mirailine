@@ -11,6 +11,7 @@ interface IContactsItemProps {
   type: ContactTypes;
   text: string;
   className?: string;
+  isLink?: boolean;
 }
 
 export enum ContactTypes {
@@ -21,7 +22,12 @@ export enum ContactTypes {
   FAX = 'fax',
 }
 
-export const ContactsItem = ({ type, text, className }: IContactsItemProps) => {
+export const ContactsItem = ({
+  type,
+  text,
+  className,
+  isLink = true,
+}: IContactsItemProps) => {
   const getContactType = (type: ContactTypes) => {
     switch (type) {
       case ContactTypes.PHONE:
@@ -62,12 +68,20 @@ export const ContactsItem = ({ type, text, className }: IContactsItemProps) => {
   return (
     <li className={classNames(cls.contactWrapper, {}, [className])}>
       <Image className={cls.img} src={contactType.src} alt={contactType.alt} />
-      <a
-        className={classNames(cls.contact, {}, [])}
-        href={`${contactType.hrefType}${text}`}
-      >
-        {text}
-      </a>
+      {isLink ? (
+        <a
+          className={classNames(cls.contact, {}, [])}
+          href={`${contactType.hrefType}${text}`}
+        >
+          {text}
+        </a>
+      ) : (
+        <p
+          className={classNames(isLink ? cls.contact : cls.contactText, {}, [])}
+        >
+          {text}
+        </p>
+      )}
     </li>
   );
 };

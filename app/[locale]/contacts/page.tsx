@@ -103,6 +103,7 @@ export default function Contacts() {
                           ])}
                           type={ContactTypes.ADDRESS}
                           text={t('Place')}
+                          isLink={false}
                         />
                       </ul>
                     </div>
@@ -150,6 +151,7 @@ export default function Contacts() {
                           ])}
                           type={ContactTypes.ADDRESS}
                           text={`〒934-0035 富山県射水市新堀５番地5, Shinbori, Imizu city, Toyama${'\u00A0'}prefecture 934-0035, Japan`}
+                          isLink={false}
                         />
                       </ul>
                     </div>
