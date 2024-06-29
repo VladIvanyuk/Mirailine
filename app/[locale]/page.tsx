@@ -10,7 +10,10 @@ import Slider from '@/components/Slider/Slider';
 import { Header } from '@/components/Header/Header';
 import { HeaderView } from '@/components/Header/model/types';
 
-const Home = () => {
+const Home: React.FC<{ params: { locale: 'en' | 'ru' } }> = ({
+  params: { locale },
+}) => {
+  console.log(locale);
   const t = useTranslations('Home');
   return (
     <>
@@ -30,16 +33,19 @@ const Home = () => {
             </div>
             <ul className={cls.aboutCards}>
               <AboutCard
+                locale={locale}
                 title={t('Logistic')}
                 img={AboutBGPic.PLANET}
                 page="services"
               />
               <AboutCard
+                locale={locale}
                 title={t('Warehouses')}
                 img={AboutBGPic.WAREHOUSE}
                 page="about"
               />
               <AboutCard
+                locale={locale}
                 title={t('Ships')}
                 img={AboutBGPic.SHIP}
                 page="schedule"

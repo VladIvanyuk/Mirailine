@@ -1,6 +1,4 @@
 import { Footer } from '@/components/Footer/Footer';
-import { Header } from '@/components/Header/Header';
-import { HeaderView } from '@/components/Header/types';
 import '@/styles/globals.scss';
 import type { Metadata } from 'next';
 

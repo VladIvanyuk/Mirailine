@@ -1,9 +1,9 @@
-import TransshipmentPic from '../../public/images/icons/big/transshipment.png';
-import OrganizationPic from '../../public/images/icons/big/organization.png';
-import StoragePic from '../../public/images/icons/big/storage.png';
-import CustomsPic from '../../public/images/icons/big/customs.png';
-import PhotoPic from '../../public/images/icons/big/photo.png';
-import TrackingPic from '../../public/images/icons/big/tracking.png';
+import TransshipmentPic from '../../../public/images/icons/big/transshipment.png';
+import OrganizationPic from '../../../public/images/icons/big/organization.png';
+import StoragePic from '../../../public/images/icons/big/storage.png';
+import CustomsPic from '../../../public/images/icons/big/customs.png';
+import PhotoPic from '../../../public/images/icons/big/photo.png';
+import TrackingPic from '../../../public/images/icons/big/tracking.png';
 import { StaticImageData } from 'next/image';
 
 interface ICard {
