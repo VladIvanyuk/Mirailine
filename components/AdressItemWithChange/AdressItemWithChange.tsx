@@ -1,7 +1,7 @@
 import { classNames } from '@/utils/classNames/classNames';
 import cls from './AdressItemWithChange.module.scss';
 import { ReactNode } from 'react';
-import { Maps } from '../Map/Map';
+import { Maps } from '../Map/model/MapsData';
 
 interface IAdressItemProps {
   className?: string;
