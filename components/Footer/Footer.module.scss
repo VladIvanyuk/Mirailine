@@ -22,6 +22,11 @@
   font-size: 20px;
   color: var(--white);
   text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.navLink:hover {
+  color: var(--light-blue);
 }
 
 .navList {
