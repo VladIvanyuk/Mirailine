@@ -1,5 +1,4 @@
 import { Header } from '@/components/Header/Header';
-import { HeaderView } from '@/components/Header/types';
 import cls from './page.module.scss';
 import { SectionLayout } from '@/components/SectionLayout/SectionLayout';
 import { LineVariants, Title } from '@/components/Title/Title';
@@ -14,8 +13,9 @@ import {
   ContactsItem,
 } from '@/components/ContactsItem/ContactsItem';
 import { classNames } from '@/utils/classNames/classNames';
-import { Map, Maps } from '@/components/Map/Map';
-import { mapLinks } from '@/components/Map/MapLinks';
+import { Map } from '@/components/Map/Map';
+import { HeaderView } from '@/components/Header/model/types';
+import { Maps, mapLinks } from '@/components/Map/model/MapsData';
 
 export default function Contacts() {
   const t = useTranslations('Contacts');

@@ -1,5 +1,4 @@
 import { Header } from '@/components/Header/Header';
-import { HeaderView } from '@/components/Header/types';
 import cls from './page.module.scss';
 import { SectionLayout } from '@/components/SectionLayout/SectionLayout';
 import { LineVariants, Title } from '@/components/Title/Title';
@@ -7,6 +6,7 @@ import { useTranslations } from 'next-intl';
 import TitleTrackingDecor from '@/public/images/text/tracking.png';
 import { TrackingSearch } from '@/components/TrackingSearch/TrackingSearch';
 import { Description } from '@/components/Description/Description';
+import { HeaderView } from '@/components/Header/model/types';
 
 export interface ITranslationsTypes {
   placeholder: string;

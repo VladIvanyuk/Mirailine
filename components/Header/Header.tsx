@@ -4,14 +4,14 @@ import cls from './Header.module.scss';
 import Image from 'next/image';
 import Logo from '@/public/images/logo.png';
 import { classNames } from '@/utils/classNames/classNames';
-import { IHeaderProps } from './types';
+import { IHeaderProps } from './model/types';
 import { useLocale } from 'next-intl';
 import { LocaleSwitcher } from '../LocaleSwitcher/LocaleSwitcher';
 import { SectionLayout } from '../SectionLayout/SectionLayout';
 import { NavLink } from '../NavLink/NavLink';
-import { Routes } from './Routes';
 import { useState } from 'react';
-import { translations } from './Translations';
+import { translations } from './model/Translations';
+import { Routes } from './model/Routes';
 
 export const Header = ({ view }: IHeaderProps) => {
   const activeLocale = useLocale();
@@ -61,7 +61,7 @@ export const Header = ({ view }: IHeaderProps) => {
               []
             )}
           >
-            <nav className={cls.navMob}>
+            <nav>
               <LocaleSwitcher className={cls.localeSwitcher} />
               <div className={cls.workSchedule}>
                 <p className={cls.workScheduleText}>
@@ -71,7 +71,7 @@ export const Header = ({ view }: IHeaderProps) => {
                   {translations.work[activeLocale]['time']}
                 </p>
               </div>
-              <ul className={cls.navListMob}>
+              <ul>
                 {Routes.map((route) => (
                   <NavLink
                     className={cls.navLink}

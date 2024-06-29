@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { classNames } from '@/utils/classNames/classNames';
 import cls from './PricesList.module.scss';
-import { IPricesItem } from './pricesData';
+import { IPricesItem } from './model/pricesData';
 import { ListHeading } from '../ListHeading/ListHeading';
 
 interface IPricesListProps {

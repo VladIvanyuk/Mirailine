@@ -1,5 +1,4 @@
 import { Header } from '@/components/Header/Header';
-import { HeaderView } from '@/components/Header/types';
 import cls from './page.module.scss';
 import { SectionLayout } from '@/components/SectionLayout/SectionLayout';
 import { LineVariants, Title } from '@/components/Title/Title';
@@ -12,10 +11,11 @@ import JapanIcon from '@/public/images/countries/japan.png';
 import CanadaIcon from '@/public/images/countries/canada.png';
 import { Description } from '@/components/Description/Description';
 import { AdressItem } from '@/components/AdressItem/AdressItem';
-import { Map, Maps } from '@/components/Map/Map';
-import { mapLinks } from '@/components/Map/MapLinks';
+import { Map } from '@/components/Map/Map';
 import { useTranslations } from 'next-intl';
 import { WarehouseMaps } from '@/components/WarehouseMaps/WarehouseMaps';
+import { HeaderView } from '@/components/Header/model/types';
+import { Maps, mapLinks } from '@/components/Map/model/MapsData';
 
 export default function About() {
   const t = useTranslations('About');

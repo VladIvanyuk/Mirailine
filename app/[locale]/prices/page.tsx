@@ -1,12 +1,12 @@
 import { Header } from '@/components/Header/Header';
-import { HeaderView } from '@/components/Header/types';
 import cls from './page.module.scss';
 import { SectionLayout } from '@/components/SectionLayout/SectionLayout';
 import { LineVariants, Title } from '@/components/Title/Title';
 import TitlePricesDecor from '@/public/images/text/prices.png';
 import { useTranslations } from 'next-intl';
 import { PricesList } from '@/components/PricesList/PricesList';
-import { pricesData } from '@/components/PricesList/pricesData';
+import { pricesData } from '@/components/PricesList/model/pricesData';
+import { HeaderView } from '@/components/Header/model/types';
 
 export default function Prices() {
   const t = useTranslations('Prices');

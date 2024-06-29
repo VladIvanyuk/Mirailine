@@ -1,14 +1,14 @@
 import { Header } from '@/components/Header/Header';
-import { HeaderView } from '@/components/Header/types';
 import cls from './page.module.scss';
 import { SectionLayout } from '@/components/SectionLayout/SectionLayout';
 import { LineVariants, Title } from '@/components/Title/Title';
 import TitleServicesDecor from '@/public/images/text/services.png';
 import { Description, FontSizes } from '@/components/Description/Description';
-import { cards } from '@/components/ServicesCard/cardsData';
 import { ServicesCard } from '@/components/ServicesCard/ServicesCard';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
+import { HeaderView } from '@/components/Header/model/types';
+import { cards } from '@/components/ServicesCard/model/cardsData';
 
 export default function Services() {
   const t = useTranslations('Services');

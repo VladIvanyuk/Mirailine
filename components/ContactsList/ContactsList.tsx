@@ -2,7 +2,7 @@ import { StaticImport } from 'next/dist/shared/lib/get-img-props';
 import { ContactTypes, ContactsItem } from '../ContactsItem/ContactsItem';
 import cls from './ContactsList.module.scss';
 import { classNames } from '@/utils/classNames/classNames';
-import Image, { StaticImageData } from 'next/image';
+import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 
 interface IContactsListProps {

@@ -2,9 +2,9 @@
 
 import cls from './WarehouseMaps.module.scss';
 import { AdressItemWithChange } from '../AdressItemWithChange/AdressItemWithChange';
-import { Map, Maps } from '../Map/Map';
+import { Map } from '../Map/Map';
 import { useState } from 'react';
-import { mapLinks } from '../Map/MapLinks';
+import { Maps, mapLinks } from '../Map/model/MapsData';
 
 interface IWarehouseMapsProps {
   className?: string;

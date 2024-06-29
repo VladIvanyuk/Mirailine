@@ -1,5 +1,3 @@
-'use-client';
-
 import cls from './page.module.scss';
 import { useTranslations } from 'next-intl';
 import { classNames } from '@/utils/classNames/classNames';
@@ -10,7 +8,7 @@ import { AboutBGPic, AboutCard } from '@/components/AboutCard/AboutCard';
 import { ServicesList } from '@/components/ServicesList/ServicesList';
 import Slider from '@/components/Slider/Slider';
 import { Header } from '@/components/Header/Header';
-import { HeaderView } from '@/components/Header/types';
+import { HeaderView } from '@/components/Header/model/types';
 
 const Home = () => {
   const t = useTranslations('Home');
@@ -28,9 +26,7 @@ const Home = () => {
           <Title lineVariant={LineVariants.VARIANT_ONE} text={t('About')} />
           <div className={cls.aboutContent}>
             <div className={cls.aboutDescrWrapper}>
-              <Description className={cls.mainDescr}>
-                {t('AboutDescr')}
-              </Description>
+              <Description>{t('AboutDescr')}</Description>
             </div>
             <ul className={cls.aboutCards}>
               <AboutCard

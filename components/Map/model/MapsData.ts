@@ -1,5 +1,3 @@
-import { Maps } from './Map';
-
 export const mapLinks: Record<Maps, string> = {
   fushiki:
     'https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3194.7911194948088!2d137.06068907640486!3d36.7995582677347!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzbCsDQ3JzU4LjQiTiAxMzfCsDAzJzQ3LjgiRQ!5e0!3m2!1sru!2sru!4v1717404301660!5m2!1sru!2sru',
@@ -14,3 +12,13 @@ export const mapLinks: Record<Maps, string> = {
   miraivdk:
     'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d728.1684918400268!2d131.88210993485086!3d43.111366170824255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5fb38df1f1626021%3A0xdef421d63e41a6a7!2z0J3QuNC20L3QtdC_0L7RgNGC0L7QstCw0Y8g0YPQuy4sIDEsINCS0LvQsNC00LjQstC-0YHRgtC-0LosINCf0YDQuNC80L7RgNGB0LrQuNC5INC60YDQsNC5LCDQoNC-0YHRgdC40Y8sIDY5MDA5MQ!5e0!3m2!1sru!2sus!4v1719027889853!5m2!1sru!2sus',
 };
+
+export enum Maps {
+  FUSHIKI = 'fushiki',
+  TOYAMA = 'toyama',
+  T1 = 't1',
+  T2 = 't2',
+  OSAKA = 'osaka',
+  YOKOHAMA = 'yokohama',
+  MIRAIVDK = 'miraivdk',
+}
