@@ -71,7 +71,8 @@
     "Vessel": "Vessel",
     "Voyage": "Voyage number",
     "Date": "Date of shipment",
-    "Port": "Port of shipment"
+    "Port": "Port of shipment",
+    "Error": "Something went wrong. Try reloading the page."
   },
   "Prices": {
     "Title": "Prices",

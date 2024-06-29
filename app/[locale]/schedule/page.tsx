@@ -10,6 +10,15 @@ import { HeaderView } from '@/components/Header/model/types';
 
 export default function Schedule() {
   const t = useTranslations('Schedule');
+
+  const scheduleTranslations = {
+    Vessel: t('Vessel'),
+    Voyage: t('Voyage'),
+    Date: t('Date'),
+    Port: t('Port'),
+    Error: t('Error'),
+  };
+
   return (
     <>
       <Header view={HeaderView.Schedule} />
@@ -21,7 +30,7 @@ export default function Schedule() {
             decorText={TitleScheduleDecor}
             className={cls.scheduleTitle}
           />
-          <ScheduleList />
+          <ScheduleList translations={scheduleTranslations} />
         </SectionLayout>
         <Image
           src={TitleScheduleDecor}

@@ -1,6 +1,19 @@
 .scheduleList {
   background-color: var(--white);
-  padding: 50px 250px 20px 250px;
+  padding: 50px 250px;
+}
+
+.loader img {
+  display: block;
+  margin: 0 auto;
+}
+
+.error p {
+  font-family: var(--font-one);
+  text-align: center;
+  font-weight: 600;
+  color: rgb(218, 22, 22);
+  font-size: 22px;
 }
 
 .tableHeadingTitle {
@@ -23,9 +36,6 @@
 .tableTextRow {
   display: flex;
   justify-content: center;
-}
-
-.tableTextRow:not(:last-child) {
 }
 
 .text {
