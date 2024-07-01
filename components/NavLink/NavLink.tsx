@@ -2,9 +2,9 @@
 
 import { classNames } from '@/utils/classNames/classNames';
 import cls from './NavLink.module.scss';
-import Link from 'next/link';
 import { ReactNode } from 'react';
 import { usePathname } from 'next/navigation';
+import { Link } from 'next-view-transitions';
 
 interface INavLinkProps {
   className?: string;

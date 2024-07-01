@@ -1,7 +1,7 @@
 import { Header } from '@/components/Header/Header';
 import cls from './page.module.scss';
 import { SectionLayout } from '@/components/SectionLayout/SectionLayout';
-import { LineVariants, Title } from '@/components/Title/Title';
+import { LineVariants, Title, TitleAnimations } from '@/components/Title/Title';
 import TitleServicesDecor from '@/public/images/text/services.png';
 import { Description, FontSizes } from '@/components/Description/Description';
 import { ServicesCard } from '@/components/ServicesCard/ServicesCard';
@@ -18,6 +18,7 @@ export default function Services() {
       <main className="main">
         <SectionLayout className="container">
           <Title
+            animation={TitleAnimations.RIGHT}
             decorText={TitleServicesDecor}
             text={t('Services')}
             lineVariant={LineVariants.VARIANT_SIX}
@@ -55,7 +56,11 @@ export default function Services() {
           </div>
         </SectionLayout>
         <SectionLayout>
-          <Title text={t('WeCan')} lineVariant={LineVariants.VARIANT_FIVE} />
+          <Title
+            animation={TitleAnimations.LEFT}
+            text={t('WeCan')}
+            lineVariant={LineVariants.VARIANT_FIVE}
+          />
           <ul className={cls.servicesCardsList}>
             {cards.map((card) => (
               <ServicesCard
