@@ -7,6 +7,7 @@ interface ITitleProps {
   lineVariant: string;
   decorText?: StaticImageData;
   animation?: string;
+  className?: string;
 }
 
 export enum LineVariants {
@@ -29,6 +30,7 @@ export const Title = ({
   text,
   lineVariant,
   decorText,
+  className,
   animation = TitleAnimations.RIGHT,
 }: ITitleProps) => {
   return (
@@ -37,6 +39,7 @@ export const Title = ({
         className={classNames(cls.titleText, {}, [
           cls[lineVariant],
           cls[animation],
+          className,
         ])}
       >
         {text}
