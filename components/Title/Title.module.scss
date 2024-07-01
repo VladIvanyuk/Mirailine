@@ -17,7 +17,16 @@
 
 .titleText {
   position: relative;
+}
+
+.titleTextRightAnim {
+  position: relative;
   animation: fadeInRightShorter 1s;
+}
+
+.titleTextLeftAnim {
+  position: relative;
+  animation: fadeInLeftShorter 1s;
 }
 
 .variantOne::before {
@@ -199,6 +208,17 @@
   0% {
     opacity: 0;
     transform: translate(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fadeInLeftShorter {
+  0% {
+    opacity: 0;
+    transform: translate(50px);
   }
   100% {
     opacity: 1;

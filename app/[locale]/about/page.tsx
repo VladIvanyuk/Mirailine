@@ -1,7 +1,7 @@
 import { Header } from '@/components/Header/Header';
 import cls from './page.module.scss';
 import { SectionLayout } from '@/components/SectionLayout/SectionLayout';
-import { LineVariants, Title } from '@/components/Title/Title';
+import { LineVariants, Title, TitleAnimations } from '@/components/Title/Title';
 import TitleAboutDecor from '@/public/images/text/about.png';
 import TitleWarehouseDecor from '@/public/images/text/warehouse.png';
 import { classNames } from '@/utils/classNames/classNames';
@@ -32,6 +32,7 @@ export default function About() {
       <main className="main">
         <SectionLayout>
           <Title
+            animation={TitleAnimations.RIGHT}
             lineVariant={LineVariants.VARIANT_FOUR}
             text={t('About')}
             decorText={TitleAboutDecor}
@@ -84,6 +85,7 @@ export default function About() {
         </SectionLayout>
         <SectionLayout>
           <Title
+            animation={TitleAnimations.LEFT}
             lineVariant={LineVariants.VARIANT_FIVE}
             text={t('Warehouses')}
             decorText={TitleWarehouseDecor}

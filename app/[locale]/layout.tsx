@@ -1,6 +1,7 @@
 import { Footer } from '@/components/Footer/Footer';
 import '@/styles/globals.scss';
 import type { Metadata } from 'next';
+import { ViewTransitions } from 'next-view-transitions';
 
 export const metadata: Metadata = {
   title: 'Mirai Line | Home',
@@ -19,11 +20,13 @@ type TProps = {
 
 export default function RootLayout({ children, params: { locale } }: TProps) {
   return (
-    <html lang={locale}>
-      <body>
-        {children}
-        <Footer />
-      </body>
-    </html>
+    <ViewTransitions>
+      <html lang={locale}>
+        <body>
+          {children}
+          <Footer />
+        </body>
+      </html>
+    </ViewTransitions>
   );
 }

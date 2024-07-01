@@ -6,7 +6,7 @@ interface ITitleProps {
   text: string;
   lineVariant: string;
   decorText?: StaticImageData;
-  className?: string;
+  animation?: string;
 }
 
 export enum LineVariants {
@@ -20,16 +20,24 @@ export enum LineVariants {
   VARIANT_EIGHT = 'variantEight',
 }
 
+export enum TitleAnimations {
+  RIGHT = 'titleTextRightAnim',
+  LEFT = 'titleTextLeftAnim',
+}
+
 export const Title = ({
   text,
   lineVariant,
   decorText,
-  className,
+  animation = TitleAnimations.RIGHT,
 }: ITitleProps) => {
   return (
     <h2 className={classNames(cls.title, {}, [])}>
       <p
-        className={classNames(cls.titleText, {}, [cls[lineVariant], className])}
+        className={classNames(cls.titleText, {}, [
+          cls[lineVariant],
+          cls[animation],
+        ])}
       >
         {text}
       </p>
