@@ -5,6 +5,7 @@ import cls from './ScheduleList.module.scss';
 import { useEffect, useState } from 'react';
 import Loader from '@/public/loader.gif';
 import Image from 'next/image';
+import { Skeleton } from '../Skeleton/Skeleton';
 
 interface IScheduleListProps {
   className?: string;
@@ -69,7 +70,11 @@ export const ScheduleList = ({
 
   return isLoading ? (
     <div className={classNames(cls.scheduleList, {}, [cls.loader])}>
-      <Image src={Loader} alt="Анимация загрузки" />
+      <Skeleton height={60} width={'100%'} marginB={30} />
+      <Skeleton height={60} width={'100%'} marginB={30} />
+      <Skeleton height={60} width={'100%'} marginB={30} />
+      <Skeleton height={60} width={'100%'} marginB={30} />
+      <Skeleton height={60} width={'100%'} marginB={30} />
     </div>
   ) : (
     <div className={classNames(cls.scheduleList, {}, [className])}>
