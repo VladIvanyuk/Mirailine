@@ -2,6 +2,9 @@
   min-height: 950px;
   overflow: hidden;
   background-image: url('../../public/images/sea.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .wrapper {

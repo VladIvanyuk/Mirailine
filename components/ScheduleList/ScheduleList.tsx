@@ -3,8 +3,6 @@
 import { classNames } from '@/utils/classNames/classNames';
 import cls from './ScheduleList.module.scss';
 import { useEffect, useState } from 'react';
-import Loader from '@/public/loader.gif';
-import Image from 'next/image';
 import { Skeleton } from '../Skeleton/Skeleton';
 
 interface IScheduleListProps {
@@ -70,11 +68,36 @@ export const ScheduleList = ({
 
   return isLoading ? (
     <div className={classNames(cls.scheduleList, {}, [cls.loader])}>
-      <Skeleton height={60} width={'100%'} marginB={30} />
-      <Skeleton height={60} width={'100%'} marginB={30} />
-      <Skeleton height={60} width={'100%'} marginB={30} />
-      <Skeleton height={60} width={'100%'} marginB={30} />
-      <Skeleton height={60} width={'100%'} marginB={30} />
+      <Skeleton
+        className={cls.skeleton}
+        height={60}
+        width={'100%'}
+        marginB={30}
+      />
+      <Skeleton
+        className={cls.skeleton}
+        height={60}
+        width={'100%'}
+        marginB={30}
+      />
+      <Skeleton
+        className={cls.skeleton}
+        height={60}
+        width={'100%'}
+        marginB={30}
+      />
+      <Skeleton
+        className={cls.skeleton}
+        height={60}
+        width={'100%'}
+        marginB={30}
+      />
+      <Skeleton
+        className={cls.skeleton}
+        height={60}
+        width={'100%'}
+        marginB={30}
+      />
     </div>
   ) : (
     <div className={classNames(cls.scheduleList, {}, [className])}>

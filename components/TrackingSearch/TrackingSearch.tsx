@@ -14,7 +14,7 @@ import cls from './TrackingSearch.module.scss';
 import { handleZip } from '@/utils/imgDownloader/imgDownloader';
 import { ITranslationsTypes } from '@/app/[locale]/tracking/page';
 import SearchVector from '@/public/images/vectors/search.png';
-import Loader from '@/public/loader.gif';
+import { Skeleton } from '../Skeleton/Skeleton';
 
 interface ITrackingSearchProps {
   className?: string;
@@ -148,7 +148,7 @@ export const TrackingSearch = ({
         </button>
       </div>
       <div className={cls.loader}>
-        {isLoading && <Image src={Loader} alt="Загрузка" />}
+        {isLoading && <Skeleton width={'100%'} height={30} />}
       </div>
       <div className={cls.error}>
         {isError && <p>Груз с таким номером не найден!</p>}
