@@ -1,6 +1,7 @@
 .scheduleList {
   background-color: var(--white);
   padding: 50px 250px;
+  min-height: 500px;
 }
 
 .loader img {
@@ -74,6 +75,7 @@
     padding: 0;
     overflow: scroll;
     background-color: inherit;
+    min-height: 240px;
   }
 
   .tableHead {
