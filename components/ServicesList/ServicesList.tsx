@@ -8,6 +8,7 @@ import Customs from '@/public/images/icons/customs.png';
 import Photo from '@/public/images/icons/photo.png';
 import Tracking from '@/public/images/icons/tracking.png';
 import { ServicesListItem } from '../ServicesListItem/ServicesListItem';
+import FadeIntoView from '../FadeIntoView/FadeIntoView';
 
 interface IServicesListProps {
   className?: string;
@@ -46,12 +47,14 @@ export const ServicesList = ({ className }: IServicesListProps) => {
   return (
     <div className={classNames(cls.servicesList, {}, [className])}>
       {services.map(({ pic, text }, index) => (
-        <ServicesListItem
-          pic={pic}
-          text={t(text)}
-          number={index + 1}
-          key={index}
-        />
+        <FadeIntoView className={cls.servicesListItem} key={index}>
+          <ServicesListItem
+            pic={pic}
+            text={t(text)}
+            number={index + 1}
+            key={index}
+          />
+        </FadeIntoView>
       ))}
     </div>
   );

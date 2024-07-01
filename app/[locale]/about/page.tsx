@@ -16,6 +16,7 @@ import { useTranslations } from 'next-intl';
 import { WarehouseMaps } from '@/components/WarehouseMaps/WarehouseMaps';
 import { HeaderView } from '@/components/Header/model/types';
 import { Maps, mapLinks } from '@/components/Map/model/MapsData';
+import FadeIntoView from '@/components/FadeIntoView/FadeIntoView';
 
 export default function About() {
   const t = useTranslations('About');
@@ -83,57 +84,64 @@ export default function About() {
             <div className={cls.aboutImg}></div>
           </div>
         </SectionLayout>
-        <SectionLayout>
-          <Title
-            animation={TitleAnimations.LEFT}
-            lineVariant={LineVariants.VARIANT_FIVE}
-            text={t('Warehouses')}
-            decorText={TitleWarehouseDecor}
-          />
-          <Description className={cls.warehouseDescr}>
-            {t('WarehouseDescr')}
-          </Description>
-          <WarehouseMaps titles={AdressTitles} />
-          <div className={cls.warehouseContent}>
-            <div className={cls.addressList}>
-              <div>
-                <AdressItem title="Osaka">
-                  <p>HS-3 大阪港ターミナル</p>
-                  <p className={cls.addressItemTop}>
-                    〒554-0041 大阪府大阪港此花区北港白津1-9-25
-                  </p>
-                  <p>HS-3 terminal of Osaka Port</p>
-                  <p>
-                    〒554-0041 Osaka-fu, Osaka-shi, Konohana Ward,
-                    Hokkoshiratsu, 1-chōme-9-25
-                  </p>
-                </AdressItem>
+        <FadeIntoView>
+          <SectionLayout>
+            <Title
+              animation={TitleAnimations.LEFT}
+              lineVariant={LineVariants.VARIANT_FIVE}
+              text={t('Warehouses')}
+              decorText={TitleWarehouseDecor}
+            />
+            <Description className={cls.warehouseDescr}>
+              {t('WarehouseDescr')}
+            </Description>
+            <WarehouseMaps titles={AdressTitles} />
+            <FadeIntoView>
+              <div className={cls.warehouseContent}>
+                <div className={cls.addressList}>
+                  <div>
+                    <AdressItem title="Osaka">
+                      <p>HS-3 大阪港ターミナル</p>
+                      <p className={cls.addressItemTop}>
+                        〒554-0041 大阪府大阪港此花区北港白津1-9-25
+                      </p>
+                      <p>HS-3 terminal of Osaka Port</p>
+                      <p>
+                        〒554-0041 Osaka-fu, Osaka-shi, Konohana Ward,
+                        Hokkoshiratsu, 1-chōme-9-25
+                      </p>
+                    </AdressItem>
+                  </div>
+                </div>
+                <div className={cls.map}>
+                  <Map src={mapLinks[Maps.OSAKA]} />
+                </div>
               </div>
-            </div>
-            <div className={cls.map}>
-              <Map src={mapLinks[Maps.OSAKA]} />
-            </div>
-          </div>
-          <div className={cls.warehouseContent}>
-            <div className={cls.addressList}>
-              <div>
-                <AdressItem title="Yokohama">
-                  <p className={cls.addressItemTop}>
-                    京浜港大黒埠頭地区指定保税地域大黒埠頭 K号荷捌地〒230-0054
-                    神奈川県横浜市鶴見区大黒ふ頭20
-                  </p>
-                  <p>Cargo handling area K</p>
-                  <p>
-                    20 Daikokufuto, Tsurumi Ward, Yokohama, Kanagawa 230-0054
-                  </p>
-                </AdressItem>
+            </FadeIntoView>
+            <FadeIntoView>
+              <div className={cls.warehouseContent}>
+                <div className={cls.addressList}>
+                  <div>
+                    <AdressItem title="Yokohama">
+                      <p className={cls.addressItemTop}>
+                        京浜港大黒埠頭地区指定保税地域大黒埠頭
+                        K号荷捌地〒230-0054 神奈川県横浜市鶴見区大黒ふ頭20
+                      </p>
+                      <p>Cargo handling area K</p>
+                      <p>
+                        20 Daikokufuto, Tsurumi Ward, Yokohama, Kanagawa
+                        230-0054
+                      </p>
+                    </AdressItem>
+                  </div>
+                </div>
+                <div className={cls.map}>
+                  <Map src={mapLinks[Maps.YOKOHAMA]} />
+                </div>
               </div>
-            </div>
-            <div className={cls.map}>
-              <Map src={mapLinks[Maps.YOKOHAMA]} />
-            </div>
-          </div>
-        </SectionLayout>
+            </FadeIntoView>
+          </SectionLayout>
+        </FadeIntoView>
       </main>
     </>
   );

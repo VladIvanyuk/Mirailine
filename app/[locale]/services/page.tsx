@@ -61,7 +61,7 @@ export default function Services() {
             text={t('WeCan')}
             lineVariant={LineVariants.VARIANT_FIVE}
           />
-          <ul className={cls.servicesCardsList}>
+          <div className={cls.servicesCardsList}>
             {cards.map((card) => (
               <ServicesCard
                 key={card.id}
@@ -70,7 +70,7 @@ export default function Services() {
                 src={card.src}
               />
             ))}
-          </ul>
+          </div>
         </SectionLayout>
       </main>
     </>

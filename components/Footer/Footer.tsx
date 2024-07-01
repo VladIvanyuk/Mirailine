@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { SectionLayout } from '../SectionLayout/SectionLayout';
 import cls from './Footer.module.scss';
 import { useLocale, useTranslations } from 'next-intl';
@@ -9,6 +8,7 @@ import JapanImg from '@/public/images/countries/japan.png';
 import RussiaImg from '@/public/images/countries/russia.png';
 import LogoFooter from '@/public/images/logo-footer.png';
 import { ScrollTopButton } from '../ScrollTopButton/ScrollTopButton';
+import { Link } from 'next-view-transitions';
 
 export enum ContactNumbers {
   PRETENSION_CONTACT = '+7-994-109-5764',

@@ -7,6 +7,7 @@ import { useTranslations } from 'next-intl';
 import { PricesList } from '@/components/PricesList/PricesList';
 import { pricesData } from '@/components/PricesList/model/pricesData';
 import { HeaderView } from '@/components/Header/model/types';
+import FadeIntoView from '@/components/FadeIntoView/FadeIntoView';
 
 export default function Prices() {
   const t = useTranslations('Prices');
@@ -25,8 +26,12 @@ export default function Prices() {
         </SectionLayout>
         <SectionLayout classes={cls.listWrapper}>
           <PricesList title={t('OskVdk')} list={pricesData.Osaka} />
-          <PricesList title={t('YokVdk')} list={pricesData.Yokohama} />
-          <PricesList title={t('ToyaVdk')} list={pricesData.Toyama} />
+          <FadeIntoView>
+            <PricesList title={t('YokVdk')} list={pricesData.Yokohama} />
+          </FadeIntoView>
+          <FadeIntoView>
+            <PricesList title={t('ToyaVdk')} list={pricesData.Toyama} />
+          </FadeIntoView>
         </SectionLayout>
       </main>
     </>
