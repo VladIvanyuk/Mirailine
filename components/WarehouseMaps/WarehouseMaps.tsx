@@ -5,6 +5,7 @@ import { AdressItemWithChange } from '../AdressItemWithChange/AdressItemWithChan
 import { Map } from '../Map/Map';
 import { useState } from 'react';
 import { Maps, mapLinks } from '../Map/model/MapsData';
+import FadeIntoView from '../FadeIntoView/FadeIntoView';
 
 interface IWarehouseMapsProps {
   className?: string;
@@ -36,49 +37,57 @@ export const WarehouseMaps = ({ className, titles }: IWarehouseMapsProps) => {
   return (
     <div className={cls.warehouseContent}>
       <ul className={cls.addressList}>
-        <li>
-          <AdressItemWithChange
-            onClick={onClickHandler}
-            map={map}
-            name="fushiki"
-            title={titles['Fushiki']}
-          >
-            <p>高岡市伏木万葉ふ頭</p>
-            <p>Fushikimanyofuto, Takaoka-shi, Toyama-ken</p>
-          </AdressItemWithChange>
-        </li>
-        <li>
-          <AdressItemWithChange
-            onClick={onClickHandler}
-            map={map}
-            name="toyama"
-            title={titles['Toyamashinko']}
-          >
-            <p>Kitafuto, Toyamashinko, Imizu-shi, Toyama-ken</p>
-          </AdressItemWithChange>
-        </li>
-        <li>
-          <AdressItemWithChange
-            onClick={onClickHandler}
-            map={map}
-            name="t1"
-            title={titles['T1']}
-          >
-            <p>富山県射水市新堀5</p>
-            <p>Toyama-ken, Imizu-shi, Shinbori 5</p>
-          </AdressItemWithChange>
-        </li>
-        <li>
-          <AdressItemWithChange
-            onClick={onClickHandler}
-            map={map}
-            name="t2"
-            title={titles['T2']}
-          >
-            <p>富山県高岡市堀岡又新2-2</p>
-            <p>Toyama-ken, Takaoka-shi, Horiokamatashin 2 – 2</p>
-          </AdressItemWithChange>
-        </li>
+        <FadeIntoView>
+          <li>
+            <AdressItemWithChange
+              onClick={onClickHandler}
+              map={map}
+              name="fushiki"
+              title={titles['Fushiki']}
+            >
+              <p>高岡市伏木万葉ふ頭</p>
+              <p>Fushikimanyofuto, Takaoka-shi, Toyama-ken</p>
+            </AdressItemWithChange>
+          </li>
+        </FadeIntoView>
+        <FadeIntoView>
+          <li>
+            <AdressItemWithChange
+              onClick={onClickHandler}
+              map={map}
+              name="toyama"
+              title={titles['Toyamashinko']}
+            >
+              <p>Kitafuto, Toyamashinko, Imizu-shi, Toyama-ken</p>
+            </AdressItemWithChange>
+          </li>
+        </FadeIntoView>
+        <FadeIntoView>
+          <li>
+            <AdressItemWithChange
+              onClick={onClickHandler}
+              map={map}
+              name="t1"
+              title={titles['T1']}
+            >
+              <p>富山県射水市新堀5</p>
+              <p>Toyama-ken, Imizu-shi, Shinbori 5</p>
+            </AdressItemWithChange>
+          </li>
+        </FadeIntoView>
+        <FadeIntoView>
+          <li>
+            <AdressItemWithChange
+              onClick={onClickHandler}
+              map={map}
+              name="t2"
+              title={titles['T2']}
+            >
+              <p>富山県高岡市堀岡又新2-2</p>
+              <p>Toyama-ken, Takaoka-shi, Horiokamatashin 2 – 2</p>
+            </AdressItemWithChange>
+          </li>
+        </FadeIntoView>
       </ul>
       <div className={cls.map}>{currentMap}</div>
     </div>

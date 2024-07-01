@@ -43,16 +43,25 @@ export default function About() {
               <p className={cls.aboutBoldText}>
                 {t('AboutCompanyInfoFirstParagraph')}
               </p>
-              <p className={classNames(cls.aboutThinText, {}, [])}>
+              <p
+                className={classNames(cls.aboutThinText, {}, [
+                  cls.aboutThinTextFirst,
+                ])}
+              >
                 {t('AboutCompanyInfoSecondParagraph')}
               </p>
-              <p className={classNames(cls.aboutThinText, {}, [])}>
+              <p
+                className={classNames(cls.aboutThinText, {}, [
+                  cls.aboutThinTextSecond,
+                ])}
+              >
                 {t('AboutCompanyInfoThirdParagraph')}
               </p>
               <ul>
                 <li
                   className={classNames(cls.aboutThinText, {}, [
                     cls.aboutThinTextWithIcons,
+                    cls.aboutThinTextThird,
                   ])}
                 >
                   <Image src={RussiaIcon} alt="Флаг России" />
@@ -61,6 +70,7 @@ export default function About() {
                 <li
                   className={classNames(cls.aboutThinText, {}, [
                     cls.aboutThinTextWithIcons,
+                    cls.aboutThinTextFourth,
                   ])}
                 >
                   <Image src={JapanIcon} alt="Флаг США" />
@@ -69,6 +79,7 @@ export default function About() {
                 <li
                   className={classNames(cls.aboutThinText, {}, [
                     cls.aboutThinTextWithIcons,
+                    cls.aboutThinTextFifth,
                   ])}
                 >
                   <Image src={CanadaIcon} alt="Флаг Канады" />
@@ -95,7 +106,9 @@ export default function About() {
             <Description className={cls.warehouseDescr}>
               {t('WarehouseDescr')}
             </Description>
-            <WarehouseMaps titles={AdressTitles} />
+            <FadeIntoView>
+              <WarehouseMaps titles={AdressTitles} />
+            </FadeIntoView>
             <FadeIntoView>
               <div className={cls.warehouseContent}>
                 <div className={cls.addressList}>
