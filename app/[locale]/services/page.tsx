@@ -9,6 +9,7 @@ import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { HeaderView } from '@/components/Header/model/types';
 import { cards } from '@/components/ServicesCard/model/cardsData';
+import { classNames } from '@/utils/classNames/classNames';
 
 export default function Services() {
   const t = useTranslations('Services');
@@ -29,19 +30,35 @@ export default function Services() {
                 {t('Description')}
               </Description>
               <ul className={cls.numbersList}>
-                <li className={cls.numbersListItem}>
+                <li
+                  className={classNames(cls.numbersListItem, {}, [
+                    cls.numbersFirstListItem,
+                  ])}
+                >
                   <p className={cls.numbersListNum}>100+</p>
                   <p className={cls.numbersListText}>{t('HappyClients')}</p>
                 </li>
-                <li className={cls.numbersListItem}>
+                <li
+                  className={classNames(cls.numbersListItem, {}, [
+                    cls.numbersSecondListItem,
+                  ])}
+                >
                   <p className={cls.numbersListNum}>143+</p>
                   <p className={cls.numbersListText}>{t('TransportedCargo')}</p>
                 </li>
-                <li className={cls.numbersListItem}>
+                <li
+                  className={classNames(cls.numbersListItem, {}, [
+                    cls.numbersThirdListItem,
+                  ])}
+                >
                   <p className={cls.numbersListNum}>450+</p>
                   <p className={cls.numbersListText}>{t('Employees')}</p>
                 </li>
-                <li className={cls.numbersListItem}>
+                <li
+                  className={classNames(cls.numbersListItem, {}, [
+                    cls.numbersFourthListItem,
+                  ])}
+                >
                   <p className={cls.numbersListNum}>15000+</p>
                   <p className={cls.numbersListText}>{t('Warehouses')}</p>
                 </li>
