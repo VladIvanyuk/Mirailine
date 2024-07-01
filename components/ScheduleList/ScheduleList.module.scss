@@ -1,7 +1,7 @@
 .scheduleList {
   background-color: var(--white);
   padding: 50px 250px;
-  min-height: 500px;
+  animation: heightSize 2s forwards;
 }
 
 .loader img {
