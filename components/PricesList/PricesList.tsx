@@ -3,6 +3,7 @@ import { classNames } from '@/utils/classNames/classNames';
 import cls from './PricesList.module.scss';
 import { IPricesItem } from './model/pricesData';
 import { ListHeading } from '../ListHeading/ListHeading';
+import FadeIntoView from '../FadeIntoView/FadeIntoView';
 
 interface IPricesListProps {
   className?: string;
@@ -26,16 +27,20 @@ export const PricesList = ({ className, title, list }: IPricesListProps) => {
           </p>
         </div>
         {list.map((item, index) => (
-          <div key={index} className={classNames(cls.textRowValues, {}, [])}>
-            <p className={classNames(cls.textPart, {}, [])}>
-              {t(item.categoryKey)}
-            </p>
-            <p className={classNames(cls.textPart, {}, [])}>
-              {t(item.priceKey)}
-            </p>
-          </div>
+          <FadeIntoView key={index}>
+            <div className={classNames(cls.textRowValues, {}, [])}>
+              <p className={classNames(cls.textPart, {}, [])}>
+                {t(item.categoryKey)}
+              </p>
+              <p className={classNames(cls.textPart, {}, [])}>
+                {t(item.priceKey)}
+              </p>
+            </div>
+          </FadeIntoView>
         ))}
-        <p className={cls.listNote}>{t('Details')}</p>
+        <FadeIntoView>
+          <p className={cls.listNote}>{t('Details')}</p>
+        </FadeIntoView>
       </div>
     </div>
   );
