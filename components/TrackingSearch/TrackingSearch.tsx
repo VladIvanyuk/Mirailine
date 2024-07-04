@@ -15,7 +15,6 @@ import { handleZip } from '@/utils/imgDownloader/imgDownloader';
 import { ITranslationsTypes } from '@/app/[locale]/tracking/page';
 import SearchVector from '@/public/images/vectors/search.png';
 import { Skeleton } from '../Skeleton/Skeleton';
-import Sea from '@/public/images/sea.png';
 
 interface ITrackingSearchProps {
   className?: string;
@@ -114,7 +113,7 @@ export const TrackingSearch = ({
             navigation
             pagination={{ clickable: true }}
           >
-            {/* {frameData &&
+            {frameData &&
               frameData.images.map((el, index) => (
                 <SwiperSlide className={cls.swiperSlide} key={index}>
                   <Image
@@ -125,23 +124,7 @@ export const TrackingSearch = ({
                     alt="Картинка кузова"
                   />
                 </SwiperSlide>
-              ))} */}
-
-            <SwiperSlide>
-              <Image src={Sea} alt="" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <Image src={Sea} alt="" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <Image src={Sea} alt="" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <Image src={Sea} alt="" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <Image src={Sea} alt="" />
-            </SwiperSlide>
+              ))}
           </Swiper>
         </div>
       )}
@@ -156,7 +139,7 @@ export const TrackingSearch = ({
           placeholder={placeholder}
         />
         <button onClick={searchFrame} className={cls.button}>
-          <p className={cls.btnText}>{button + '2'}</p>
+          <p className={cls.btnText}>{button}</p>
           <Image
             className={cls.btnImage}
             src={SearchVector}

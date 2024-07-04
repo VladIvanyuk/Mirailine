@@ -89,17 +89,17 @@
   cursor: pointer;
 }
 
-.swiper {
-  z-index: 100 !important;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 1000px;
-  height: 650px;
-  display: flex !important;
-  justify-content: center;
-  position: fixed !important;
-}
+// .swiper {
+//   z-index: 100 !important;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+//   width: 1000px;
+//   height: 650px;
+//   display: flex !important;
+//   justify-content: center;
+//   position: fixed !important;
+// }
 
 .swiperLayout {
   width: 100%;
@@ -182,10 +182,10 @@
     padding: 50px 50px 70px;
   }
 
-  .swiper {
-    width: 90vw;
-    height: fit-content;
-  }
+  // .swiper {
+  //   width: 90vw;
+  //   height: fit-content;
+  // }
 }
 
 @media (max-width: 900px) {
