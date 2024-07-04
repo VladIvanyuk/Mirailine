@@ -21,7 +21,9 @@ export const ServicesCard = ({
 
   return (
     <FadeIntoView className={classNames(cls.servicesCard, {}, [className])}>
-      <Image className={cls.image} src={src} alt={t(textKey)} />
+      <div className={cls.imageWrapper}>
+        <Image className={cls.image} src={src} alt={t(textKey)} />
+      </div>
       <p className={cls.servicesCardText}>{t(textKey)}</p>
       <span className={cls.cardNumber}>{number}</span>
     </FadeIntoView>

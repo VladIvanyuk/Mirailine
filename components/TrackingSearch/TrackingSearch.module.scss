@@ -33,10 +33,10 @@
   padding-top: 40px;
 }
 
-.loader img {
+.loader {
   display: block;
   margin: 0 auto;
-  margin-top: 40px;
+  padding-top: 40px;
 }
 
 .button {
@@ -78,10 +78,6 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
-}
-
-.infoBlock {
-  padding-top: 40px;
 }
 
 .imgsListItem {
@@ -239,6 +235,11 @@
 
   .imgsListItem {
     flex-basis: 30%;
+  }
+
+  .loader div {
+    height: 30px !important;
+    margin-bottom: 10px !important;
   }
 }
 

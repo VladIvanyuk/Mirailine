@@ -148,7 +148,8 @@ export const TrackingSearch = ({
         </button>
       </div>
       <div className={cls.loader}>
-        {isLoading && <Skeleton width={'100%'} height={30} />}
+        {isLoading && <Skeleton width={'100%'} height={50} marginB={20} />}
+        {isLoading && <Skeleton width={'100%'} height={50} marginB={20} />}
       </div>
       <div className={cls.error}>
         {isError && <p>Груз с таким номером не найден!</p>}
