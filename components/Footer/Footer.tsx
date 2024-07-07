@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import { SectionLayout } from '../SectionLayout/SectionLayout';
 import cls from './Footer.module.scss';
 import { useLocale, useTranslations } from 'next-intl';
@@ -29,13 +28,7 @@ export const Footer = () => {
     <footer className={cls.footer}>
       <SectionLayout classes={cls.footerWrapper}>
         <ScrollTopButton />
-        <img
-          className={cls.footerLogo}
-          src={
-            'https://s3.timeweb.cloud/47f0ddef-mirailine/main/logo-footer.png'
-          }
-          alt="Логотип"
-        />
+        <Image className={cls.footerLogo} src={LogoFooter} alt="Логотип" />
         <div className={cls.footerListsWrapper}>
           <ul className={cls.navList}>
             <li>

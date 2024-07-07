@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 'use client';
 
 import cls from './Header.module.scss';
@@ -32,8 +31,9 @@ export const Header = ({ view }: IHeaderProps) => {
     >
       <div className={cls.headerWrapper}>
         <SectionLayout classes={cls.headerNavWrapper}>
-          <img
-            src={'https://s3.timeweb.cloud/47f0ddef-mirailine/main/logo.png'}
+          <Image
+            src={Logo}
+            priority={true}
             alt="Mirai Line Logo"
             className={cls.logo}
           />
