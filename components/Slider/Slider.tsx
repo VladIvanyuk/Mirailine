@@ -53,14 +53,11 @@ const Slider = () => {
       modules={[Autoplay]}
       className={cls.swiper}
     >
-      {partnersImgs.map((item) => {
-        console.log(item.key);
-        return (
-          <SwiperSlide key={item.key} className={cls.swiperSlide}>
-            <img src={BUCKET_URL + item.key} alt={'Партнёр'} />
-          </SwiperSlide>
-        );
-      })}
+      {partnersImgs.map((item) => (
+        <SwiperSlide key={item.key} className={cls.swiperSlide}>
+          <img src={BUCKET_URL + item.key} alt={'Партнёр'} />
+        </SwiperSlide>
+      ))}
     </Swiper>
   );
 };
