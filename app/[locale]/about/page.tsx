@@ -7,7 +7,7 @@ import TitleWarehouseDecor from '@/public/images/text/warehouse.png';
 import { classNames } from '@/utils/classNames/classNames';
 import Image from 'next/image';
 import RussiaIcon from '@/public/images/countries/russia-wide.png';
-import JapanIcon from '@/public/images/countries/japan.png';
+import UsaIcon from '@/public/images/countries/usa.png';
 import CanadaIcon from '@/public/images/countries/canada.png';
 import { Description } from '@/components/Description/Description';
 import { AdressItem } from '@/components/AdressItem/AdressItem';
@@ -73,7 +73,7 @@ export default function About() {
                     cls.aboutThinTextFourth,
                   ])}
                 >
-                  <Image src={JapanIcon} alt="Флаг США" />
+                  <Image src={UsaIcon} alt="Флаг США" />
                   <span>{t('USA')}</span>
                 </li>
                 <li
