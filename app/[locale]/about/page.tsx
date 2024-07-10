@@ -17,6 +17,11 @@ import { WarehouseMaps } from '@/components/WarehouseMaps/WarehouseMaps';
 import { HeaderView } from '@/components/Header/model/types';
 import { Maps, mapLinks } from '@/components/Map/model/MapsData';
 import FadeIntoView from '@/components/FadeIntoView/FadeIntoView';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Mirai Line | About',
+};
 
 export default function About() {
   const t = useTranslations('About');
@@ -30,7 +35,7 @@ export default function About() {
   return (
     <>
       <Header view={HeaderView.About} />
-      <main className="main">
+      <main className='main'>
         <SectionLayout>
           <Title
             animation={TitleAnimations.RIGHT}
@@ -64,7 +69,7 @@ export default function About() {
                     cls.aboutThinTextThird,
                   ])}
                 >
-                  <Image src={RussiaIcon} alt="Флаг России" />
+                  <Image src={RussiaIcon} alt='Флаг России' />
                   <span>{t('Russia')}</span>
                 </li>
                 <li
@@ -73,7 +78,7 @@ export default function About() {
                     cls.aboutThinTextFourth,
                   ])}
                 >
-                  <Image src={UsaIcon} alt="Флаг США" />
+                  <Image src={UsaIcon} alt='Флаг США' />
                   <span>{t('USA')}</span>
                 </li>
                 <li
@@ -82,7 +87,7 @@ export default function About() {
                     cls.aboutThinTextFifth,
                   ])}
                 >
-                  <Image src={CanadaIcon} alt="Флаг Канады" />
+                  <Image src={CanadaIcon} alt='Флаг Канады' />
                   <span>{t('Canada')}</span>
                 </li>
               </ul>
@@ -90,7 +95,7 @@ export default function About() {
             <Image
               className={cls.decorImg}
               src={TitleAboutDecor}
-              alt="Иероглифы"
+              alt='Иероглифы'
             />
             <div className={cls.aboutImg}></div>
           </div>
@@ -113,7 +118,7 @@ export default function About() {
               <div className={cls.warehouseContent}>
                 <div className={cls.addressList}>
                   <div>
-                    <AdressItem title="Osaka">
+                    <AdressItem title='Osaka'>
                       <p>HS-3 大阪港ターミナル</p>
                       <p className={cls.addressItemTop}>
                         〒554-0041 大阪府大阪港此花区北港白津1-9-25
@@ -135,7 +140,7 @@ export default function About() {
               <div className={cls.warehouseContent}>
                 <div className={cls.addressList}>
                   <div>
-                    <AdressItem title="Yokohama">
+                    <AdressItem title='Yokohama'>
                       <p className={cls.addressItemTop}>
                         京浜港大黒埠頭地区指定保税地域大黒埠頭
                         K号荷捌地〒230-0054 神奈川県横浜市鶴見区大黒ふ頭20

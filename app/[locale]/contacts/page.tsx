@@ -16,6 +16,11 @@ import { classNames } from '@/utils/classNames/classNames';
 import { Map } from '@/components/Map/Map';
 import { HeaderView } from '@/components/Header/model/types';
 import { Maps, mapLinks } from '@/components/Map/model/MapsData';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Mirai Line | Contacts',
+};
 
 export default function Contacts() {
   const t = useTranslations('Contacts');

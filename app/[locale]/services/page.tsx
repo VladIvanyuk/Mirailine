@@ -10,6 +10,11 @@ import Image from 'next/image';
 import { HeaderView } from '@/components/Header/model/types';
 import { cards } from '@/components/ServicesCard/model/cardsData';
 import { classNames } from '@/utils/classNames/classNames';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Mirai Line | Services',
+};
 
 export default function Services() {
   const t = useTranslations('Services');

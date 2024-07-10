@@ -7,6 +7,11 @@ import TitleTrackingDecor from '@/public/images/text/tracking.png';
 import { TrackingSearch } from '@/components/TrackingSearch/TrackingSearch';
 import { Description } from '@/components/Description/Description';
 import { HeaderView } from '@/components/Header/model/types';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Mirai Line | Tracking',
+};
 
 export interface ITranslationsTypes {
   placeholder: string;
@@ -40,7 +45,7 @@ export default function Tracking() {
   return (
     <>
       <Header view={HeaderView.Tracking} />
-      <main className="main">
+      <main className='main'>
         <SectionLayout classes={cls.titleWrapper}>
           <Title
             className={cls.trackingTitle}
