@@ -16,13 +16,18 @@ import { classNames } from '@/utils/classNames/classNames';
 import { Map } from '@/components/Map/Map';
 import { HeaderView } from '@/components/Header/model/types';
 import { Maps, mapLinks } from '@/components/Map/model/MapsData';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Mirai Line | Contacts',
+};
 
 export default function Contacts() {
   const t = useTranslations('Contacts');
   return (
     <>
       <Header view={HeaderView.Contacts} />
-      <main className="main">
+      <main className='main'>
         <SectionLayout classes={cls.section}>
           <Title
             className={cls.contactsTitle}
@@ -84,18 +89,8 @@ export default function Contacts() {
                       <ul className={cls.mapItemList}>
                         <ContactsItem
                           className={cls.contactsItem}
-                          type={ContactTypes.PHONE}
-                          text={'+7-994-109-5764'}
-                        />
-                        <ContactsItem
-                          className={cls.contactsItem}
-                          type={ContactTypes.WA}
-                          text={'+7-994-109-5764'}
-                        />
-                        <ContactsItem
-                          className={cls.contactsItem}
                           type={ContactTypes.EMAIL}
-                          text={'claim@mirailine.com'}
+                          text={'sklad@autoportservice.ru'}
                         />
                         <ContactsItem
                           className={classNames(cls.contactsItem, {}, [
@@ -115,7 +110,7 @@ export default function Contacts() {
               </div>
               <div className={cls.contactMapItemWrapper}>
                 <div className={cls.contactsMapItemBlock}>
-                  <div className="">
+                  <div className=''>
                     <div className={cls.contactMapItem}>
                       <ListHeading
                         className={classNames(cls.contactsHeading, {}, [

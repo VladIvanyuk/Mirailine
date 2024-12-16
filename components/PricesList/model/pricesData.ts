@@ -11,87 +11,39 @@ export const pricesData: IPricesData = {
   Osaka: [
     {
       categoryKey: 'Car',
-      priceKey: '700All',
-    },
-    {
-      categoryKey: 'Constructor',
-      priceKey: '1200',
-    },
-    {
-      categoryKey: 'Motorcycle',
-      priceKey: 'ByAgreement',
-    },
-    {
-      categoryKey: 'Machinery',
-      priceKey: 'ByAgreement',
+      priceKey: '400All',
     },
   ],
   Yokohama: [
     {
       categoryKey: 'Car',
-      priceKey: '700All',
-    },
-    {
-      categoryKey: 'Motorcycle',
-      priceKey: 'ByAgreement',
-    },
-    {
-      categoryKey: 'Machinery',
-      priceKey: 'ByAgreement',
+      priceKey: '400All',
     },
   ],
   Toyama: [
     {
       categoryKey: 'Car',
-      priceKey: '550',
-    },
-    {
-      categoryKey: 'UndriveableCar',
-      priceKey: '650',
-    },
-    {
-      categoryKey: 'TruckUnder5Tonnes',
-      priceKey: '850+',
-    },
-    {
-      categoryKey: 'UndriveableTruckUnder5Tonnes',
-      priceKey: 'ByAgreement',
-    },
-    {
-      categoryKey: 'Constructor',
-      priceKey: '1100',
-    },
-    {
-      categoryKey: 'CutNormal',
-      priceKey: '1100',
-    },
-    {
-      categoryKey: 'ConstructorEURO',
-      priceKey: '1250',
-    },
-    {
-      categoryKey: 'CutEURO',
-      priceKey: '1250',
-    },
-    {
-      categoryKey: 'TruckConstructor',
-      priceKey: '1250',
-    },
-    {
-      categoryKey: 'TruckConstructor',
-      priceKey: '250+',
-    },
-    {
-      categoryKey: 'Tractor',
-      priceKey: '600',
+      priceKey: '300All',
     },
     {
       categoryKey: 'Motorcycle',
-      priceKey: 'ByAgreement',
+      priceKey: '250',
+    },
+    {
+      categoryKey: 'Tractor',
+      priceKey: '550',
     },
     {
       categoryKey: 'Pallet',
-      priceKey: '550',
+      priceKey: '600',
+    },
+    {
+      categoryKey: 'Constructor',
+      priceKey: '800',
+    },
+    {
+      categoryKey: 'CutNormal',
+      priceKey: '900',
     },
   ],
 };

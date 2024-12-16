@@ -6,9 +6,9 @@ import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 
 interface IContactsListProps {
-  phone: string;
-  wa: string;
-  email: string;
+  phone?: string;
+  wa?: string;
+  email?: string;
   children?: React.ReactNode;
   country?: string;
   countrySubtext?: string;
@@ -16,9 +16,9 @@ interface IContactsListProps {
 }
 
 export const ContactsList = ({
-  phone,
-  wa,
-  email,
+  phone = '',
+  wa = '',
+  email = '',
   children,
   country = '',
   countrySubtext = '',
@@ -61,9 +61,9 @@ export const ContactsList = ({
         </div>
       )}
       <ul className={cls.contactsList}>
-        <ContactsItem type={ContactTypes.PHONE} text={phone} />
-        <ContactsItem type={ContactTypes.WA} text={wa} />
-        <ContactsItem type={ContactTypes.EMAIL} text={email} />
+        {phone && <ContactsItem type={ContactTypes.PHONE} text={phone} />}
+        {wa && <ContactsItem type={ContactTypes.WA} text={wa} />}
+        {email && <ContactsItem type={ContactTypes.EMAIL} text={email} />}
         {children}
       </ul>
     </>

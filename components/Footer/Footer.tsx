@@ -7,13 +7,11 @@ import Image from 'next/image';
 import Date from '@/public/images/vectors/date.png';
 import JapanImg from '@/public/images/countries/japan.png';
 import RussiaImg from '@/public/images/countries/russia.png';
-import LogoFooter from '@/public/images/logo-footer.png';
 import { ScrollTopButton } from '../ScrollTopButton/ScrollTopButton';
 import { Link } from 'next-view-transitions';
 
 export enum ContactNumbers {
-  PRETENSION_CONTACT = '+7-994-109-5764',
-  PRETENSION_EMAIL = 'claim@mirailine.com',
+  PRETENSION_EMAIL = 'sklad@autoportservice.ru',
   JAPAN_TEL_CONTACT = '+81-766-86-0772',
   JAPAN_WA_CONTACT = '+81-90-7357-8470',
   JAPAN_EMAIL_CONTACT = 'shipping@mirailine.com',
@@ -34,7 +32,7 @@ export const Footer = () => {
           src={
             'https://s3.timeweb.cloud/47f0ddef-mirailine/main/logo-footer.png'
           }
-          alt="Логотип"
+          alt='Логотип'
         />
         <div className={cls.footerListsWrapper}>
           <ul className={cls.navList}>
@@ -76,11 +74,7 @@ export const Footer = () => {
           </ul>
           <ul className={cls.contactsList}>
             <li className={cls.claims}>
-              <ContactsList
-                phone={ContactNumbers.PRETENSION_CONTACT}
-                wa={ContactNumbers.PRETENSION_CONTACT}
-                email={ContactNumbers.PRETENSION_EMAIL}
-              >
+              <ContactsList email={ContactNumbers.PRETENSION_EMAIL}>
                 <li className={cls.contactWrapper}>
                   <Image
                     className={cls.workTimeIng}

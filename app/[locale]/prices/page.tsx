@@ -8,13 +8,18 @@ import { PricesList } from '@/components/PricesList/PricesList';
 import { pricesData } from '@/components/PricesList/model/pricesData';
 import { HeaderView } from '@/components/Header/model/types';
 import FadeIntoView from '@/components/FadeIntoView/FadeIntoView';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Mirai Line | Prices',
+};
 
 export default function Prices() {
   const t = useTranslations('Prices');
   return (
     <>
       <Header view={HeaderView.Prices} />
-      <main className="main">
+      <main className='main'>
         <SectionLayout classes={cls.titleWrapper}>
           <Title
             className={cls.scheduleTitle}

@@ -7,6 +7,11 @@ import TitleScheduleDecor from '@/public/images/text/schedule.png';
 import { ScheduleList } from '@/components/ScheduleList/ScheduleList';
 import Image from 'next/image';
 import { HeaderView } from '@/components/Header/model/types';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Mirai Line | Schedule',
+};
 
 export default function Schedule() {
   const t = useTranslations('Schedule');
@@ -22,7 +27,7 @@ export default function Schedule() {
   return (
     <>
       <Header view={HeaderView.Schedule} />
-      <main className="main">
+      <main className='main'>
         <SectionLayout classes={cls.scheduleContainer}>
           <Title
             lineVariant={LineVariants.VARIANT_THREE}
@@ -34,7 +39,7 @@ export default function Schedule() {
         </SectionLayout>
         <Image
           src={TitleScheduleDecor}
-          alt="Иероглифы"
+          alt='Иероглифы'
           className={cls.bottomDecor}
         />
         <div className={cls.bottomImg}></div>

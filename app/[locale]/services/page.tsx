@@ -10,13 +10,18 @@ import Image from 'next/image';
 import { HeaderView } from '@/components/Header/model/types';
 import { cards } from '@/components/ServicesCard/model/cardsData';
 import { classNames } from '@/utils/classNames/classNames';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Mirai Line | Services',
+};
 
 export default function Services() {
   const t = useTranslations('Services');
   return (
     <>
       <Header view={HeaderView.Services} />
-      <main className="main">
+      <main className='main'>
         <SectionLayout classes={cls.servicesContainer}>
           <Title
             animation={TitleAnimations.RIGHT}
@@ -35,7 +40,7 @@ export default function Services() {
                     cls.numbersFirstListItem,
                   ])}
                 >
-                  <p className={cls.numbersListNum}>100+</p>
+                  <p className={cls.numbersListNum}>12000+</p>
                   <p className={cls.numbersListText}>{t('HappyClients')}</p>
                 </li>
                 <li
@@ -43,7 +48,7 @@ export default function Services() {
                     cls.numbersSecondListItem,
                   ])}
                 >
-                  <p className={cls.numbersListNum}>143+</p>
+                  <p className={cls.numbersListNum}>38840+</p>
                   <p className={cls.numbersListText}>{t('TransportedCargo')}</p>
                 </li>
                 <li
@@ -67,7 +72,7 @@ export default function Services() {
             <Image
               className={cls.servicesImgDecor}
               src={TitleServicesDecor}
-              alt="Иероглифы"
+              alt='Иероглифы'
             />
             <div className={cls.servicesImage}></div>
           </div>
