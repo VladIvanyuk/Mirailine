@@ -83,7 +83,7 @@ const Home: React.FC<{ params: { locale: 'en' | 'ru' } }> = ({
               lineVariant={LineVariants.VARIANT_THREE}
               text={t('Partners')}
             />
-            <Slider />
+            {/* <Slider /> */}
           </SectionLayout>
         </FadeIntoView>
       </main>
